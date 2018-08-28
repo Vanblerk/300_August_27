@@ -81,6 +81,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	void Death()
 	{
+		anim.SetTrigger ("isDead");
 		Debug.Log ("Player dead");
 	}
 }
