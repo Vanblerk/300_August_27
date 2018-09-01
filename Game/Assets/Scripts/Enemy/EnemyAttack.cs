@@ -65,6 +65,7 @@ public class EnemyAttack : MonoBehaviour {
 		timer += Time.deltaTime;
 
 		if (timer >= timeBetweenAttacks && playerInRange) {
+			anim.SetBool ("isWalking", false);
 			anim.SetBool("isAttacking", true);
 			Attack ();
 		} 
