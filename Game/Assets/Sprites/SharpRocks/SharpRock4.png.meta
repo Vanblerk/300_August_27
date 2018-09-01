@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 22d196996732dc04392da65680e0ff0e
-timeCreated: 1535806296
+guid: c8af19775b7794d478f48d8123cf7463
+timeCreated: 1535806298
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SharpRock1_0
+    21300000: SharpRock4_0
+    21300002: SharpRock4_1
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -82,13 +83,27 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SharpRock1_0
+      name: SharpRock4_0
       rect:
         serializedVersion: 2
-        x: 838
-        y: 256
-        width: 217
-        height: 540
+        x: 878
+        y: 359
+        width: 198
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SharpRock4_1
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 547
+        width: 11
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

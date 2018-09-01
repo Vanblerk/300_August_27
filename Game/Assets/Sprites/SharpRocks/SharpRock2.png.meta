@@ -1,13 +1,17 @@
 fileFormatVersion: 2
-guid: 6c25304a06f9b7c4fa291c87308dba98
-timeCreated: 1534868110
+guid: abfae87c3dd02294e966e6e8383be68e
+timeCreated: 1535806297
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SharpRock2_0
-    21300002: SharpRock2_1
-    21300004: SharpRock2_2
-    21300006: SharpRock2_3
+    21300000: SharpRock2_1
+    21300002: SharpRock2_2
+    21300004: SharpRock2_3
+    21300006: SharpRock2_4
+    21300008: SharpRock2_5
+    21300010: SharpRock2_6
+    21300012: SharpRock2_7
+    21300014: SharpRock2_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -62,7 +66,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -72,7 +76,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -85,27 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SharpRock2_0
-      rect:
-        serializedVersion: 2
-        x: 1521
-        y: 840
-        width: 38
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
       name: SharpRock2_1
       rect:
         serializedVersion: 2
-        x: 1039
-        y: 413
-        width: 10
-        height: 14
+        x: 896
+        y: 872
+        width: 6
+        height: 4
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,10 +106,10 @@ TextureImporter:
       name: SharpRock2_2
       rect:
         serializedVersion: 2
-        x: 1050
-        y: 410
-        width: 9
-        height: 13
+        x: 857
+        y: 293
+        width: 217
+        height: 576
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,10 +120,80 @@ TextureImporter:
       name: SharpRock2_3
       rect:
         serializedVersion: 2
-        x: 1206
-        y: 292
-        width: 382
-        height: 496
+        x: 885
+        y: 188
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SharpRock2_4
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 193
+        width: 15
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SharpRock2_5
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 159
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SharpRock2_6
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 171
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SharpRock2_7
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 159
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SharpRock2_8
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 153
+        width: 7
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 6d4c3b08e7a77e2458eced092ee0f43d
-timeCreated: 1534868110
+guid: 70afc35bfb3552a4f94c6e47a6af092b
+timeCreated: 1535806297
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: SharpRock3_0
-    21300002: SharpRock3_1
-    21300004: SharpRock3_2
-    21300006: SharpRock3_3
+    21300002: SharpRock3_2
+    21300004: SharpRock3_6
+    21300006: SharpRock3_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -62,7 +62,7 @@ TextureImporter:
   textureFormatSet: 0
   platformSettings:
   - buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -72,7 +72,7 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 4096
+    maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 2
@@ -88,24 +88,10 @@ TextureImporter:
       name: SharpRock3_0
       rect:
         serializedVersion: 2
-        x: 688
-        y: 907
-        width: 20
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: SharpRock3_1
-      rect:
-        serializedVersion: 2
-        x: 509
-        y: 75
-        width: 315
-        height: 567
+        x: 1103
+        y: 1038
+        width: 9
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,10 +102,10 @@ TextureImporter:
       name: SharpRock3_2
       rect:
         serializedVersion: 2
-        x: 964
-        y: 10
-        width: 10
-        height: 14
+        x: 783
+        y: 271
+        width: 231
+        height: 510
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,13 +113,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: SharpRock3_3
+      name: SharpRock3_6
       rect:
         serializedVersion: 2
-        x: 973
-        y: 8
-        width: 11
-        height: 16
+        x: 728
+        y: 80
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: SharpRock3_7
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 77
+        width: 8
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
