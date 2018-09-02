@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerActions : MonoBehaviour
-{
-	//Nico Variables
+public class PlayerActionsLevelOne : MonoBehaviour {
+
 	public AudioClip grappleSound;
 	public AudioClip grappleClankSound;
 	public AudioClip gulpHealth;
@@ -24,6 +23,7 @@ public class PlayerActions : MonoBehaviour
 	public bool hasHooked = false;
 	public bool firstHit = false;
 	public bool projectTest = false;
+	public bool projectTest2 = false;
 	public bool isSet = false;
 	public float grappleTime = 0f;
 	RaycastHit2D hit;
@@ -31,8 +31,10 @@ public class PlayerActions : MonoBehaviour
 	public LayerMask mask;
 	GameObject pirate;
 	GameObject projectileCol;
+	GameObject projectileCol2;
 	GameObject projectExit;
 	GameObject poison;
+	GameObject poison2;
 	GameObject endGame;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
@@ -48,6 +50,7 @@ public class PlayerActions : MonoBehaviour
 	Vector2 mouseCoords;
 	Vector2 mouseDirection;
 	Vector2 projectileStartingPos;
+	Vector2 projectileStartingPos2;
 	Vector3 worldView;
 
 	//Vanblerk Variables
@@ -113,10 +116,13 @@ public class PlayerActions : MonoBehaviour
 		pirate = GameObject.Find ("Character");
 		HealthPickup = GameObject.Find ("HealthPickup");
 		poison = GameObject.Find ("Projectiles");
+		poison2 = GameObject.Find ("Projectiles2");
 		projectExit = GameObject.Find ("ProjectilesExit");
 		projectileCol = GameObject.Find ("ProjectileCollider");
+		projectileCol2 = GameObject.Find ("ProjectileCollider2");
+		//projectileCol2 = GameObject.Find ("ProjectileCollider2");
 		barrelCollider = GameObject.Find ("BarrelCollider");
-		endGame = GameObject.Find ("ExitLevelCollider");
+		endGame = GameObject.Find ("EndGameCollider");
 		//barrel = GameObject.Find ("Barrel");
 		grapple = GetComponent<DistanceJoint2D> ();
 		anim = GetComponent<Animator>();
@@ -127,11 +133,9 @@ public class PlayerActions : MonoBehaviour
 		grapple.enabled = false;
 		line.enabled = false;
 		poison.SetActive (false);
+		poison2.SetActive (false);
 		projectileCol.SetActive (true);
-		projectileStartingPos.x = poison.transform.position.x;
-		projectileStartingPos.y = poison.transform.position.y;
-
-
+		projectileCol2.SetActive (true);
 
 		var vol = VolumeController.SaveStuff.VolumeG;
 		AdjustVolume(vol);
@@ -140,7 +144,7 @@ public class PlayerActions : MonoBehaviour
 		mySource.Play();
 
 
-		
+
 	}
 
 
@@ -171,18 +175,13 @@ public class PlayerActions : MonoBehaviour
 			poison.SetActive (true);
 			projectTest = true;
 		}	
-		if (coll.gameObject.name == "Projectiles") {
 
-			Debug.Log("HHHHHHHHHH");
-			poison.SetActive (false);
-			projectTest = false;
-			//decrement health
-			//reset
-			poison.transform.position = projectileStartingPos;
-			poison.SetActive (true);
-			projectTest = true;
-			ThrowProjectile (projectTest);
+		if (coll.gameObject.name == "ProjectileCollider2") {
+			projectileCol2.SetActive (false);
+			poison2.SetActive (true);
+			projectTest2 = true;
 		}
+
 
 		if (coll.gameObject.name == "ProjectilesExit") {
 			projectTest = false;
@@ -192,11 +191,16 @@ public class PlayerActions : MonoBehaviour
 		}
 		if (coll.gameObject == endGame) {
 			Debug.Log("End Level");
-			SceneManager.LoadScene ("LevelOne");
+			if (Input.GetKey (KeyCode.UpArrow)) {
+				Application.LoadLevel ("LevelOne");
+			}
+			//bool isShowing;
+			//isShowing = true;
+			//video.SetActive(isShowing);
 		}
 
 		//if (coll.gameObject.name == "BarrelCollider") {
-			
+
 		//}
 
 		//When Player touches collider that causes a barrel to be rolled
@@ -233,16 +237,15 @@ public class PlayerActions : MonoBehaviour
 
 	}
 
-	 void OnTriggerEnter2D(Collider2D other)
-     {
-		Debug.Log ("triggerEntered");
+	void OnTriggerEnter2D(Collider2D other)
+	{
 
 		if (other.gameObject == barrelCollider)
-         {
-			Debug.Log ("barrelCollider");
+		{
+			Debug.Log ("BarrelCollider");
 			barrelroll.rollBarrel ();
 
-         }
+		}
 
 		if (other.gameObject == HealthPickup)
 		{
@@ -252,13 +255,12 @@ public class PlayerActions : MonoBehaviour
 			mySource.PlayOneShot(gulpHealth);
 			HealthPickup.SetActive (false);
 		}
-     }
-   
+	}
+
 
 	// Update is called once per frame
 	void Update()
 	{
-
 		if (Input.GetKey (KeyCode.T)) {
 			SceneManager.LoadScene ("TutorialLevel");
 		}
@@ -270,8 +272,6 @@ public class PlayerActions : MonoBehaviour
 		if (Input.GetKey (KeyCode.M)) {
 			SceneManager.LoadScene ("MainMenu");
 		}
-
-
 
 		Movement();
 		Attack();
@@ -287,7 +287,7 @@ public class PlayerActions : MonoBehaviour
 				firstHit = false;
 				StartCoroutine(GrappleTimer());
 			}
-			
+
 		} 
 
 		if (Input.GetKey (KeyCode.Mouse0)) {
@@ -323,6 +323,8 @@ public class PlayerActions : MonoBehaviour
 		//     mySource.PlayOneShot(swordHit);
 		// }
 		ThrowProjectile(projectTest);
+		ThrowProjectile2(projectTest2);
+
 
 	}
 
@@ -399,7 +401,7 @@ public class PlayerActions : MonoBehaviour
 
 				if(canGrap == true){
 
-				
+
 
 					// mySource.PlayClipAtPoint(grappleSound, transform.position);
 					// mySource.Play(grappleSound);
@@ -415,7 +417,7 @@ public class PlayerActions : MonoBehaviour
 					if (pirate.transform.position.x < Input.mousePosition.x) {
 
 						values.x = hit.point.x + 3.7f;
-						values.y = hit.point.y;
+						values.y = hit.point.y - 2.2f;
 						lineR.x = hit.point.x + 0f;
 						lineR.y = hit.point.y;
 						grapple.connectedAnchor = values;
@@ -437,10 +439,10 @@ public class PlayerActions : MonoBehaviour
 					while (grapple.distance > 2f) {
 						grappleTime = grappleTime + 0.00001f;	
 						grapple.distance = grapple.distance - grappleTime;
-						
+
 					}
 				}
-					
+
 
 			}//end of if collide
 			else {
@@ -459,12 +461,12 @@ public class PlayerActions : MonoBehaviour
 
 
 		}
-		
+
 	}
 
 	public void AdjustVolume (float vol) {
-     	AudioListener.volume = vol;
- 	}
+		AudioListener.volume = vol;
+	}
 
 	IEnumerator Example()
 	{
@@ -476,19 +478,25 @@ public class PlayerActions : MonoBehaviour
 	IEnumerator GrappleTimer()
 	{
 		canGrap = false;
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.1f);
 		canGrap = true;
 	}
 
 	public void ThrowProjectile(bool project){
 		if (project == true) {
 			Vector2 projectileCoords;
-			projectileCoords.x = poison.transform.position.x + 20f;
-			projectileCoords.y = poison.transform.position.y - 7f;
+			projectileCoords.x = poison.transform.position.x - 60f;
+			projectileCoords.y = poison.transform.position.y - 60f;
 			poison.transform.position = Vector2.MoveTowards (poison.transform.position, projectileCoords, 3 * Time.deltaTime);
 		} 
 	}
 
-	
-
+	public void ThrowProjectile2(bool project){
+		if (project == true) {
+			Vector2 projectileCoords;
+			projectileCoords.x = poison2.transform.position.x - 50f;
+			projectileCoords.y = poison2.transform.position.y - 40f;
+			poison2.transform.position = Vector2.MoveTowards (poison2.transform.position, projectileCoords, 3 * Time.deltaTime);
+		} 
+	}
 }
