@@ -1147,7 +1147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Volume: {fileID: 0}
-  ambientMusic: {fileID: 8300000, guid: db2105cd8ad36b54eb54db20ad9ef3e1, type: 3}
   mySource: {fileID: 297190467}
 --- !u!4 &297190469
 Transform:
@@ -1160,7 +1159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &308898780
 GameObject:
@@ -4165,6 +4164,11 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588584515519784, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: flashSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94d752af07a0e9c4198f5726bf3aff7e, type: 2}
