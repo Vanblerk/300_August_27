@@ -1226,8 +1226,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.78, y: 3.73}
+  m_Offset: {x: 0.0000005002777, y: -0.5451604}
+  m_Size: {x: 1.7800002, y: 2.6396816}
   m_Direction: 0
 --- !u!212 &90094089
 SpriteRenderer:
@@ -1415,7 +1415,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.78, y: 3.73}
+  m_Size: {x: 1.78, y: 2.49}
   m_Direction: 0
 --- !u!212 &95193984
 SpriteRenderer:
@@ -1544,6 +1544,7 @@ GameObject:
   - component: {fileID: 120975377}
   - component: {fileID: 120975379}
   - component: {fileID: 120975378}
+  - component: {fileID: 120975380}
   m_Layer: 0
   m_Name: SharpRock1_0 (5)
   m_TagString: Untagged
@@ -1573,11 +1574,11 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.78, y: 3.73}
+  m_Offset: {x: 0.49554402, y: 0.6512756}
+  m_Size: {x: 2.7710974, y: 5.0325456}
   m_Direction: 0
 --- !u!212 &120975379
 SpriteRenderer:
@@ -1623,6 +1624,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &120975380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 120975376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0afdf143c21ec44ba1ae9f3126dc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &135584054
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,8 +2644,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.66, y: 3.28}
+  m_Offset: {x: 0, y: -0.32018808}
+  m_Size: {x: 1.66, y: 2.6396236}
   m_Direction: 0
 --- !u!212 &229713307
 SpriteRenderer:
@@ -2820,8 +2832,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
+  m_Offset: {x: 0.000000006884049, y: -0.17307982}
+  m_Size: {x: 1.3500009, y: 3.6638339}
   m_Direction: 0
 --- !u!212 &240361530
 SpriteRenderer:
@@ -3056,7 +3068,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
+  m_Size: {x: 1.35, y: 2.99}
   m_Direction: 0
 --- !u!212 &256046180
 SpriteRenderer:
@@ -3112,6 +3124,8 @@ GameObject:
   - component: {fileID: 265339558}
   - component: {fileID: 265339557}
   - component: {fileID: 265339559}
+  - component: {fileID: 265339560}
+  - component: {fileID: 265339561}
   m_Layer: 0
   m_Name: SharpRock3_2
   m_TagString: Untagged
@@ -3185,11 +3199,37 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.40135464, y: 0.3052001}
+  m_Size: {x: 1.1047539, y: 5.4504056}
+  m_Direction: 0
+--- !u!114 &265339560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265339556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0afdf143c21ec44ba1ae9f3126dc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &265339561
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265339556}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
+  m_Size: {x: 1.43, y: 4.05}
   m_Direction: 0
 --- !u!1 &325313660
 GameObject:
@@ -3199,6 +3239,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 325313661}
+  - component: {fileID: 325313662}
   m_Layer: 2
   m_Name: SharpRocks
   m_TagString: Untagged
@@ -3267,6 +3308,17 @@ Transform:
   m_Father: {fileID: 649613351}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &325313662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 325313660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0afdf143c21ec44ba1ae9f3126dc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &335189404
 GameObject:
   m_ObjectHideFlags: 0
@@ -3853,7 +3905,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 377612041}
   m_LocalRotation: {x: -0, y: -0, z: 0.05058928, w: -0.9987195}
-  m_LocalPosition: {x: 136.74069, y: -23.505684, z: -3.31}
+  m_LocalPosition: {x: 136.17, y: -24.59, z: -3.31}
   m_LocalScale: {x: 1.3031001, y: 1.2319402, z: 1}
   m_Children: []
   m_Father: {fileID: 325313661}
@@ -3871,7 +3923,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.98}
   m_Size: {x: 1.35, y: 4.01}
   m_Direction: 0
 --- !u!212 &377612044
@@ -3960,8 +4012,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
+  m_Offset: {x: 0.00000005975518, y: -0.7303517}
+  m_Size: {x: 1.3499998, y: 2.5492976}
   m_Direction: 0
 --- !u!212 &382587017
 SpriteRenderer:
@@ -5667,7 +5719,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.95}
   m_Size: {x: 1.35, y: 4.01}
   m_Direction: 0
 --- !u!212 &537074541
@@ -7762,6 +7814,7 @@ GameObject:
   - component: {fileID: 715358970}
   - component: {fileID: 715358972}
   - component: {fileID: 715358971}
+  - component: {fileID: 715358973}
   m_Layer: 0
   m_Name: SharpRock3_2 (15)
   m_TagString: Untagged
@@ -7775,13 +7828,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715358969}
-  m_LocalRotation: {x: -0, y: -0, z: 0.063984536, w: -0.997951}
+  m_LocalRotation: {x: 0, y: 0, z: -0.1771706, w: 0.98418015}
   m_LocalPosition: {x: 144.99252, y: -28.058739, z: -3.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 325313661}
   m_RootOrder: 43
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.3370004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -20.41}
 --- !u!70 &715358971
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -7791,12 +7844,12 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
-  m_Direction: 0
+  m_Offset: {x: -8.340305, y: -0.2530385}
+  m_Size: {x: 19.390015, y: 3.5039244}
+  m_Direction: 1
 --- !u!212 &715358972
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7841,6 +7894,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &715358973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715358969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0afdf143c21ec44ba1ae9f3126dc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &718585017
 GameObject:
   m_ObjectHideFlags: 0
@@ -8381,7 +8445,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 821221018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 85.31, y: -6.3, z: 0.109767005}
+  m_LocalPosition: {x: 84.65, y: -6.3, z: 0.109767005}
   m_LocalScale: {x: 0.18143, y: 0.20279999, z: 1}
   m_Children: []
   m_Father: {fileID: 1878041962}
@@ -9198,7 +9262,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.66, y: 3.28}
+  m_Size: {x: 1.66, y: 0.97}
   m_Direction: 0
 --- !u!212 &910330980
 SpriteRenderer:
@@ -11703,7 +11767,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.39}
   m_Size: {x: 1.35, y: 4.01}
   m_Direction: 0
 --- !u!212 &1083964162
@@ -13770,7 +13834,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1}
   m_Size: {x: 1.78, y: 3.73}
   m_Direction: 0
 --- !u!212 &1248450234
@@ -14094,7 +14158,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.66}
   m_Size: {x: 1.35, y: 4.01}
   m_Direction: 0
 --- !u!212 &1302341563
@@ -14553,7 +14617,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.01}
   m_Size: {x: 1.66, y: 3.28}
   m_Direction: 0
 --- !u!212 &1366257656
@@ -15500,7 +15564,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.64}
   m_Size: {x: 1.78, y: 3.73}
   m_Direction: 0
 --- !u!212 &1482882932
@@ -15571,7 +15635,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1483048782}
   m_LocalRotation: {x: -0, y: -0, z: -0.04029803, w: -0.9991877}
-  m_LocalPosition: {x: 132.13257, y: -22.510971, z: -3.31}
+  m_LocalPosition: {x: 132.02, y: -23.43, z: -3.31}
   m_LocalScale: {x: 1.2778997, y: 1.2741599, z: 1}
   m_Children: []
   m_Father: {fileID: 325313661}
@@ -15589,7 +15653,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.99}
   m_Size: {x: 1.35, y: 4.01}
   m_Direction: 0
 --- !u!212 &1483048785
@@ -16008,8 +16072,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.78, y: 3.73}
+  m_Offset: {x: 2.9375302e-10, y: -0.36676142}
+  m_Size: {x: 1.7800009, y: 2.9964728}
   m_Direction: 0
 --- !u!212 &1507949660
 SpriteRenderer:
@@ -16065,6 +16129,7 @@ GameObject:
   - component: {fileID: 1508520914}
   - component: {fileID: 1508520916}
   - component: {fileID: 1508520915}
+  - component: {fileID: 1508520917}
   m_Layer: 0
   m_Name: SharpRock4_0
   m_TagString: Untagged
@@ -16094,12 +16159,12 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.66, y: 3.28}
-  m_Direction: 0
+  m_Offset: {x: 2.4211316, y: 0.873207}
+  m_Size: {x: 14.331198, y: 3.0064843}
+  m_Direction: 1
 --- !u!212 &1508520916
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16144,6 +16209,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1508520917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1508520913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0afdf143c21ec44ba1ae9f3126dc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1512109208
 GameObject:
   m_ObjectHideFlags: 0
@@ -16550,7 +16626,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.48}
   m_Size: {x: 1.35, y: 4.01}
   m_Direction: 0
 --- !u!212 &1519702112
@@ -16621,7 +16697,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1523516411}
   m_LocalRotation: {x: -0, y: -0, z: 0.41244197, w: -0.91098386}
-  m_LocalPosition: {x: 119.5142, y: -15.158709, z: -3.31}
+  m_LocalPosition: {x: 118.64, y: -16.46, z: -3.31}
   m_LocalScale: {x: 1.2134, y: 1.4099702, z: 1}
   m_Children: []
   m_Father: {fileID: 325313661}
@@ -16640,7 +16716,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.78, y: 3.73}
+  m_Size: {x: 1.78, y: 3.31}
   m_Direction: 0
 --- !u!212 &1523516414
 SpriteRenderer:
@@ -16728,8 +16804,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
+  m_Offset: {x: -0.00000033116478, y: -0.3908749}
+  m_Size: {x: 1.350004, y: 3.2282467}
   m_Direction: 0
 --- !u!212 &1529884170
 SpriteRenderer:
@@ -17168,6 +17244,7 @@ GameObject:
   - component: {fileID: 1594400969}
   - component: {fileID: 1594400971}
   - component: {fileID: 1594400970}
+  - component: {fileID: 1594400972}
   m_Layer: 0
   m_Name: SharpRock4_0 (2)
   m_TagString: Untagged
@@ -17197,12 +17274,12 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.66, y: 3.28}
-  m_Direction: 0
+  m_Offset: {x: 3.3148828, y: 0.00004935945}
+  m_Size: {x: 15.977808, y: 3.279999}
+  m_Direction: 1
 --- !u!212 &1594400971
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17247,6 +17324,17 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1594400972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594400968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0afdf143c21ec44ba1ae9f3126dc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1610160733
 GameObject:
   m_ObjectHideFlags: 0
@@ -17290,7 +17378,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
+  m_Size: {x: 1.31, y: 1.15}
   m_Direction: 0
 --- !u!212 &1610160736
 SpriteRenderer:
@@ -17461,7 +17549,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634347990}
   m_LocalRotation: {x: -0, y: -0, z: 0.3218189, w: -0.9468013}
-  m_LocalPosition: {x: 137.94934, y: -24.402092, z: -3.31}
+  m_LocalPosition: {x: 137.3, y: -25.7, z: -3.31}
   m_LocalScale: {x: 1.2134, y: 1.4099698, z: 1}
   m_Children: []
   m_Father: {fileID: 325313661}
@@ -17479,7 +17567,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.43}
   m_Size: {x: 1.78, y: 3.73}
   m_Direction: 0
 --- !u!212 &1634347993
@@ -17667,7 +17755,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -1.3}
   m_Size: {x: 1.78, y: 3.73}
   m_Direction: 0
 --- !u!212 &1646941176
@@ -18405,7 +18493,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1715941232}
   m_LocalRotation: {x: -0, y: -0, z: 0.14755341, w: -0.9890541}
-  m_LocalPosition: {x: 118.50214, y: -14.04513, z: -3.31}
+  m_LocalPosition: {x: 117.28, y: -15.32, z: -3.31}
   m_LocalScale: {x: 1.3030998, y: 1.2319397, z: 1}
   m_Children: []
   m_Father: {fileID: 325313661}
@@ -18424,7 +18512,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
+  m_Size: {x: 1.35, y: 3.33}
   m_Direction: 0
 --- !u!212 &1715941235
 SpriteRenderer:
@@ -18611,8 +18699,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.78, y: 3.73}
+  m_Offset: {x: 0, y: -0.44}
+  m_Size: {x: 1.78, y: 3.53}
   m_Direction: 0
 --- !u!212 &1727200757
 SpriteRenderer:
@@ -19220,6 +19308,8 @@ GameObject:
   - component: {fileID: 1762260689}
   - component: {fileID: 1762260688}
   - component: {fileID: 1762260690}
+  - component: {fileID: 1762260691}
+  - component: {fileID: 1762260692}
   m_Layer: 0
   m_Name: SharpRock1_0
   m_TagString: Untagged
@@ -19293,11 +19383,37 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.07617057, y: 0.44771072}
+  m_Size: {x: 1.6276636, y: 4.6254163}
+  m_Direction: 0
+--- !u!114 &1762260691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1762260687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d0afdf143c21ec44ba1ae9f3126dc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!70 &1762260692
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1762260687}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.78, y: 3.73}
+  m_Offset: {x: -0.0000038146973, y: 0}
+  m_Size: {x: 1.74, y: 3.69}
   m_Direction: 0
 --- !u!1 &1768667031
 GameObject:
@@ -19513,7 +19629,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.07}
   m_Size: {x: 2.17, y: 3.79}
   m_Direction: 0
 --- !u!212 &1779458645
@@ -20020,7 +20136,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.78, y: 3.73}
+  m_Size: {x: 1.78, y: 0.49}
   m_Direction: 0
 --- !u!212 &1839212589
 SpriteRenderer:
@@ -20281,7 +20397,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
+  m_Size: {x: 1.35, y: 1.72}
   m_Direction: 0
 --- !u!212 &1859954187
 SpriteRenderer:
@@ -21321,7 +21437,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.78, y: 3.73}
+  m_Size: {x: 1.78, y: 2.63}
   m_Direction: 0
 --- !u!212 &1940446191
 SpriteRenderer:
@@ -21905,7 +22021,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.84}
   m_Size: {x: 1.78, y: 3.73}
   m_Direction: 0
 --- !u!212 &2026512736
@@ -21976,7 +22092,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2031381829}
   m_LocalRotation: {x: -0, y: -0, z: -0.1291299, w: 0.9916277}
-  m_LocalPosition: {x: 120.16968, y: -16.42418, z: -3.31}
+  m_LocalPosition: {x: 119.98, y: -16.61, z: -3.31}
   m_LocalScale: {x: 1.1352803, y: 1.16476, z: 1}
   m_Children: []
   m_Father: {fileID: 325313661}
@@ -21995,7 +22111,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.35, y: 4.01}
+  m_Size: {x: 1.35, y: 2.79}
   m_Direction: 0
 --- !u!212 &2031381832
 SpriteRenderer:

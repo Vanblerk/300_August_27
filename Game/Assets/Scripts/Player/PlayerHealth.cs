@@ -79,8 +79,9 @@ public class PlayerHealth : MonoBehaviour {
 		currentHealth += amount;
 	}
 
-	void Death()
+	public void Death()
 	{
+		currentHealth = 0;
 		anim.SetTrigger ("isDead");
 		Debug.Log ("Player dead");
 	}
