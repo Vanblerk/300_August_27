@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour {
 
 
     Animator anim;
-    CapsuleCollider capsuleCollider;
+   // CapsuleCollider capsuleCollider;
     bool isDead;
     bool damaged;
     // AudioSource enemyAudio;
@@ -35,7 +35,7 @@ public class EnemyHealth : MonoBehaviour {
     {
         anim = GetComponent<Animator>();
         // enemyAudio = GetComponent();
-        capsuleCollider = GetComponent<CapsuleCollider>();
+        //capsuleCollider = GetComponent<CapsuleCollider>();
         currentHealth = startingHealth;
         damageImage = GetComponent<SpriteRenderer>();
         mySource = GetComponent<AudioSource>();

@@ -5,7 +5,7 @@ using UnityEngine;
 public class BarrelRoll : MonoBehaviour {
 
 
-	private float thrust = 1.0f;
+	//private float thrust = 1.0f;
 	Rigidbody2D barrel;
 
 	GameObject player;

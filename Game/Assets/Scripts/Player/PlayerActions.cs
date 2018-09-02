@@ -237,6 +237,7 @@ public class PlayerActions : MonoBehaviour
 
 	 void OnTriggerEnter2D(Collider2D other)
      {
+		Debug.Log ("triggerEntered");
 
 		if (other.gameObject == barrelCollider)
          {

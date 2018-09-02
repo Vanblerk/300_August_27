@@ -4,25 +4,57 @@ using UnityEngine;
 
 public class EnemyWalk : MonoBehaviour {
 	Animator anim;
+	GameObject player;
+
+	public float speed;			//speed of enemy
+	private Transform target;	//Target to follow
+	bool playerInSight;			//To check if player is in line of sight
 
 	void Awake () {
+		playerInSight = false;
 		anim = GetComponent<Animator>();
+		player = GameObject.FindGameObjectWithTag ("Player");
+		target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform>();
 	}
-	
-	// Update is called once per frame
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject == player)	//if colliding with player
+		{			
+			playerInSight = true;
+		}
+	}					
+
+	void OnTriggerExit2D(Collider2D other)
+	{
+
+		if (other.gameObject == player)	//if colliding with player
+		{			
+			playerInSight = false;
+		}
+	}
+
 	void Update () {
 
+		if (playerInSight == true) {
+			WalkToPlayer ();
+		} else {
+			stopWalking ();
+		}
 
+
+	}
+
+	public void WalkToPlayer(){
 
 		anim.SetBool ("EnemyIdle", false);
 		anim.SetBool ("isWalking", true);
-		transform.Translate(Vector2.left * 1.2f * Time.deltaTime);
-		transform.eulerAngles = new Vector2(0, 0);
+		transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+
 	}
 
-	public void Walk(){
-
-
-
+	public void stopWalking(){
+		anim.SetBool ("EnemyIdle", true);
+		anim.SetBool ("isWalking", false);
 	}
 }

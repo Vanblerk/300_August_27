@@ -11,6 +11,7 @@ public class EnemyAttack : MonoBehaviour {
 	GameObject player;							// Reference to the player GameObject.
 	PlayerHealth playerHealth;					// Reference to the player's health.
 	EnemyHealth enemyHealth; 					// Reference to this enemy's health.
+	EnemyWalk enemyWalk;						// Reference to the enemy walk script
 	bool playerInRange; 						// Whether player is within the trigger collider and can be damaged
 	float timer;	
 	
@@ -21,6 +22,7 @@ public class EnemyAttack : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = player.GetComponent<PlayerHealth> ();
 		enemyHealth = GetComponent<EnemyHealth> ();
+		enemyWalk = GetComponent<EnemyWalk> ();
 		anim = GetComponent<Animator>();
 	}
 
@@ -65,6 +67,7 @@ public class EnemyAttack : MonoBehaviour {
 		timer += Time.deltaTime;
 
 		if (timer >= timeBetweenAttacks && playerInRange) {
+			enemyWalk.stopWalking ();
 			anim.SetBool ("isWalking", false);
 			anim.SetBool("isAttacking", true);
 			Attack ();
