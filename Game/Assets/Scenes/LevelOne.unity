@@ -22648,10 +22648,11 @@ MonoBehaviour:
   currentHealth: 100
   healthSlider: {fileID: 0}
   damageImage: {fileID: 1878241259}
-  deathClip: {fileID: 0}
+  deathClip: {fileID: 8300000, guid: 166514b8ff518084988ef404e9d08a61, type: 3}
   flashSpeed: 5
   flashColour: {r: 1, g: 0, b: 0, a: 1}
   HealthUI: {fileID: 0}
+  playerAudio: {fileID: 1878241255}
 --- !u!1 &1885795163
 GameObject:
   m_ObjectHideFlags: 0

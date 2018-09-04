@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	Animator anim;                                              // Reference to the Animator component.
 	PolygonCollider2D polygonCollider;							// References the players collider.
-	AudioSource playerAudio;                                    // Reference to the AudioSource component.
+	public AudioSource playerAudio;                                    // Reference to the AudioSource component.
 	bool isDead;                                                // Whether the player is dead.
 	bool damaged;                                               // True when the player gets damaged.
 
@@ -56,7 +56,6 @@ public class PlayerHealth : MonoBehaviour {
 	{
 
 		if (isDead == true) {
-			playerAudio.PlayOneShot(deathClip);
 			return;
 		}
 		damaged = true;
@@ -84,6 +83,7 @@ public class PlayerHealth : MonoBehaviour {
 	public void Death()
 	{
 		currentHealth = 0;
+		playerAudio.PlayOneShot(deathClip);
 		anim.SetTrigger ("isDead");
 		Debug.Log ("Player dead");
 	}
