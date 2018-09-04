@@ -5,7 +5,11 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - healthSlider: {instanceID: 0}
+  - damageImage: {instanceID: 0}
+  - deathClip: {fileID: 8300000, guid: 166514b8ff518084988ef404e9d08a61, type: 3}
+  - HealthUI: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
