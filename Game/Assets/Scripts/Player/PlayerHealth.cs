@@ -31,6 +31,7 @@ public class PlayerHealth : MonoBehaviour {
 		text = HealthUI.GetComponent <Text> ();
 		damageImage = GetComponent<SpriteRenderer>();
 		currentHealth = startingHealth;
+		playerAudio = GetComponent<AudioSource>();
 	}
 	
 
@@ -55,6 +56,7 @@ public class PlayerHealth : MonoBehaviour {
 	{
 
 		if (isDead == true) {
+			playerAudio.PlayOneShot(deathClip);
 			return;
 		}
 		damaged = true;
