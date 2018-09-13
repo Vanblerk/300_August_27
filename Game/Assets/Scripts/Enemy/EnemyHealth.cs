@@ -99,6 +99,6 @@ public class EnemyHealth : MonoBehaviour {
         // enemyAudio.clip = deathClip;
         // enemyAudio.Play();
 
-        Destroy(gameObject, 1.0f);
+        Destroy(gameObject, 0.80f);
     }
 }
