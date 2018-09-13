@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerActions : MonoBehaviour
 {
@@ -115,7 +116,7 @@ public class PlayerActions : MonoBehaviour
 		projectExit = GameObject.Find ("ProjectilesExit");
 		projectileCol = GameObject.Find ("ProjectileCollider");
 		barrelCollider = GameObject.Find ("BarrelCollider");
-		endGame = GameObject.Find ("EndGameCollider");
+		endGame = GameObject.Find ("ExitLevelCollider");
 		//barrel = GameObject.Find ("Barrel");
 		grapple = GetComponent<DistanceJoint2D> ();
 		anim = GetComponent<Animator>();
@@ -191,10 +192,7 @@ public class PlayerActions : MonoBehaviour
 		}
 		if (coll.gameObject == endGame) {
 			Debug.Log("End Level");
-			Application.LoadLevel(Application.loadedLevel);
-			//bool isShowing;
-			//isShowing = true;
-			//video.SetActive(isShowing);
+			SceneManager.LoadScene ("LevelOne");
 		}
 
 		//if (coll.gameObject.name == "BarrelCollider") {
@@ -260,6 +258,19 @@ public class PlayerActions : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+
+		if (Input.GetKey (KeyCode.T)) {
+			SceneManager.LoadScene ("TutorialLevel");
+		}
+
+		if (Input.GetKey (KeyCode.O)) {
+			SceneManager.LoadScene ("LevelOne");
+		}
+
+		if (Input.GetKey (KeyCode.M)) {
+			SceneManager.LoadScene ("MainMenu");
+		}
+
 
 
 		Movement();

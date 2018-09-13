@@ -67,6 +67,18 @@ public class PlayerActionsMenu : MonoBehaviour {
 	void Update () {
 		Movement();
 
+		if (Input.GetKey (KeyCode.T)) {
+			SceneManager.LoadScene ("TutorialLevel");
+		}
+
+		if (Input.GetKey (KeyCode.O)) {
+			SceneManager.LoadScene ("LevelOne");
+		}
+
+		if (Input.GetKey (KeyCode.M)) {
+			SceneManager.LoadScene ("MainMenu");
+		}
+
 
 
 	}
