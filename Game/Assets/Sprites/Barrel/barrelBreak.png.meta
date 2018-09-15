@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: e79edbb6659a4e94980d5281f1de1b11
-timeCreated: 1537015867
+guid: 3094659d209e2ea4eb780797bc9b0dfa
+timeCreated: 1537018589
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: barrelBreak_2
-    21300002: barrelBreak_3
-    21300004: barrelBreak_4
-    21300006: barrelBreak_5
-    21300008: barrelBreak_6
-    21300010: barrelBreak_7
-    21300012: barrelBreak_10
+    21300000: barrelBreak_0
+    21300002: barrelBreak_1
+    21300004: barrelBreak_2
+    21300006: barrelBreak_3
+    21300008: barrelBreak_4
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -88,13 +86,41 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+      name: barrelBreak_0
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 203
+        width: 652
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: barrelBreak_1
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 216
+        width: 625
+        height: 560
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
       name: barrelBreak_2
       rect:
         serializedVersion: 2
-        x: 1463
-        y: 264
-        width: 687
-        height: 331
+        x: 2200
+        y: 244
+        width: 551
+        height: 516
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -103,20 +129,6 @@ TextureImporter:
       tessellationDetail: 0
     - serializedVersion: 2
       name: barrelBreak_3
-      rect:
-        serializedVersion: 2
-        x: 2204
-        y: 269
-        width: 515
-        height: 435
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: barrelBreak_4
       rect:
         serializedVersion: 2
         x: 2804
@@ -130,55 +142,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: barrelBreak_5
+      name: barrelBreak_4
       rect:
         serializedVersion: 2
         x: 3343
         y: 307
         width: 425
         height: 409
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: barrelBreak_6
-      rect:
-        serializedVersion: 2
-        x: 1088
-        y: 600
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: barrelBreak_7
-      rect:
-        serializedVersion: 2
-        x: 1083
-        y: 579
-        width: 7
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: barrelBreak_10
-      rect:
-        serializedVersion: 2
-        x: 524
-        y: 252
-        width: 920
-        height: 287
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
