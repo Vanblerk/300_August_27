@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BarrelDamage : MonoBehaviour {
+	Animator anim;
 	public float timeBetweenDamage = 0.5f;		// The intervals between which the barrel can damage you
 	public int barrelDamage = 5;				// Amount of damage the barrel does
 	GameObject player;							// Reference to the player GameObject.
@@ -15,6 +16,7 @@ public class BarrelDamage : MonoBehaviour {
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = player.GetComponent<PlayerHealth> ();
+		anim = GetComponent<Animator>();
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
@@ -40,7 +42,8 @@ public class BarrelDamage : MonoBehaviour {
 
 		timer += Time.deltaTime;
 
-		if (timer >= timeBetweenDamage &&playerInRange) {
+		if (timer >= timeBetweenDamage && playerInRange) {
+			anim.SetTrigger("destroyBarrel");
 			damagePlayer ();
 		} 
 
@@ -51,7 +54,19 @@ public class BarrelDamage : MonoBehaviour {
 		if (playerHealth.currentHealth > 0) 
 		{
 			playerHealth.PlayerTakeDamage (barrelDamage);
+
+			Invoke ("destroyBarrel", 0.35f);
 		}
+
+		//Play barrel break animation
+
+
+
+	}
+
+
+	void destroyBarrel()
+	{
 
 		Destroy(gameObject, 0f);
 	}

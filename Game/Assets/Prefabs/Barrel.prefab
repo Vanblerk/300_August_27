@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 58742692158915624}
   - component: {fileID: 114898108963447162}
   - component: {fileID: 114401771416289340}
+  - component: {fileID: 95856969261086364}
   m_Layer: 2
   m_Name: Barrel
   m_TagString: Barrel
@@ -79,6 +80,23 @@ CircleCollider2D:
   m_Offset: {x: -0.059426308, y: -0.1730237}
   serializedVersion: 2
   m_Radius: 2.005468
+--- !u!95 &95856969261086364
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1961593099393710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 147341a7b0ba0814bab9442d9546d229, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114401771416289340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +155,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 11429b85453344548a8b95f1d9d91049, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7bf1b95617cc2046b17afe59e24aaf1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

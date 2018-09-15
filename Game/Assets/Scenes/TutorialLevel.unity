@@ -918,6 +918,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &222264909 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1961593099393710, guid: 309edde1e063723498c2fb90e9af130b,
+    type: 2}
+  m_PrefabInternal: {fileID: 718609174}
 --- !u!1 &267478999
 GameObject:
   m_ObjectHideFlags: 0
@@ -8102,6 +8107,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114794703268365502, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: barrel
+      value: 
+      objectReference: {fileID: 222264909}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
   m_IsPrefabParent: 0
