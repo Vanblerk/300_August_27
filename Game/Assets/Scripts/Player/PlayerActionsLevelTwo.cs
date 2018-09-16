@@ -242,7 +242,7 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 		if (other.gameObject == barrelCollider)
 		{
 			Debug.Log ("BarrelCollider");
-			barrelroll.rollBarrel ();
+			//barrelroll.rollBarrel ();
 
 		}
 
