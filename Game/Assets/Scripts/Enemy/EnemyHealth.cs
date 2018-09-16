@@ -11,21 +11,19 @@ public class EnemyHealth : MonoBehaviour {
     public int currentHealth;                                // Enemy's current health  
     public float flashSpeed = 5f;                            // Speed at which damage flashes
     public Color flashColour = new Color(0, 0, 0, 0);  //Enemy flashes red when taking damage
-    public SpriteRenderer damageImage;
-    // public float sinkSpeed = 2.5f;                        // Speed at which an enemy sinks through floor when killed  
-    // public int scoreValue = 10;                           //Score that enemy is worth
+    public SpriteRenderer damageImage;    
+  
     // public AudioClip deathclip;                           //Sound that plays when enemy is killed
     public AudioClip deathclip;
 
 
 
 
-    Animator anim;
-   // CapsuleCollider capsuleCollider;
+    Animator anim;  
     bool isDead;
     bool damaged;
     // AudioSource enemyAudio;
-    // bool isSinking;
+    
 
 
     public AudioSource mySource;
@@ -86,10 +84,18 @@ public class EnemyHealth : MonoBehaviour {
 
     void Death()
     {
+		Debug.Log (gameObject.name + "death");
         isDead = true;
         mySource.Stop();
         mySource.PlayOneShot(deathclip);
-		anim.SetTrigger ("EnemyDeath");
+
+		if (gameObject.name == "ThrowEnemy") {
+			anim.SetTrigger ("EnemyDeath");
+
+		} else if (gameObject.name == "Enemy" || gameObject.name == "KickEnemy") {
+			anim.SetTrigger ("EnemyDeath");
+		}
+
 
 
         // Tell the animator that the enemy is dead.
