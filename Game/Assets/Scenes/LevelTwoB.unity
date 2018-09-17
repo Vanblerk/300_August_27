@@ -221,7 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84296489}
   - component: {fileID: 84296490}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -291,7 +291,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 94823941}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -25.04, y: -6.9, z: -0.29999995}
+  m_LocalPosition: {x: 9.2, y: -6.9, z: -0.29999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 594912778}
@@ -398,9 +398,9 @@ GameObject:
   - component: {fileID: 101210451}
   - component: {fileID: 101210450}
   - component: {fileID: 101210449}
-  - component: {fileID: 101210448}
+  - component: {fileID: 101210453}
   m_Layer: 0
-  m_Name: Projectiles
+  m_Name: Projectileslvl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -419,17 +419,6 @@ Transform:
   m_Father: {fileID: 1786351940}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &101210448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 101210446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576876d6513c7824d8e8687aeb27a9c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &101210449
 Rigidbody2D:
   serializedVersion: 4
@@ -536,6 +525,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &101210453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101210446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e01ca806e94c4b4891095a1d46ea814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &125020182
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 148077667}
   - component: {fileID: 148077666}
   - component: {fileID: 148077665}
+  - component: {fileID: 148077677}
   m_Layer: 2
   m_Name: Character
   m_TagString: Player
@@ -737,7 +738,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 148077664}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 091cdd5042385ec45b647bd167bb8ae4, type: 3}
   m_Name: 
@@ -1250,6 +1251,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &148077677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 148077664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5335fa35a9ba334186aa5ba340534ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grappleSound: {fileID: 8300000, guid: 49525265f4db12c46b2b6ccb6e1da6b2, type: 3}
+  grappleClankSound: {fileID: 8300000, guid: 851c4cf1754dcfe4589a41b1a7934200, type: 3}
+  gulpHealth: {fileID: 8300000, guid: f5fae952dcbcf30469f4258ecd03d0e8, type: 3}
+  swordSound: {fileID: 8300000, guid: eb2e3c5274d0bc140b6580e2617dbe22, type: 3}
+  swordHit: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
+  ambientMusic: {fileID: 8300000, guid: db2105cd8ad36b54eb54db20ad9ef3e1, type: 3}
+  mySource: {fileID: 1662747379}
+  crosshairImage: {fileID: 2800000, guid: eaad76ed0f7838b4eba6b45c364f7fe0, type: 3}
+  grapple: {fileID: 148077672}
+  facingRight: 1
+  isSwinging: 0
+  hasHooked: 0
+  firstHit: 0
+  projectTest: 0
+  projectTest2: 0
+  isSet: 0
+  grappleTime: 0
+  line: {fileID: 268433910}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  grapPoint: {fileID: 1429134474}
+  attackDamage: 10
+  enemyHealth: {fileID: 0}
+  barrelroll: {fileID: 0}
+  giveHealth: {fileID: 0}
+  canGrap: 1
 --- !u!1 &157844403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 157844404}
   - component: {fileID: 157844405}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileCollider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1288,7 +1327,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1383,6 +1422,11 @@ Prefab:
       propertyPath: barrel
       value: 
       objectReference: {fileID: 344286348}
+    - target: {fileID: 212496772983058760, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
   m_IsPrefabParent: 0
@@ -2231,7 +2275,7 @@ GameObject:
   - component: {fileID: 749459521}
   - component: {fileID: 749459520}
   - component: {fileID: 749459519}
-  - component: {fileID: 749459518}
+  - component: {fileID: 749459524}
   m_Layer: 0
   m_Name: Projectiles2
   m_TagString: Untagged
@@ -2252,17 +2296,6 @@ Transform:
   m_Father: {fileID: 1786351940}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &749459518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 749459516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd99152738b39ce4a96efa13f8d1158d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &749459519
 Rigidbody2D:
   serializedVersion: 4
@@ -2369,6 +2402,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &749459524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 749459516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53a2808d7ac135041bd74229af809ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &756234639
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,7 +3012,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 926513469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.25, y: -6.9, z: -0.3}
+  m_LocalPosition: {x: -7.99, y: -6.9, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 594912778}
@@ -3881,7 +3925,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1212678298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.89, y: -6.9, z: -0.29999995}
+  m_LocalPosition: {x: -25.2, y: -6.9, z: -0.29999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 594912778}
@@ -5083,7 +5127,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796959984}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.3, y: -6.9, z: -0.29999995}
+  m_LocalPosition: {x: -42.4, y: -6.9, z: -0.29999995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 594912778}

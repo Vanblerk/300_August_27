@@ -2996,19 +2996,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_RootOrder
@@ -3026,7 +3026,11 @@ Prefab:
     - target: {fileID: 212409952824904046, guid: b9bc96d467b5d2a45b779be8e65c35cc,
         type: 2}
       propertyPath: m_FlipX
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
@@ -3096,7 +3100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 913927436}
   - component: {fileID: 913927437}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileCollider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3125,7 +3129,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3185,7 +3189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 970805216}
   - component: {fileID: 970805217}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3214,7 +3218,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -5928,7 +5932,7 @@ GameObject:
   - component: {fileID: 1418005533}
   - component: {fileID: 1418005532}
   - component: {fileID: 1418005531}
-  - component: {fileID: 1418005530}
+  - component: {fileID: 1418005535}
   m_Layer: 0
   m_Name: Projectiles2
   m_TagString: Untagged
@@ -5949,17 +5953,6 @@ Transform:
   m_Father: {fileID: 1095291007}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1418005530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1418005528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd99152738b39ce4a96efa13f8d1158d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1418005531
 Rigidbody2D:
   serializedVersion: 4
@@ -6066,6 +6059,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1418005535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418005528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675c69ac79152e24abdded356464113b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1435615212
 GameObject:
   m_ObjectHideFlags: 0
@@ -8618,9 +8622,9 @@ GameObject:
   - component: {fileID: 1903097086}
   - component: {fileID: 1903097085}
   - component: {fileID: 1903097084}
-  - component: {fileID: 1903097083}
+  - component: {fileID: 1903097088}
   m_Layer: 0
-  m_Name: Projectiles
+  m_Name: Projectileslvl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8639,17 +8643,6 @@ Transform:
   m_Father: {fileID: 1095291007}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1903097083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1903097081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 576876d6513c7824d8e8687aeb27a9c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1903097084
 Rigidbody2D:
   serializedVersion: 4
@@ -8756,6 +8749,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1903097088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1903097081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc9136a70075334880a0590e207538e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1907611205
 GameObject:
   m_ObjectHideFlags: 0

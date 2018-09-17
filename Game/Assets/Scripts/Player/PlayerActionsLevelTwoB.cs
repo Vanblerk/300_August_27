@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerActionsLevelTwo : MonoBehaviour {
+public class PlayerActionsLevelTwoB : MonoBehaviour {
+
 	public AudioClip grappleSound;
 	public AudioClip grappleClankSound;
 	public AudioClip gulpHealth;
@@ -489,8 +490,8 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 	public void ThrowProjectile(bool project){
 		if (project == true) {
 			Vector2 projectileCoords;
-			projectileCoords.x = poison.transform.position.x - 85f;
-			projectileCoords.y = poison.transform.position.y - 5f;
+			projectileCoords.x = poison.transform.position.x - 40f;
+			projectileCoords.y = poison.transform.position.y - 40f;
 			poison.transform.position = Vector2.MoveTowards (poison.transform.position, projectileCoords, 3 * Time.deltaTime);
 		} 
 	}
@@ -498,8 +499,8 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 	public void ThrowProjectile2(bool project){
 		if (project == true) {
 			Vector2 projectileCoords;
-			projectileCoords.x = poison2.transform.position.x - 60f;
-			projectileCoords.y = poison2.transform.position.y - 30f;
+			projectileCoords.x = poison2.transform.position.x + 40f;
+			projectileCoords.y = poison2.transform.position.y - 25f;
 			poison2.transform.position = Vector2.MoveTowards (poison2.transform.position, projectileCoords, 3 * Time.deltaTime);
 		} 
 	}

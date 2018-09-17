@@ -171,19 +171,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			mySource.PlayOneShot(gulpHealth);*/
 		}
 
-		if (coll.gameObject.name == "ProjectileCollider") {
-			projectileCol.SetActive (false);
-			poison.SetActive (true);
-			projectTest = true;
-		}	
-
-		if (coll.gameObject.name == "ProjectileCollider2") {
-			projectileCol2.SetActive (false);
-			poison2.SetActive (true);
-			projectTest2 = true;
-		}
-
-
+	
 		if (coll.gameObject.name == "ProjectilesExit") {
 			projectTest = false;
 			poison.SetActive (false);
@@ -255,6 +243,18 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			giveHealth.givePlayerHealth (); 
 			mySource.PlayOneShot(gulpHealth);
 			HealthPickup.SetActive (false);
+		}
+
+		if (other.gameObject.name == "ProjectileCollider") {
+			projectileCol.SetActive (false);
+			poison.SetActive (true);
+			projectTest = true;
+		}	
+
+		if (other.gameObject.name == "ProjectileCollider2") {
+			projectileCol2.SetActive (false);
+			poison2.SetActive (true);
+			projectTest2 = true;
 		}
 	}
 
@@ -481,7 +481,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	IEnumerator GrappleTimer()
 	{
 		canGrap = false;
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.2f);
 		canGrap = true;
 	}
 
