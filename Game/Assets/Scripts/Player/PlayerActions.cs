@@ -34,6 +34,7 @@ public class PlayerActions : MonoBehaviour
 	GameObject projectExit;
 	GameObject poison;
 	GameObject endGame;
+	public Transform grapPoint;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -298,7 +299,7 @@ public class PlayerActions : MonoBehaviour
 					anim.SetBool ("isSwinging", true);
 					hasHooked = true;
 					grapple.enabled = true;
-
+					swingFlip (facingRight, mouseDirection);
 					mySource.PlayOneShot(grappleSound);
 				}
 			}
@@ -334,6 +335,7 @@ public class PlayerActions : MonoBehaviour
 			anim.SetBool("isWalking", true);
 			transform.Translate(Vector2.right * 5f * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
+			facingRight = true;
 
 		}
 		else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -342,6 +344,7 @@ public class PlayerActions : MonoBehaviour
 			anim.SetBool("isWalking", true);
 			transform.Translate(Vector2.right * 5f * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, -180);
+			facingRight = false;
 		}
 		else
 		{
@@ -421,7 +424,7 @@ public class PlayerActions : MonoBehaviour
 						grapple.connectedAnchor = values;
 						line.enabled = true;
 						line.SetPosition (1, lineR);
-						line.SetPosition (0, transform.position);
+						line.SetPosition (0, grapPoint.transform.position);
 
 
 
@@ -430,7 +433,7 @@ public class PlayerActions : MonoBehaviour
 						lineR.x = hit.point.x + 0f;
 						lineR.y = hit.point.y;
 						line.enabled = true;
-						line.SetPosition (0, transform.position);
+						line.SetPosition (0, grapPoint.transform.position);
 						line.SetPosition (1, lineR);
 					}
 
@@ -489,6 +492,26 @@ public class PlayerActions : MonoBehaviour
 		} 
 	}
 
+	public void swingFlip(bool isRight, Vector2 mousePos)
+	{
+		//mouse is clicked to the right
+		if (mousePos.x > pirate.transform.position.x) {
+			//if I am not right
+			if (isRight != true) {
+				pirate.transform.Rotate (0f, 180f, 0f);
+				facingRight = true;
+			}
+
+		} else {
+			//mouse was to the left
+			//I am facing right 
+			if (isRight == true) {
+				pirate.transform.Rotate (0f, 180f, 0f);
+				facingRight = false;
+			}
+		}
+
+	}
 	
 
 }

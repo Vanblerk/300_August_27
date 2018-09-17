@@ -5492,6 +5492,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &495814859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 495814860}
+  m_Layer: 2
+  m_Name: GrapPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &495814860
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 495814859}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.33, y: 0.81, z: -1.2099996}
+  m_LocalScale: {x: 1, y: -0.63, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1878241261}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &503326319
 GameObject:
   m_ObjectHideFlags: 0
@@ -7633,7 +7661,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677426778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9652,7 +9680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2cf2a223557e840a29f5cfeef6f4e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: {fileID: 0}
+  Volume: {fileID: 812387669}
   mySource: {fileID: 860753011}
 --- !u!4 &860753013
 Transform:
@@ -22284,6 +22312,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 0
+  grapPoint: {fileID: 495814860}
   attackDamage: 10
   enemyHealth: {fileID: 0}
   barrelroll: {fileID: 0}
@@ -22612,6 +22641,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 0
+  grapPoint: {fileID: 0}
   attackDamage: 10
   enemyHealth: {fileID: 0}
   barrelroll: {fileID: 0}
@@ -22690,7 +22720,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.095999986, y: 0.5360002, z: -6.82}
   m_LocalScale: {x: 0.45, y: 0.45, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 495814860}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

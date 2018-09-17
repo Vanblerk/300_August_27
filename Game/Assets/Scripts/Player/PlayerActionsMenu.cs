@@ -29,6 +29,7 @@ public class PlayerActionsMenu : MonoBehaviour {
 	Vector2 values;
 	Vector2 lineR;
 	Vector3 target;
+	public Transform grapPoint;
 
 
 	void OnGUI()
@@ -111,8 +112,8 @@ public class PlayerActionsMenu : MonoBehaviour {
 	public void Swinging(Vector2 coords)
 	{
 		grapple.connectedAnchor = coords;
-		//line.SetPosition (0, pirate.transform.position);
-		//line.SetPosition (1, coords);
+		line.SetPosition (0, grapPoint.transform.position);
+		line.SetPosition (1, coords);
 		grapple.enabled = true;
 		//line.enabled = true;
 		while (grapple.distance > 2f) {
