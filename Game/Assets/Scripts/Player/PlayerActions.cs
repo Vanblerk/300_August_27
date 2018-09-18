@@ -10,6 +10,7 @@ public class PlayerActions : MonoBehaviour
 	public AudioClip grappleClankSound;
 	public AudioClip grappleClankSoundHigh;
 	public AudioClip grappleClankSoundLow;
+	public AudioClip DeathSound;
 	public bool PlayHigh = false;
 	public bool PlayLow = false;
 	public AudioClip gulpHealth;
