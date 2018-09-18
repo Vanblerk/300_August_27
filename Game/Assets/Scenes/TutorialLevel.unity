@@ -163,7 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69923309}
   - component: {fileID: 69923310}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 267479000}
   - component: {fileID: 267479002}
   - component: {fileID: 267479001}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: singleFloorBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1559,7 +1559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359690480}
   - component: {fileID: 359690481}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectilesExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,7 +1618,7 @@ GameObject:
   - component: {fileID: 373125929}
   - component: {fileID: 373125928}
   - component: {fileID: 373125930}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Projectiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2072,7 +2072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461975497}
   - component: {fileID: 461975498}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3286,7 +3286,7 @@ GameObject:
   - component: {fileID: 743132101}
   - component: {fileID: 743132103}
   - component: {fileID: 743132102}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: singleFloorBoard (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4535,7 +4535,7 @@ GameObject:
   - component: {fileID: 1116128900}
   - component: {fileID: 1116128901}
   - component: {fileID: 1116128902}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4844,7 +4844,7 @@ GameObject:
   - component: {fileID: 1153773078}
   - component: {fileID: 1153773079}
   - component: {fileID: 1153773080}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5263,7 +5263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309834475}
   - component: {fileID: 1309834474}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5796,6 +5796,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
   m_IsPrefabParent: 0
@@ -6215,7 +6219,7 @@ GameObject:
   - component: {fileID: 1581874799}
   - component: {fileID: 1581874801}
   - component: {fileID: 1581874800}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: singleFloorBoard (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6314,7 +6318,7 @@ GameObject:
   - component: {fileID: 1610044030}
   - component: {fileID: 1610044031}
   - component: {fileID: 1610044032}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6413,7 +6417,7 @@ GameObject:
   - component: {fileID: 1621020310}
   - component: {fileID: 1621020312}
   - component: {fileID: 1621020311}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: singleFloorBoard (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8365,7 +8369,7 @@ GameObject:
   - component: {fileID: 2023628188}
   - component: {fileID: 2023628187}
   - component: {fileID: 2023628189}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
