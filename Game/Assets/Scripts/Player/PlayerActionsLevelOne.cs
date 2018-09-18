@@ -7,6 +7,10 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 	public AudioClip grappleSound;
 	public AudioClip grappleClankSound;
+	public AudioClip grappleClankSoundHigh;
+	public AudioClip grappleClankSoundLow;
+	public bool PlayHigh = false;
+	public bool PlayLow = false;
 	public AudioClip gulpHealth;
 	public AudioClip swordSound;
 	public AudioClip swordHit;
@@ -143,6 +147,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		//Music
 		mySource = GetComponent<AudioSource>();
 		mySource.Play();
+		mySource.PlayOneShot(ambientMusic);
 
 
 
@@ -309,7 +314,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 		if(isSwinging == true){
 			//Play Clank noise to say we've attached
-			mySource.PlayOneShot(grappleClankSound);
+			//mySource.PlayOneShot(grappleClankSound);
 		}
 		if(Input.GetMouseButtonDown(0) == true){
 			//moving to on colision
@@ -400,7 +405,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 			if (hit.collider != null) {
 
-				Debug.Log ("platform hit");
+				//Debug.Log ("platform hit");
 
 				if(canGrap == true){
 
@@ -412,7 +417,30 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 					// mySource.PlayOneShot(grappleSound);
 
 					if (firstHit == false) {
-						mySource.PlayOneShot (grappleClankSound);
+						// mySource.PlayOneShot (grappleClankSound);
+						if(PlayHigh == true && PlayLow == false){
+							// if(PlayLow == false){
+								mySource.PlayOneShot(grappleClankSoundHigh);
+								PlayHigh = false;
+								PlayLow = false;
+								Debug.Log("High Sound");
+							// }
+						}
+						else if(PlayLow == true && PlayHigh == false){
+							// if(PlayHigh == false){
+								mySource.PlayOneShot(grappleClankSoundLow);
+								PlayLow = false;
+								PlayHigh = true;
+								Debug.Log("Low Sound");
+							// }
+						}
+						else if(PlayHigh == false && PlayLow == false){
+							// if(PlayLow == false){
+								mySource.PlayOneShot(grappleClankSound);
+								PlayLow = true;
+								Debug.Log("Normal Sound");
+							// }
+						}
 						firstHit = true;
 					}
 
@@ -481,7 +509,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	IEnumerator GrappleTimer()
 	{
 		canGrap = false;
-		yield return new WaitForSeconds(0.2f);
+		yield return new WaitForSeconds(0.5f);
 		canGrap = true;
 	}
 

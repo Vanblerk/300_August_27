@@ -8,6 +8,11 @@ public class PlayerActions : MonoBehaviour
 	//Nico Variables
 	public AudioClip grappleSound;
 	public AudioClip grappleClankSound;
+	public AudioClip grappleClankSoundHigh;
+	public AudioClip grappleClankSoundLow;
+	public AudioClip DeathSound;
+	public bool PlayHigh = false;
+	public bool PlayLow = false;
 	public AudioClip gulpHealth;
 	public AudioClip swordSound;
 	public AudioClip swordHit;
@@ -272,6 +277,14 @@ public class PlayerActions : MonoBehaviour
 			SceneManager.LoadScene ("MainMenu");
 		}
 
+		if (Input.GetKey (KeyCode.H)) {
+			SceneManager.LoadScene ("LevelTwo");
+		}
+
+		if (Input.GetKey (KeyCode.Y)) {
+			SceneManager.LoadScene ("LevelTwoB");
+		}
+
 
 
 		Movement();
@@ -309,7 +322,21 @@ public class PlayerActions : MonoBehaviour
 
 		if(isSwinging == true){
 			//Play Clank noise to say we've attached
-			mySource.PlayOneShot(grappleClankSound);
+			// if(PlayHigh == true){
+			// 	mySource.PlayOneShot(grappleClankSoundHigh);
+			// 	PlayHigh = false;
+			// 	PlayLow = true;
+			// }
+			// if(PlayLow == true){
+			// 	mySource.PlayOneShot(grappleClankSoundLow);
+			// 	PlayLow = false;
+			// }
+			// if(PlayHigh == false){
+			// 	if(PlayLow == false){
+			// 		mySource.PlayOneShot(grappleClankSound);
+			// 		PlayHigh = true;
+			// 	}
+			// }
 		}
 		if(Input.GetMouseButtonDown(0) == true){
 			//moving to on colision
@@ -410,7 +437,30 @@ public class PlayerActions : MonoBehaviour
 					// mySource.PlayOneShot(grappleSound);
 
 					if (firstHit == false) {
-						mySource.PlayOneShot (grappleClankSound);
+						// mySource.PlayOneShot (grappleClankSound);
+						if(PlayHigh == true && PlayLow == false){
+							// if(PlayLow == false){
+								mySource.PlayOneShot(grappleClankSoundHigh);
+								PlayHigh = false;
+								PlayLow = false;
+								Debug.Log("High Sound");
+							// }
+						}
+						else if(PlayLow == true && PlayHigh == false){
+							// if(PlayHigh == false){
+								mySource.PlayOneShot(grappleClankSoundLow);
+								PlayLow = false;
+								PlayHigh = true;
+								Debug.Log("Low Sound");
+							// }
+						}
+						else if(PlayHigh == false && PlayLow == false){
+							// if(PlayLow == false){
+								mySource.PlayOneShot(grappleClankSound);
+								PlayLow = true;
+								Debug.Log("Normal Sound");
+							// }
+						}
 						firstHit = true;
 					}
 
