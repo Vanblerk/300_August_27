@@ -7,6 +7,10 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 
 	public AudioClip grappleSound;
 	public AudioClip grappleClankSound;
+	public AudioClip grappleClankSoundHigh;
+	public AudioClip grappleClankSoundLow;
+	public bool PlayHigh = false;
+	public bool PlayLow = false;
 	public AudioClip gulpHealth;
 	public AudioClip swordSound;
 	public AudioClip swordHit;
@@ -310,7 +314,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 
 		if(isSwinging == true){
 			//Play Clank noise to say we've attached
-			mySource.PlayOneShot(grappleClankSound);
+			// mySource.PlayOneShot(grappleClankSound);
 		}
 		if(Input.GetMouseButtonDown(0) == true){
 			//moving to on colision
@@ -413,7 +417,30 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 					// mySource.PlayOneShot(grappleSound);
 
 					if (firstHit == false) {
-						mySource.PlayOneShot (grappleClankSound);
+						// mySource.PlayOneShot (grappleClankSound);
+						if(PlayHigh == true && PlayLow == false){
+							// if(PlayLow == false){
+								mySource.PlayOneShot(grappleClankSoundHigh);
+								PlayHigh = false;
+								PlayLow = false;
+								Debug.Log("High Sound");
+							// }
+						}
+						else if(PlayLow == true && PlayHigh == false){
+							// if(PlayHigh == false){
+								mySource.PlayOneShot(grappleClankSoundLow);
+								PlayLow = false;
+								PlayHigh = true;
+								Debug.Log("Low Sound");
+							// }
+						}
+						else if(PlayHigh == false && PlayLow == false){
+							// if(PlayLow == false){
+								mySource.PlayOneShot(grappleClankSound);
+								PlayLow = true;
+								Debug.Log("Normal Sound");
+							// }
+						}
 						firstHit = true;
 					}
 
