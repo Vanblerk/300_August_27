@@ -519,7 +519,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 	IEnumerator GrappleTimer()
 	{
 		canGrap = false;
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.25f);
 		canGrap = true;
 	}
 
