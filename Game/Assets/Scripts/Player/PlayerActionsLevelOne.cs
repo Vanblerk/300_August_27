@@ -36,6 +36,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	GameObject poison;
 	GameObject poison2;
 	GameObject endGame;
+	public Transform grapPoint;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -170,19 +171,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			mySource.PlayOneShot(gulpHealth);*/
 		}
 
-		if (coll.gameObject.name == "ProjectileCollider") {
-			projectileCol.SetActive (false);
-			poison.SetActive (true);
-			projectTest = true;
-		}	
-
-		if (coll.gameObject.name == "ProjectileCollider2") {
-			projectileCol2.SetActive (false);
-			poison2.SetActive (true);
-			projectTest2 = true;
-		}
-
-
+	
 		if (coll.gameObject.name == "ProjectilesExit") {
 			projectTest = false;
 			poison.SetActive (false);
@@ -243,7 +232,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		if (other.gameObject == barrelCollider)
 		{
 			Debug.Log ("BarrelCollider");
-			barrelroll.rollBarrel ();
+			//barrelroll.rollBarrel ();
 
 		}
 
@@ -254,6 +243,18 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			giveHealth.givePlayerHealth (); 
 			mySource.PlayOneShot(gulpHealth);
 			HealthPickup.SetActive (false);
+		}
+
+		if (other.gameObject.name == "ProjectileCollider") {
+			projectileCol.SetActive (false);
+			poison.SetActive (true);
+			projectTest = true;
+		}	
+
+		if (other.gameObject.name == "ProjectileCollider2") {
+			projectileCol2.SetActive (false);
+			poison2.SetActive (true);
+			projectTest2 = true;
 		}
 	}
 
@@ -298,7 +299,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 					anim.SetBool ("isSwinging", true);
 					hasHooked = true;
 					grapple.enabled = true;
-
+					swingFlip (facingRight, mouseDirection);
 					mySource.PlayOneShot(grappleSound);
 				}
 			}
@@ -336,6 +337,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			anim.SetBool("isWalking", true);
 			transform.Translate(Vector2.right * 5f * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
+			facingRight = true;
 
 		}
 		else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -344,6 +346,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			anim.SetBool("isWalking", true);
 			transform.Translate(Vector2.right * 5f * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, -180);
+			facingRight = false;
 		}
 		else
 		{
@@ -423,7 +426,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 						grapple.connectedAnchor = values;
 						line.enabled = true;
 						line.SetPosition (1, lineR);
-						line.SetPosition (0, transform.position);
+						line.SetPosition (0, grapPoint.transform.position);
 
 
 
@@ -432,7 +435,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 						lineR.x = hit.point.x + 0f;
 						lineR.y = hit.point.y;
 						line.enabled = true;
-						line.SetPosition (0, transform.position);
+						line.SetPosition (0, grapPoint.transform.position);
 						line.SetPosition (1, lineR);
 					}
 
@@ -478,7 +481,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	IEnumerator GrappleTimer()
 	{
 		canGrap = false;
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.2f);
 		canGrap = true;
 	}
 
@@ -499,4 +502,27 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			poison2.transform.position = Vector2.MoveTowards (poison2.transform.position, projectileCoords, 3 * Time.deltaTime);
 		} 
 	}
+
+	public void swingFlip(bool isRight, Vector2 mousePos)
+	{
+		//mouse is clicked to the right
+		if (mousePos.x > pirate.transform.position.x) {
+			//if I am not right
+			if (isRight != true) {
+				pirate.transform.Rotate (0f, 180f, 0f);
+				facingRight = true;
+			}
+
+		} else {
+			//mouse was to the left
+			//I am facing right 
+			if (isRight == true) {
+				pirate.transform.Rotate (0f, 180f, 0f);
+				facingRight = false;
+			}
+		}
+
+	}
+
+
 }

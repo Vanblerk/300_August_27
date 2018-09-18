@@ -15,7 +15,8 @@ public class Projectiles2LevelOne : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		ground = GameObject.Find ("CaveFloor (9)");
+		ground = GameObject.Find ("CaveFloor (3)");
+		ground2 = GameObject.Find ("CaveFloor (8)");
 		poison = GameObject.Find ("Projectiles2");
 		pirate = GameObject.Find ("Character");
 		projectileStartingPos.x = poison.transform.position.x;

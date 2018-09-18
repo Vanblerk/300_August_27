@@ -8,7 +8,7 @@ public class BarrelRoll : MonoBehaviour {
 	//private float thrust = 1.0f;
 	Rigidbody2D barrel;
 
-	GameObject player;
+	//GameObject player;
 	// Use this for initialization
 
 	void Awake (){
@@ -26,9 +26,16 @@ public class BarrelRoll : MonoBehaviour {
 
 	}
 
-	public void rollBarrel()
+	public void rollBarrel(string direction)
 	{
-		Debug.Log ("Rolling");
-		barrel.AddForce (Vector2.right * 300);
+		if (direction == "right") {
+			barrel.AddForce (Vector2.right * 300);
+		} else {
+			barrel.AddForce (Vector2.left * 300);
+		}
+
+
 	}
+
+
 }

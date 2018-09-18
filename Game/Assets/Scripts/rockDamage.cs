@@ -6,6 +6,8 @@ public class rockDamage : MonoBehaviour {
 
 	GameObject player;							// Reference to the player GameObject.
 	PlayerHealth playerHealth;					// Reference to the player's health script
+	bool killPlayer = false;
+	bool playerDead = false;
 
 
 	void Awake () 
@@ -16,10 +18,9 @@ public class rockDamage : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject == player)	//if colliding with player
+		if (other.gameObject == player && killPlayer == false)	//if colliding with player
 		{
-			Debug.Log ("player rock death");
-			playerHealth.Death ();
+			killPlayer = true;
 
 		}
 	}
@@ -27,6 +28,12 @@ public class rockDamage : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+		if (killPlayer == true) {
+			if (playerDead == false) {
+				playerHealth.Death ();
+				playerDead = true;
+			}
+		}
 	}
 }
