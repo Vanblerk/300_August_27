@@ -666,7 +666,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4841612093360890, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 114401771416289340, guid: 309edde1e063723498c2fb90e9af130b,
         type: 2}
@@ -4238,7 +4238,7 @@ Transform:
   m_LocalScale: {x: 1, y: 9.08, z: 1}
   m_Children: []
   m_Father: {fileID: 1095291007}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &913927437
 BoxCollider2D:
@@ -4387,7 +4387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 9.08, z: 1}
   m_Children: []
   m_Father: {fileID: 1095291007}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &970805217
 BoxCollider2D:
@@ -5559,6 +5559,7 @@ Transform:
   - {fileID: 809869998}
   - {fileID: 1700631684}
   - {fileID: 1227726806}
+  - {fileID: 1249342390}
   - {fileID: 970805216}
   - {fileID: 1903097082}
   - {fileID: 913927436}
@@ -5598,7 +5599,7 @@ Transform:
   m_Children:
   - {fileID: 1836322317}
   m_Father: {fileID: 1095291007}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1192625864
 Prefab:
@@ -5637,7 +5638,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4841612093360890, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 114401771416289340, guid: 309edde1e063723498c2fb90e9af130b,
         type: 2}
@@ -6142,6 +6143,60 @@ Transform:
   m_PrefabParentObject: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc,
     type: 2}
   m_PrefabInternal: {fileID: 1236034750}
+--- !u!1 &1249342389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1249342390}
+  - component: {fileID: 1249342391}
+  m_Layer: 2
+  m_Name: EndGameCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1249342390
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1249342389}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 119.9, y: 71.2, z: 0}
+  m_LocalScale: {x: 3.2, y: 9.08, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1095291007}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1249342391
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1249342389}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1265434044
 GameObject:
   m_ObjectHideFlags: 0
@@ -6750,7 +6805,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4841612093360890, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 114401771416289340, guid: 309edde1e063723498c2fb90e9af130b,
         type: 2}
@@ -7431,7 +7486,7 @@ Transform:
   m_LocalScale: {x: 0.37047, y: 0.37047, z: 0.37047}
   m_Children: []
   m_Father: {fileID: 1095291007}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1418005531
 Rigidbody2D:
@@ -7828,6 +7883,7 @@ MonoBehaviour:
   grappleClankSound: {fileID: 8300000, guid: 851c4cf1754dcfe4589a41b1a7934200, type: 3}
   grappleClankSoundHigh: {fileID: 0}
   grappleClankSoundLow: {fileID: 0}
+  DeathSound: {fileID: 0}
   PlayHigh: 0
   PlayLow: 0
   gulpHealth: {fileID: 8300000, guid: f5fae952dcbcf30469f4258ecd03d0e8, type: 3}
@@ -8927,7 +8983,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4841612093360890, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114401771416289340, guid: 309edde1e063723498c2fb90e9af130b,
         type: 2}
@@ -10478,7 +10534,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bdfba97cf9253cd4eb44e85fbca26c8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10548,7 +10604,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
@@ -10596,7 +10652,7 @@ Transform:
   m_LocalScale: {x: 0.37047, y: 0.37047, z: 0.37047}
   m_Children: []
   m_Father: {fileID: 1095291007}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1903097084
 Rigidbody2D:

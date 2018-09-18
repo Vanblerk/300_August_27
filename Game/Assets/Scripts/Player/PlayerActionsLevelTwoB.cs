@@ -41,6 +41,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 	GameObject poison2;
 	GameObject endGame;
 	public Transform grapPoint;
+	bool canAttack = true;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -367,11 +368,13 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 		{
 			anim.SetBool("isAttacking", true);
 
-			if (enemyInRange)
+			if (enemyInRange && canAttack)
 			{
 				//Debug.Log("in Range and attacking");
 				enemyHealth = Enemy.GetComponent<EnemyHealth>();
 				enemyHealth.TakeDamage(attackDamage);
+				canAttack = false;
+				StartCoroutine(attackCooldown());
 			}
 		}
 		else
@@ -399,7 +402,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 
 
 			}
-			hit = Physics2D.Raycast (ray.origin, ray.direction, 15f);
+			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
 			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
 
@@ -504,6 +507,12 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(0.3f);
 		line.enabled = false;
+	}
+
+	IEnumerator attackCooldown()
+	{
+		yield return new WaitForSeconds(0.6f);
+		canAttack = true;
 	}
 
 	//Change WaitForSeconds to delay the grapple time more or less

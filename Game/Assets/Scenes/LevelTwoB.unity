@@ -931,6 +931,7 @@ MonoBehaviour:
   grappleClankSound: {fileID: 8300000, guid: 851c4cf1754dcfe4589a41b1a7934200, type: 3}
   grappleClankSoundHigh: {fileID: 0}
   grappleClankSoundLow: {fileID: 0}
+  DeathSound: {fileID: 0}
   PlayHigh: 0
   PlayLow: 0
   gulpHealth: {fileID: 8300000, guid: f5fae952dcbcf30469f4258ecd03d0e8, type: 3}
@@ -1676,7 +1677,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bdfba97cf9253cd4eb44e85fbca26c8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1746,7 +1747,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0

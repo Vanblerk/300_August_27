@@ -40,6 +40,7 @@ public class PlayerActions : MonoBehaviour
 	GameObject poison;
 	GameObject endGame;
 	public Transform grapPoint;
+	bool canAttack = true;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -171,12 +172,7 @@ public class PlayerActions : MonoBehaviour
 			/*pickups.SetActive (false);
 			mySource.PlayOneShot(gulpHealth);*/
 		}
-
-		if (coll.gameObject.name == "ProjectileCollider") {
-			projectileCol.SetActive (false);
-			poison.SetActive (true);
-			projectTest = true;
-		}	
+			
 		if (coll.gameObject.name == "Projectiles") {
 
 			Debug.Log("HHHHHHHHHH");
@@ -196,10 +192,7 @@ public class PlayerActions : MonoBehaviour
 			projectExit.SetActive (false);
 
 		}
-		if (coll.gameObject == endGame) {
-			Debug.Log("End Level");
-			SceneManager.LoadScene ("LevelOne");
-		}
+
 
 		//if (coll.gameObject.name == "BarrelCollider") {
 			
@@ -257,6 +250,17 @@ public class PlayerActions : MonoBehaviour
 			giveHealth.givePlayerHealth (); 
 			mySource.PlayOneShot(gulpHealth);
 			HealthPickup.SetActive (false);
+		}
+
+		if (other.gameObject.name == "ProjectileCollider") {
+			projectileCol.SetActive (false);
+			poison.SetActive (true);
+			projectTest = true;
+		}
+
+		if (other.gameObject == endGame) {
+			Debug.Log("End Level");
+			SceneManager.LoadScene ("LevelOne");
 		}
      }
    
@@ -387,11 +391,13 @@ public class PlayerActions : MonoBehaviour
 		{
 			anim.SetBool("isAttacking", true);
 
-			if (enemyInRange)
+			if (enemyInRange && canAttack)
 			{
 				//Debug.Log("in Range and attacking");
 				enemyHealth = Enemy.GetComponent<EnemyHealth>();
 				enemyHealth.TakeDamage(attackDamage);
+				canAttack = false;
+				StartCoroutine(attackCooldown());
 			}
 		}
 		else
@@ -419,7 +425,7 @@ public class PlayerActions : MonoBehaviour
 
 
 			}
-			hit = Physics2D.Raycast (ray.origin, ray.direction, 15f);
+			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
 			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
 
@@ -523,6 +529,12 @@ public class PlayerActions : MonoBehaviour
 	{
 		yield return new WaitForSeconds(0.3f);
 		line.enabled = false;
+	}
+
+	IEnumerator attackCooldown()
+	{
+		yield return new WaitForSeconds(0.6f);
+		canAttack = true;
 	}
 
 	//Change WaitForSeconds to delay the grapple time more or less
