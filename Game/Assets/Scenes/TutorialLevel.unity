@@ -4082,6 +4082,16 @@ Prefab:
       propertyPath: grapPoint
       value: 
       objectReference: {fileID: 1484931819}
+    - target: {fileID: 114834132504298486, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: grappleClankSoundHigh
+      value: 
+      objectReference: {fileID: 8300000, guid: aa08a1e4746d1c243a65a216a3baace9, type: 3}
+    - target: {fileID: 114834132504298486, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: grappleClankSoundLow
+      value: 
+      objectReference: {fileID: 8300000, guid: 2099c3cbea459e74bb67102eed972317, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94d752af07a0e9c4198f5726bf3aff7e, type: 2}
   m_IsPrefabParent: 0

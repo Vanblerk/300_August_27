@@ -6302,6 +6302,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grappleSound: {fileID: 8300000, guid: 49525265f4db12c46b2b6ccb6e1da6b2, type: 3}
   grappleClankSound: {fileID: 8300000, guid: 851c4cf1754dcfe4589a41b1a7934200, type: 3}
+  grappleClankSoundHigh: {fileID: 0}
+  grappleClankSoundLow: {fileID: 0}
+  PlayHigh: 0
+  PlayLow: 0
   gulpHealth: {fileID: 8300000, guid: f5fae952dcbcf30469f4258ecd03d0e8, type: 3}
   swordSound: {fileID: 8300000, guid: eb2e3c5274d0bc140b6580e2617dbe22, type: 3}
   swordHit: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
@@ -6341,6 +6345,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grappleSound: {fileID: 8300000, guid: 49525265f4db12c46b2b6ccb6e1da6b2, type: 3}
   grappleClankSound: {fileID: 8300000, guid: 851c4cf1754dcfe4589a41b1a7934200, type: 3}
+  grappleClankSoundHigh: {fileID: 0}
+  grappleClankSoundLow: {fileID: 0}
+  PlayHigh: 0
+  PlayLow: 0
   gulpHealth: {fileID: 8300000, guid: f5fae952dcbcf30469f4258ecd03d0e8, type: 3}
   swordSound: {fileID: 8300000, guid: eb2e3c5274d0bc140b6580e2617dbe22, type: 3}
   swordHit: {fileID: 8300000, guid: ba22a7e6b1b0841448be8aca7cb2d892, type: 3}
@@ -6783,6 +6791,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grappleSound: {fileID: 8300000, guid: 49525265f4db12c46b2b6ccb6e1da6b2, type: 3}
   grappleClankSound: {fileID: 8300000, guid: 851c4cf1754dcfe4589a41b1a7934200, type: 3}
+  grappleClankSoundHigh: {fileID: 8300000, guid: aa08a1e4746d1c243a65a216a3baace9,
+    type: 3}
+  grappleClankSoundLow: {fileID: 8300000, guid: 2099c3cbea459e74bb67102eed972317,
+    type: 3}
+  PlayHigh: 0
+  PlayLow: 0
   gulpHealth: {fileID: 8300000, guid: f5fae952dcbcf30469f4258ecd03d0e8, type: 3}
   swordSound: {fileID: 8300000, guid: eb2e3c5274d0bc140b6580e2617dbe22, type: 3}
   swordHit: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
