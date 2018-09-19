@@ -4,20 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class MenuClick : MonoBehaviour {
+public class LevelMenuClick : MonoBehaviour {
 
-	GameObject menu;
-	public GameObject play;
-	public GameObject options;
-	public GameObject exit;
+	public GameObject menu;
+	public GameObject lvl1;
+	public GameObject tut;
+	public GameObject lvl2;
 	public PlayerActionsMenu actionScript;
 	SubMenuClick subScript;
 	public GameObject subMenu;
 	GameObject pirate;
 	Vector2 coords;
 	Vector2 pirateCoords;
-	public GameObject levelMenu;
-	LevelMenuClick lvlScript;
 
 	// public AudioSource mySource;
 
@@ -26,32 +24,39 @@ public class MenuClick : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		menu = GameObject.Find ("MainMenu");
+		//menu = GameObject.Find ("LevelMenu");
 		pirate = GameObject.Find ("Character");
 		//subMenu = GameObject.FindGameObjectWithTag("submen");
-		/*play = GameObject.Find ("box");
-		exit = GameObject.Find ("box3");
-		options = GameObject.Find ("box2");*/
+		/*lvl1 = GameObject.Find ("box");
+		lvl2 = GameObject.Find ("box3");
+		tut = GameObject.Find ("box2");*/
 
-		lvlScript = (LevelMenuClick) levelMenu.GetComponent(typeof(LevelMenuClick));
-		subScript = (SubMenuClick) subMenu.GetComponent(typeof(SubMenuClick));
 		pirateCoords = pirate.transform.position;
-
+		lvl1.SetActive(false);
+		lvl2.SetActive(false);
+		tut.SetActive(false);
 		// mySource = GetComponent<AudioSource>();
 		// mySource.Play();
 	}
 
 	// Update is called once per frame
 	void Update () {
-		play.SetActive(true);
-		exit.SetActive(true);
-		options.SetActive(true);
+		lvl1.SetActive (true);
+		lvl2.SetActive (true);
+		tut.SetActive (true);
+	}
+
+	public void startLvl(){
+		menu.SetActive (true);
+		lvl1.SetActive (true);
+		lvl2.SetActive (true);
+		tut.SetActive (true);
 	}
 
 	public void PlayGame(){
 		//play grapple func
 		actionScript.setSwing (true);
-		coords = play.transform.position;
+		coords = lvl1.transform.position;
 		actionScript.Swinging(coords);
 		StartCoroutine(playEnum());
 	}
@@ -59,7 +64,7 @@ public class MenuClick : MonoBehaviour {
 	public void GoToOptions(){
 		//play grapple
 		actionScript.setSwing (true);
-		coords = options.transform.position;
+		coords = tut.transform.position;
 		actionScript.Swinging(coords);
 		//Disable all components and enable the others
 		StartCoroutine(optionsEnum());
@@ -69,7 +74,7 @@ public class MenuClick : MonoBehaviour {
 	public void ExitGame(){
 		//play grapple
 		actionScript.setSwing (true);
-		coords = exit.transform.position;
+		coords = lvl2.transform.position;
 		actionScript.Swinging(coords);
 		StartCoroutine(exitEnum());
 
@@ -80,35 +85,19 @@ public class MenuClick : MonoBehaviour {
 	IEnumerator playEnum()
 	{
 		yield return new WaitForSeconds(1.6f);
-		pirate.transform.position = pirateCoords;
-		actionScript.setGrapple(false);
-		actionScript.setSwing (false);
-		lvlScript.startLvl();
-		play.SetActive (false);
-		options.SetActive (false);
-		exit.SetActive (false);
-		menu.SetActive(false);
-
+		SceneManager.LoadScene("LevelOne");
 	}
 
 	IEnumerator exitEnum()
 	{
 		yield return new WaitForSeconds(1.6f);
-		Application.Quit();
+		SceneManager.LoadScene("LevelTwo");
 	}
 
 	IEnumerator optionsEnum()
 	{
 		yield return new WaitForSeconds(1.6f);
-		pirate.transform.position = pirateCoords;
-		actionScript.setGrapple(false);
-		actionScript.setSwing (false);
-		subScript.startSub();
-		play.SetActive (false);
-		options.SetActive (false);
-		exit.SetActive (false);
-		menu.SetActive(false);
+		SceneManager.LoadScene("TutorialLevel");
 	}
-
 
 }
