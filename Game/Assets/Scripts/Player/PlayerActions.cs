@@ -8,6 +8,11 @@ public class PlayerActions : MonoBehaviour
 	//Nico Variables
 	public AudioClip grappleSound;
 	public AudioClip grappleClankSound;
+	public AudioClip grappleClankSoundHigh;
+	public AudioClip grappleClankSoundLow;
+	public AudioClip DeathSound;
+	public bool PlayHigh = false;
+	public bool PlayLow = false;
 	public AudioClip gulpHealth;
 	public AudioClip swordSound;
 	public AudioClip swordHit;
@@ -34,6 +39,8 @@ public class PlayerActions : MonoBehaviour
 	GameObject projectExit;
 	GameObject poison;
 	GameObject endGame;
+	public Transform grapPoint;
+	bool canAttack = true;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -165,12 +172,7 @@ public class PlayerActions : MonoBehaviour
 			/*pickups.SetActive (false);
 			mySource.PlayOneShot(gulpHealth);*/
 		}
-
-		if (coll.gameObject.name == "ProjectileCollider") {
-			projectileCol.SetActive (false);
-			poison.SetActive (true);
-			projectTest = true;
-		}	
+			
 		if (coll.gameObject.name == "Projectiles") {
 
 			Debug.Log("HHHHHHHHHH");
@@ -190,10 +192,7 @@ public class PlayerActions : MonoBehaviour
 			projectExit.SetActive (false);
 
 		}
-		if (coll.gameObject == endGame) {
-			Debug.Log("End Level");
-			SceneManager.LoadScene ("LevelOne");
-		}
+
 
 		//if (coll.gameObject.name == "BarrelCollider") {
 			
@@ -252,10 +251,28 @@ public class PlayerActions : MonoBehaviour
 			mySource.PlayOneShot(gulpHealth);
 			HealthPickup.SetActive (false);
 		}
-     }
-   
 
-	// Update is called once per frame
+		if (other.gameObject.name == "ProjectileCollider") {
+			projectileCol.SetActive (false);
+			poison.SetActive (true);
+			projectTest = true;
+		}
+
+		if (other.gameObject == endGame) {
+			Debug.Log("End Level");
+			StartCoroutine(endCooldown());
+		}
+
+	}
+
+		IEnumerator endCooldown()
+		{
+			yield return new WaitForSeconds(0.6f);
+			SceneManager.LoadScene ("LevelOne");
+		}
+
+
+
 	void Update()
 	{
 
@@ -269,6 +286,14 @@ public class PlayerActions : MonoBehaviour
 
 		if (Input.GetKey (KeyCode.M)) {
 			SceneManager.LoadScene ("MainMenu");
+		}
+
+		if (Input.GetKey (KeyCode.H)) {
+			SceneManager.LoadScene ("LevelTwo");
+		}
+
+		if (Input.GetKey (KeyCode.Y)) {
+			SceneManager.LoadScene ("LevelTwoB");
 		}
 
 
@@ -298,7 +323,7 @@ public class PlayerActions : MonoBehaviour
 					anim.SetBool ("isSwinging", true);
 					hasHooked = true;
 					grapple.enabled = true;
-
+					swingFlip (facingRight, mouseDirection);
 					mySource.PlayOneShot(grappleSound);
 				}
 			}
@@ -308,7 +333,21 @@ public class PlayerActions : MonoBehaviour
 
 		if(isSwinging == true){
 			//Play Clank noise to say we've attached
-			mySource.PlayOneShot(grappleClankSound);
+			// if(PlayHigh == true){
+			// 	mySource.PlayOneShot(grappleClankSoundHigh);
+			// 	PlayHigh = false;
+			// 	PlayLow = true;
+			// }
+			// if(PlayLow == true){
+			// 	mySource.PlayOneShot(grappleClankSoundLow);
+			// 	PlayLow = false;
+			// }
+			// if(PlayHigh == false){
+			// 	if(PlayLow == false){
+			// 		mySource.PlayOneShot(grappleClankSound);
+			// 		PlayHigh = true;
+			// 	}
+			// }
 		}
 		if(Input.GetMouseButtonDown(0) == true){
 			//moving to on colision
@@ -334,6 +373,7 @@ public class PlayerActions : MonoBehaviour
 			anim.SetBool("isWalking", true);
 			transform.Translate(Vector2.right * 5f * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
+			facingRight = true;
 
 		}
 		else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
@@ -342,6 +382,7 @@ public class PlayerActions : MonoBehaviour
 			anim.SetBool("isWalking", true);
 			transform.Translate(Vector2.right * 5f * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, -180);
+			facingRight = false;
 		}
 		else
 		{
@@ -357,11 +398,13 @@ public class PlayerActions : MonoBehaviour
 		{
 			anim.SetBool("isAttacking", true);
 
-			if (enemyInRange)
+			if (enemyInRange && canAttack)
 			{
 				//Debug.Log("in Range and attacking");
 				enemyHealth = Enemy.GetComponent<EnemyHealth>();
 				enemyHealth.TakeDamage(attackDamage);
+				canAttack = false;
+				StartCoroutine(attackCooldown());
 			}
 		}
 		else
@@ -389,7 +432,7 @@ public class PlayerActions : MonoBehaviour
 
 
 			}
-			hit = Physics2D.Raycast (ray.origin, ray.direction, 15f);
+			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
 			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
 
@@ -407,7 +450,30 @@ public class PlayerActions : MonoBehaviour
 					// mySource.PlayOneShot(grappleSound);
 
 					if (firstHit == false) {
-						mySource.PlayOneShot (grappleClankSound);
+						// mySource.PlayOneShot (grappleClankSound);
+						if(PlayHigh == true && PlayLow == false){
+							// if(PlayLow == false){
+								mySource.PlayOneShot(grappleClankSoundHigh);
+								PlayHigh = false;
+								PlayLow = false;
+								Debug.Log("High Sound");
+							// }
+						}
+						else if(PlayLow == true && PlayHigh == false){
+							// if(PlayHigh == false){
+								mySource.PlayOneShot(grappleClankSoundLow);
+								PlayLow = false;
+								PlayHigh = true;
+								Debug.Log("Low Sound");
+							// }
+						}
+						else if(PlayHigh == false && PlayLow == false){
+							// if(PlayLow == false){
+								mySource.PlayOneShot(grappleClankSound);
+								PlayLow = true;
+								Debug.Log("Normal Sound");
+							// }
+						}
 						firstHit = true;
 					}
 
@@ -421,7 +487,7 @@ public class PlayerActions : MonoBehaviour
 						grapple.connectedAnchor = values;
 						line.enabled = true;
 						line.SetPosition (1, lineR);
-						line.SetPosition (0, transform.position);
+						line.SetPosition (0, grapPoint.transform.position);
 
 
 
@@ -430,7 +496,7 @@ public class PlayerActions : MonoBehaviour
 						lineR.x = hit.point.x + 0f;
 						lineR.y = hit.point.y;
 						line.enabled = true;
-						line.SetPosition (0, transform.position);
+						line.SetPosition (0, grapPoint.transform.position);
 						line.SetPosition (1, lineR);
 					}
 
@@ -472,6 +538,12 @@ public class PlayerActions : MonoBehaviour
 		line.enabled = false;
 	}
 
+	IEnumerator attackCooldown()
+	{
+		yield return new WaitForSeconds(0.6f);
+		canAttack = true;
+	}
+
 	//Change WaitForSeconds to delay the grapple time more or less
 	IEnumerator GrappleTimer()
 	{
@@ -489,6 +561,26 @@ public class PlayerActions : MonoBehaviour
 		} 
 	}
 
+	public void swingFlip(bool isRight, Vector2 mousePos)
+	{
+		//mouse is clicked to the right
+		if (mousePos.x > pirate.transform.position.x) {
+			//if I am not right
+			if (isRight != true) {
+				pirate.transform.Rotate (0f, 180f, 0f);
+				facingRight = true;
+			}
+
+		} else {
+			//mouse was to the left
+			//I am facing right 
+			if (isRight == true) {
+				pirate.transform.Rotate (0f, 180f, 0f);
+				facingRight = false;
+			}
+		}
+
+	}
 	
 
 }

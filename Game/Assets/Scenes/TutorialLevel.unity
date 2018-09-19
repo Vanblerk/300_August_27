@@ -163,7 +163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69923309}
   - component: {fileID: 69923310}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 267479000}
   - component: {fileID: 267479002}
   - component: {fileID: 267479001}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: singleFloorBoard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2cf2a223557e840a29f5cfeef6f4e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: {fileID: 0}
+  Volume: {fileID: 1666698232}
   mySource: {fileID: 297190467}
 --- !u!4 &297190469
 Transform:
@@ -1559,7 +1559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 359690480}
   - component: {fileID: 359690481}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectilesExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1618,7 +1618,7 @@ GameObject:
   - component: {fileID: 373125929}
   - component: {fileID: 373125928}
   - component: {fileID: 373125930}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Projectiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2072,7 +2072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 461975497}
   - component: {fileID: 461975498}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3286,7 +3286,7 @@ GameObject:
   - component: {fileID: 743132101}
   - component: {fileID: 743132103}
   - component: {fileID: 743132102}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: singleFloorBoard (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4077,9 +4077,44 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114834132504298486, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: grapPoint
+      value: 
+      objectReference: {fileID: 1484931819}
+    - target: {fileID: 114834132504298486, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: grappleClankSoundHigh
+      value: 
+      objectReference: {fileID: 8300000, guid: aa08a1e4746d1c243a65a216a3baace9, type: 3}
+    - target: {fileID: 114834132504298486, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: grappleClankSoundLow
+      value: 
+      objectReference: {fileID: 8300000, guid: 2099c3cbea459e74bb67102eed972317, type: 3}
+    - target: {fileID: 114588584515519784, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: deathClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 166514b8ff518084988ef404e9d08a61, type: 3}
+    - target: {fileID: 114588584515519784, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: startingHealth
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588584515519784, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: currentHealth
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94d752af07a0e9c4198f5726bf3aff7e, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1050503898 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4071043925346084, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1050503897}
 --- !u!1 &1061504482
 GameObject:
   m_ObjectHideFlags: 0
@@ -4515,7 +4550,7 @@ GameObject:
   - component: {fileID: 1116128900}
   - component: {fileID: 1116128901}
   - component: {fileID: 1116128902}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4629,7 +4664,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.z
@@ -4637,11 +4672,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
@@ -4824,7 +4863,7 @@ GameObject:
   - component: {fileID: 1153773078}
   - component: {fileID: 1153773079}
   - component: {fileID: 1153773080}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5243,7 +5282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309834475}
   - component: {fileID: 1309834474}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5776,6 +5815,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
   m_IsPrefabParent: 0
@@ -6011,6 +6054,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1484931818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1484931819}
+  m_Layer: 2
+  m_Name: GrapPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1484931819
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484931818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.33, y: 0.78, z: 0}
+  m_LocalScale: {x: 1, y: -0.63, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1050503898}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1507602744
 GameObject:
   m_ObjectHideFlags: 0
@@ -6167,7 +6238,7 @@ GameObject:
   - component: {fileID: 1581874799}
   - component: {fileID: 1581874801}
   - component: {fileID: 1581874800}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: singleFloorBoard (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6266,7 +6337,7 @@ GameObject:
   - component: {fileID: 1610044030}
   - component: {fileID: 1610044031}
   - component: {fileID: 1610044032}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tavernWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6365,7 +6436,7 @@ GameObject:
   - component: {fileID: 1621020310}
   - component: {fileID: 1621020312}
   - component: {fileID: 1621020311}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: singleFloorBoard (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7925,7 +7996,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -8145,7 +8216,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bdfba97cf9253cd4eb44e85fbca26c8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8317,7 +8388,7 @@ GameObject:
   - component: {fileID: 2023628188}
   - component: {fileID: 2023628187}
   - component: {fileID: 2023628189}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

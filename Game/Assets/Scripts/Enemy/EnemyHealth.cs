@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour {
 
 
-    public int startingHealth = 500;                         // Enemy's starting health
+    public int startingHealth = 10;                         // Enemy's starting health
     public int currentHealth;                                // Enemy's current health  
     public float flashSpeed = 5f;                            // Speed at which damage flashes
     public Color flashColour = new Color(0, 0, 0, 0);  //Enemy flashes red when taking damage
@@ -77,6 +77,7 @@ public class EnemyHealth : MonoBehaviour {
 
         if(currentHealth <= 0)
         {
+			Debug.Log("DEAD");
             Death();
         }
     }

@@ -66,10 +66,12 @@ public class EnemyAttack : MonoBehaviour {
 	{
 		timer += Time.deltaTime;
 
-		if (timer >= timeBetweenAttacks && playerInRange) {
+		//if (timer >= timeBetweenAttacks && playerInRange) {
+		if(playerInRange){
 			enemyWalk.stopWalking ();
 			anim.SetBool ("isWalking", false);
 			anim.SetBool("isAttacking", true);
+			//Invoke ("Attack", 0.4f);
 			Attack ();
 		} 
 		else if(playerInRange == false)
@@ -88,16 +90,17 @@ public class EnemyAttack : MonoBehaviour {
 	{
 		timer = 0f;
 
-		
+
 
 		if (playerHealth.currentHealth > 0) 
 		{
-			if(canAttack == true){
-				playerHealth.PlayerTakeDamage (attackDamage);
+			if(canAttack == true){				
 				StartCoroutine(AttackTimer());
-			}
-			
+				playerHealth.PlayerTakeDamage (attackDamage);
+			}			
 		}
+
+		//canAttack = false;
 	}
 
 	//Change WaitForSeconds to delay the Attack time more or less

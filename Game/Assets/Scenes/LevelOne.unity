@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1763839}
   - component: {fileID: 1763841}
   - component: {fileID: 1763840}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 10430563}
   - component: {fileID: 10430565}
   - component: {fileID: 10430564}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   - component: {fileID: 14157503}
   - component: {fileID: 14157504}
   - component: {fileID: 14157505}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -619,11 +619,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4234728655512088, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
       propertyPath: m_Name
       value: ThrowEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
@@ -732,6 +736,60 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &63875194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 63875195}
+  - component: {fileID: 63875196}
+  m_Layer: 2
+  m_Name: EndGameCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &63875195
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63875194}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 202.51, y: -24.4, z: 0}
+  m_LocalScale: {x: 4.6, y: 7.28, z: 1}
+  m_Children: []
+  m_Father: {fileID: 843058952}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &63875196
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 63875194}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &64129679
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +800,7 @@ GameObject:
   - component: {fileID: 64129680}
   - component: {fileID: 64129681}
   - component: {fileID: 64129682}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +899,7 @@ GameObject:
   - component: {fileID: 65146042}
   - component: {fileID: 65146044}
   - component: {fileID: 65146043}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 71885361}
   - component: {fileID: 71885362}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1142,7 +1200,7 @@ GameObject:
   - component: {fileID: 90094087}
   - component: {fileID: 90094089}
   - component: {fileID: 90094088}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1330,7 +1388,7 @@ GameObject:
   - component: {fileID: 95193982}
   - component: {fileID: 95193984}
   - component: {fileID: 95193983}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1418,7 +1476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107906128}
   - component: {fileID: 107906127}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1493,7 +1551,7 @@ GameObject:
   - component: {fileID: 120975379}
   - component: {fileID: 120975378}
   - component: {fileID: 120975380}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1592,7 +1650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 135584055}
   - component: {fileID: 135584056}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1610,7 +1668,7 @@ Transform:
   m_LocalScale: {x: 1, y: 9.08, z: 1}
   m_Children: []
   m_Father: {fileID: 843058952}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &135584056
 BoxCollider2D:
@@ -1621,7 +1679,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1744,7 +1802,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 136212612}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Barrels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1765,7 +1823,7 @@ Transform:
   - {fileID: 942917565}
   - {fileID: 456448110}
   m_Father: {fileID: 843058952}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &152938765
 GameObject:
@@ -1776,7 +1834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 152938766}
   - component: {fileID: 152938767}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2140,7 +2198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 177032768}
   - component: {fileID: 177032767}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2214,7 +2272,7 @@ GameObject:
   - component: {fileID: 178696087}
   - component: {fileID: 178696089}
   - component: {fileID: 178696088}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2312,7 +2370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 186458442}
   - component: {fileID: 186458443}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2497,7 +2555,7 @@ GameObject:
   - component: {fileID: 198473888}
   - component: {fileID: 198473890}
   - component: {fileID: 198473889}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2585,7 +2643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 203651043}
   - component: {fileID: 203651042}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2659,7 +2717,7 @@ GameObject:
   - component: {fileID: 229713305}
   - component: {fileID: 229713307}
   - component: {fileID: 229713306}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock4_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2847,7 +2905,7 @@ GameObject:
   - component: {fileID: 240361528}
   - component: {fileID: 240361530}
   - component: {fileID: 240361529}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2935,7 +2993,7 @@ GameObject:
   m_Component:
   - component: {fileID: 244484876}
   - component: {fileID: 244484875}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3011,7 +3069,7 @@ GameObject:
   - component: {fileID: 251716880}
   - component: {fileID: 251716883}
   - component: {fileID: 251716882}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3125,7 +3183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 252329364}
   - component: {fileID: 252329365}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeRocks (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3199,7 +3257,7 @@ GameObject:
   - component: {fileID: 256046178}
   - component: {fileID: 256046180}
   - component: {fileID: 256046179}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3290,7 +3348,7 @@ GameObject:
   - component: {fileID: 265339559}
   - component: {fileID: 265339560}
   - component: {fileID: 265339561}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3404,7 +3462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 283003670}
   - component: {fileID: 283003671}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ProjectileCollider2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3422,7 +3480,7 @@ Transform:
   m_LocalScale: {x: 1, y: 9.08, z: 1}
   m_Children: []
   m_Father: {fileID: 843058952}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &283003671
 BoxCollider2D:
@@ -3433,7 +3491,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -3449,6 +3507,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!4 &295146767 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1,
+    type: 2}
+  m_PrefabInternal: {fileID: 681813129}
 --- !u!1 &325313660
 GameObject:
   m_ObjectHideFlags: 0
@@ -3748,7 +3811,7 @@ GameObject:
   - component: {fileID: 347154486}
   - component: {fileID: 347154485}
   - component: {fileID: 347154487}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4211,7 +4274,7 @@ GameObject:
   - component: {fileID: 377612042}
   - component: {fileID: 377612044}
   - component: {fileID: 377612043}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4300,7 +4363,7 @@ GameObject:
   - component: {fileID: 382587015}
   - component: {fileID: 382587017}
   - component: {fileID: 382587016}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4461,7 +4524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 401145767}
   - component: {fileID: 401145768}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4826,7 +4889,7 @@ GameObject:
   - component: {fileID: 454887713}
   - component: {fileID: 454887714}
   - component: {fileID: 454887715}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4954,6 +5017,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1961593099393710, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
   m_IsPrefabParent: 0
@@ -5075,7 +5142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 458994212}
   - component: {fileID: 458994213}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5259,23 +5326,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1924307788998704, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_Name
@@ -5285,6 +5352,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
@@ -5304,7 +5375,7 @@ GameObject:
   - component: {fileID: 466614261}
   - component: {fileID: 466614263}
   - component: {fileID: 466614262}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5403,7 +5474,7 @@ GameObject:
   - component: {fileID: 480921556}
   - component: {fileID: 480921558}
   - component: {fileID: 480921557}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5492,6 +5563,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &495814859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 495814860}
+  m_Layer: 2
+  m_Name: GrapPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &495814860
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 495814859}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.33, y: 0.81, z: -1.2099996}
+  m_LocalScale: {x: 1, y: -0.63, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1878241261}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &503326319
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,7 +5600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 503326321}
   - component: {fileID: 503326320}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5574,7 +5673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 506126826}
   - component: {fileID: 506126827}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5750,6 +5849,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1961593099393710, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
   m_IsPrefabParent: 0
@@ -5836,7 +5939,7 @@ GameObject:
   - component: {fileID: 518783130}
   - component: {fileID: 518783132}
   - component: {fileID: 518783131}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5928,7 +6031,7 @@ GameObject:
   - component: {fileID: 520007345}
   - component: {fileID: 520007343}
   - component: {fileID: 520007342}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Projectiles2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5946,7 +6049,7 @@ Transform:
   m_LocalScale: {x: 0.37047, y: 0.37047, z: 0.37047}
   m_Children: []
   m_Father: {fileID: 843058952}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &520007342
 MonoBehaviour:
@@ -6074,7 +6177,7 @@ GameObject:
   m_Component:
   - component: {fileID: 530265132}
   - component: {fileID: 530265133}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeRocks (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6148,7 +6251,7 @@ GameObject:
   - component: {fileID: 537074539}
   - component: {fileID: 537074541}
   - component: {fileID: 537074540}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6527,7 +6630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565045848}
   - component: {fileID: 565045847}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6891,7 +6994,7 @@ GameObject:
   m_Component:
   - component: {fileID: 590382247}
   - component: {fileID: 590382246}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7063,7 +7166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636190179}
   - component: {fileID: 636190178}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7234,7 +7337,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 642619894}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7251,6 +7354,7 @@ Transform:
   m_LocalPosition: {x: 10.749218, y: 2.5008404, z: 1.90625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 295146767}
   - {fileID: 1959594913}
   - {fileID: 1280772513}
   - {fileID: 1489808334}
@@ -7263,7 +7367,7 @@ Transform:
   - {fileID: 1176193903}
   - {fileID: 1184474935}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &649613350
 GameObject:
@@ -7301,7 +7405,7 @@ Transform:
   - {fileID: 1270441274}
   - {fileID: 252329364}
   m_Father: {fileID: 843058952}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &651036036
 GameObject:
@@ -7312,7 +7416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 651036037}
   - component: {fileID: 651036038}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7484,11 +7588,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.827346
+      value: 154.34
       objectReference: {fileID: 0}
     - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 11.510042
+      value: -24.47
       objectReference: {fileID: 0}
     - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7552,7 +7656,7 @@ LineRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bdfba97cf9253cd4eb44e85fbca26c8c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7622,7 +7726,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     generateLightingData: 0
   m_UseWorldSpace: 0
   m_Loop: 0
@@ -7633,11 +7737,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 677426778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679712884
 GameObject:
@@ -7647,7 +7751,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 679712885}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7706,31 +7810,31 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 642619894}
     m_Modifications:
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 165.7401
+      value: 154.99088
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -24.374954
+      value: -26.875795
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -8.03
+      value: -9.93625
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalRotation.w
@@ -7738,7 +7842,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -7797,7 +7901,7 @@ GameObject:
   - component: {fileID: 687594555}
   - component: {fileID: 687594557}
   - component: {fileID: 687594556}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7895,7 +7999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689375425}
   - component: {fileID: 689375426}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7968,7 +8072,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694859695}
   - component: {fileID: 694859696}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeRocks (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8041,7 +8145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 698022771}
   - component: {fileID: 698022770}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8114,7 +8218,7 @@ GameObject:
   m_Component:
   - component: {fileID: 701199601}
   - component: {fileID: 701199602}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8286,7 +8390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 708968646}
   - component: {fileID: 708968645}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8361,7 +8465,7 @@ GameObject:
   - component: {fileID: 715358972}
   - component: {fileID: 715358971}
   - component: {fileID: 715358973}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8460,7 +8564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718585018}
   - component: {fileID: 718585019}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeRocks (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8804,7 +8908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 790491504}
   - component: {fileID: 790491503}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CaveExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9171,7 +9275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 823217273}
   - component: {fileID: 823217274}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9360,6 +9464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 679712885}
+  - {fileID: 63875195}
   - {fileID: 135584055}
   - {fileID: 1057707308}
   - {fileID: 283003670}
@@ -9370,7 +9475,7 @@ Transform:
   - {fileID: 1399772396}
   - {fileID: 1864639355}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &850108517
 GameObject:
@@ -9381,7 +9486,7 @@ GameObject:
   m_Component:
   - component: {fileID: 850108518}
   - component: {fileID: 850108519}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9544,6 +9649,105 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &857784276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 857784277}
+  - component: {fileID: 857784279}
+  - component: {fileID: 857784278}
+  m_Layer: 0
+  m_Name: caveHookable (27)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &857784277
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857784276}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 72.97, y: -6.25, z: 0.109767005}
+  m_LocalScale: {x: 0.18143, y: 0.20279999, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1878041962}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &857784278
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857784276}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3, y: 2.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16, y: 12}
+    newSize: {x: 16, y: 12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.65, y: 6.42}
+  m_EdgeRadius: 0
+--- !u!212 &857784279
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 857784276}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 00ca0c4e05f10674b825a7505e6a3aed, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 16, y: 12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &860753010
 GameObject:
   m_ObjectHideFlags: 0
@@ -9652,7 +9856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2cf2a223557e840a29f5cfeef6f4e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: {fileID: 0}
+  Volume: {fileID: 812387669}
   mySource: {fileID: 860753011}
 --- !u!4 &860753013
 Transform:
@@ -9665,8 +9869,107 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &862512992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 862512993}
+  - component: {fileID: 862512995}
+  - component: {fileID: 862512994}
+  m_Layer: 0
+  m_Name: caveHookable (28)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &862512993
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 862512992}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 162.61, y: -23.41, z: 0.109767005}
+  m_LocalScale: {x: 0.18143, y: 0.20279999, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1878041962}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &862512994
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 862512992}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.3, y: 2.42}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 16, y: 12}
+    newSize: {x: 16, y: 12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.65, y: 6.42}
+  m_EdgeRadius: 0
+--- !u!212 &862512995
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 862512992}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 00ca0c4e05f10674b825a7505e6a3aed, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 16, y: 12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &864330067
 GameObject:
   m_ObjectHideFlags: 0
@@ -9677,7 +9980,7 @@ GameObject:
   - component: {fileID: 864330068}
   - component: {fileID: 864330070}
   - component: {fileID: 864330069}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9775,7 +10078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 882754656}
   - component: {fileID: 882754655}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9848,7 +10151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 898043076}
   - component: {fileID: 898043077}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: HalfCaveWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9921,7 +10224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906643965}
   - component: {fileID: 906643966}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9995,7 +10298,7 @@ GameObject:
   - component: {fileID: 910330978}
   - component: {fileID: 910330980}
   - component: {fileID: 910330979}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock4_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10083,7 +10386,7 @@ GameObject:
   m_Component:
   - component: {fileID: 912065155}
   - component: {fileID: 912065154}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10168,23 +10471,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.w
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1924307788998704, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_Name
@@ -10192,7 +10495,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114893620929602110, guid: b9bc96d467b5d2a45b779be8e65c35cc,
         type: 2}
@@ -10226,7 +10529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 965696056}
   - component: {fileID: 965696057}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10333,6 +10636,10 @@ Prefab:
       propertyPath: m_Name
       value: Barrel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1961593099393710, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
   m_IsPrefabParent: 0
@@ -10378,11 +10685,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114794703268365502, guid: 48f653628de4f8d49a76ff4137d90ba1,
         type: 2}
@@ -10693,7 +10996,7 @@ GameObject:
   - component: {fileID: 997553214}
   - component: {fileID: 997553216}
   - component: {fileID: 997553215}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10889,7 +11192,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1016487481}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SkyBAckgrounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10921,7 +11224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1029442771}
   - component: {fileID: 1029442772}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10994,7 +11297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035053799}
   - component: {fileID: 1035053798}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11069,7 +11372,7 @@ GameObject:
   - component: {fileID: 1040118942}
   - component: {fileID: 1040118941}
   - component: {fileID: 1040118943}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11188,7 +11491,7 @@ GameObject:
   - component: {fileID: 1044918829}
   - component: {fileID: 1044918831}
   - component: {fileID: 1044918830}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11677,7 +11980,7 @@ GameObject:
   - component: {fileID: 1055884733}
   - component: {fileID: 1055884735}
   - component: {fileID: 1055884734}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11769,7 +12072,7 @@ GameObject:
   - component: {fileID: 1057707311}
   - component: {fileID: 1057707309}
   - component: {fileID: 1057707314}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Projectiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11787,7 +12090,7 @@ Transform:
   m_LocalScale: {x: 0.37047, y: 0.37047, z: 0.37047}
   m_Children: []
   m_Father: {fileID: 843058952}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1057707309
 Rigidbody2D:
@@ -12566,7 +12869,7 @@ GameObject:
   - component: {fileID: 1076538726}
   - component: {fileID: 1076538728}
   - component: {fileID: 1076538727}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock4_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12682,7 +12985,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4234728655512088, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
@@ -12702,7 +13009,7 @@ GameObject:
   - component: {fileID: 1083964160}
   - component: {fileID: 1083964162}
   - component: {fileID: 1083964161}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12790,7 +13097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086359271}
   - component: {fileID: 1086359270}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12863,7 +13170,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086405709}
   - component: {fileID: 1086405708}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13177,7 +13484,7 @@ GameObject:
   - component: {fileID: 1118068272}
   - component: {fileID: 1118068273}
   - component: {fileID: 1118068274}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13375,7 +13682,7 @@ GameObject:
   - component: {fileID: 1164464253}
   - component: {fileID: 1164464255}
   - component: {fileID: 1164464254}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13764,7 +14071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1172700634}
   - component: {fileID: 1172700635}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13849,27 +14156,31 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1924307788998704, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_Name
       value: Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
@@ -13900,23 +14211,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1924307788998704, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_Name
@@ -13926,6 +14237,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
@@ -13944,7 +14259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1189035775}
   - component: {fileID: 1189035776}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14117,7 +14432,7 @@ GameObject:
   - component: {fileID: 1216561188}
   - component: {fileID: 1216561189}
   - component: {fileID: 1216561190}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14606,7 +14921,7 @@ GameObject:
   - component: {fileID: 1231910971}
   - component: {fileID: 1231910973}
   - component: {fileID: 1231910972}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14704,7 +15019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1247697681}
   - component: {fileID: 1247697680}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14778,7 +15093,7 @@ GameObject:
   - component: {fileID: 1248450232}
   - component: {fileID: 1248450234}
   - component: {fileID: 1248450233}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14867,7 +15182,7 @@ GameObject:
   - component: {fileID: 1252745388}
   - component: {fileID: 1252745390}
   - component: {fileID: 1252745389}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14955,7 +15270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1256696984}
   - component: {fileID: 1256696983}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15028,7 +15343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1270441274}
   - component: {fileID: 1270441275}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeRocks (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15107,7 +15422,7 @@ GameObject:
   - component: {fileID: 1302341561}
   - component: {fileID: 1302341563}
   - component: {fileID: 1302341562}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15196,7 +15511,7 @@ GameObject:
   - component: {fileID: 1322956556}
   - component: {fileID: 1322956558}
   - component: {fileID: 1322956557}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15359,7 +15674,7 @@ GameObject:
   - component: {fileID: 1328051947}
   - component: {fileID: 1328051949}
   - component: {fileID: 1328051948}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15557,7 +15872,7 @@ GameObject:
   - component: {fileID: 1344345757}
   - component: {fileID: 1344345759}
   - component: {fileID: 1344345758}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15655,7 +15970,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1365867936}
   - component: {fileID: 1365867937}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeRocks (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15729,7 +16044,7 @@ GameObject:
   - component: {fileID: 1366257654}
   - component: {fileID: 1366257656}
   - component: {fileID: 1366257655}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock4_0 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16497,7 +16812,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1399772396}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16518,7 +16833,7 @@ Transform:
   - {fileID: 1016487481}
   - {fileID: 1923609953}
   m_Father: {fileID: 843058952}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1416960027
 GameObject:
@@ -16529,7 +16844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1416960029}
   - component: {fileID: 1416960028}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: sky (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16676,7 +16991,7 @@ GameObject:
   - component: {fileID: 1482882930}
   - component: {fileID: 1482882932}
   - component: {fileID: 1482882931}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16765,7 +17080,7 @@ GameObject:
   - component: {fileID: 1483048783}
   - component: {fileID: 1483048785}
   - component: {fileID: 1483048784}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16942,7 +17257,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.z
@@ -16950,11 +17265,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 212409952824904046, guid: b9bc96d467b5d2a45b779be8e65c35cc,
         type: 2}
@@ -16996,6 +17311,20 @@ Prefab:
       propertyPath: m_Offset.x
       value: 0.6894362
       objectReference: {fileID: 0}
+    - target: {fileID: 114623590823404408, guid: b9bc96d467b5d2a45b779be8e65c35cc,
+        type: 2}
+      propertyPath: startingHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 114623590823404408, guid: b9bc96d467b5d2a45b779be8e65c35cc,
+        type: 2}
+      propertyPath: currentHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
   m_IsPrefabParent: 0
@@ -17018,7 +17347,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1492452546
 Transform:
   m_ObjectHideFlags: 0
@@ -17030,8 +17359,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 670758214}
+  - {fileID: 1758594642}
   m_Father: {fileID: 843058952}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495996189
 GameObject:
@@ -17189,7 +17519,7 @@ GameObject:
   - component: {fileID: 1507949658}
   - component: {fileID: 1507949660}
   - component: {fileID: 1507949659}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17279,7 +17609,7 @@ GameObject:
   - component: {fileID: 1508520916}
   - component: {fileID: 1508520915}
   - component: {fileID: 1508520917}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock4_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17743,7 +18073,7 @@ GameObject:
   - component: {fileID: 1519702110}
   - component: {fileID: 1519702112}
   - component: {fileID: 1519702111}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17832,7 +18162,7 @@ GameObject:
   - component: {fileID: 1523516412}
   - component: {fileID: 1523516414}
   - component: {fileID: 1523516413}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17921,7 +18251,7 @@ GameObject:
   - component: {fileID: 1529884168}
   - component: {fileID: 1529884170}
   - component: {fileID: 1529884169}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18261,23 +18591,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1924307788998704, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_Name
@@ -18287,6 +18617,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
@@ -18306,7 +18640,7 @@ GameObject:
   - component: {fileID: 1579131492}
   - component: {fileID: 1579131494}
   - component: {fileID: 1579131493}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18416,23 +18750,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
-      propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1924307788998704, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
       propertyPath: m_Name
@@ -18442,6 +18776,10 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4678039440045248, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
@@ -18462,7 +18800,7 @@ GameObject:
   - component: {fileID: 1594400971}
   - component: {fileID: 1594400970}
   - component: {fileID: 1594400972}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock4_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18562,7 +18900,7 @@ GameObject:
   - component: {fileID: 1610160734}
   - component: {fileID: 1610160736}
   - component: {fileID: 1610160735}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18651,7 +18989,7 @@ GameObject:
   - component: {fileID: 1614071495}
   - component: {fileID: 1614071497}
   - component: {fileID: 1614071496}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18841,7 +19179,7 @@ GameObject:
   - component: {fileID: 1634347991}
   - component: {fileID: 1634347993}
   - component: {fileID: 1634347992}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19029,7 +19367,7 @@ GameObject:
   - component: {fileID: 1646941174}
   - component: {fileID: 1646941176}
   - component: {fileID: 1646941175}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19118,7 +19456,7 @@ GameObject:
   - component: {fileID: 1659058242}
   - component: {fileID: 1659058244}
   - component: {fileID: 1659058243}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19498,7 +19836,7 @@ GameObject:
   - component: {fileID: 1689920147}
   - component: {fileID: 1689920149}
   - component: {fileID: 1689920148}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19597,7 +19935,7 @@ GameObject:
   - component: {fileID: 1693195323}
   - component: {fileID: 1693195325}
   - component: {fileID: 1693195324}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19696,7 +20034,7 @@ GameObject:
   - component: {fileID: 1713965061}
   - component: {fileID: 1713965063}
   - component: {fileID: 1713965062}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19785,7 +20123,7 @@ GameObject:
   - component: {fileID: 1715941233}
   - component: {fileID: 1715941235}
   - component: {fileID: 1715941234}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19874,7 +20212,7 @@ GameObject:
   - component: {fileID: 1718633024}
   - component: {fileID: 1718633026}
   - component: {fileID: 1718633025}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19973,7 +20311,7 @@ GameObject:
   - component: {fileID: 1727200755}
   - component: {fileID: 1727200757}
   - component: {fileID: 1727200756}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20140,7 +20478,7 @@ RectTransform:
   - {fileID: 329989622}
   - {fileID: 686562947}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -20161,7 +20499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740579122}
   - component: {fileID: 1740579121}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20308,7 +20646,7 @@ GameObject:
   - component: {fileID: 1743561860}
   - component: {fileID: 1743561862}
   - component: {fileID: 1743561861}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20406,7 +20744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1749316423}
   - component: {fileID: 1749316422}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeRocks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20530,7 +20868,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1754961924
 GameObject:
@@ -20541,7 +20879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1754961926}
   - component: {fileID: 1754961925}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CaveExit (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20605,6 +20943,69 @@ Transform:
   m_Father: {fileID: 2140103843}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1758594641
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1492452546}
+    m_Modifications:
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 84.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.21953401
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778056904018770, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_Name
+      value: HealthPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.14871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.14871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.14871
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1758594642 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4826286860451634, guid: ca0f35a744e14a4439530d61694e37fe,
+    type: 2}
+  m_PrefabInternal: {fileID: 1758594641}
 --- !u!1 &1760265060
 GameObject:
   m_ObjectHideFlags: 0
@@ -20716,7 +21117,7 @@ GameObject:
   - component: {fileID: 1762260690}
   - component: {fileID: 1762260691}
   - component: {fileID: 1762260692}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21003,7 +21404,7 @@ GameObject:
   - component: {fileID: 1779458643}
   - component: {fileID: 1779458645}
   - component: {fileID: 1779458644}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock2_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21091,7 +21492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1797616557}
   - component: {fileID: 1797616556}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: sky (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21263,7 +21664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1805979648}
   - component: {fileID: 1805979649}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21336,7 +21737,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810421263}
   - component: {fileID: 1810421264}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21410,7 +21811,7 @@ GameObject:
   - component: {fileID: 1837637496}
   - component: {fileID: 1837637498}
   - component: {fileID: 1837637497}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: twoTileCaveFloor (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21509,7 +21910,7 @@ GameObject:
   - component: {fileID: 1839212587}
   - component: {fileID: 1839212589}
   - component: {fileID: 1839212588}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21696,7 +22097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1852532722}
   - component: {fileID: 1852532723}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21770,7 +22171,7 @@ GameObject:
   - component: {fileID: 1859954185}
   - component: {fileID: 1859954187}
   - component: {fileID: 1859954186}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21858,7 +22259,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860979361}
   - component: {fileID: 1860979362}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LargeRocks (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21951,7 +22352,7 @@ Transform:
   - {fileID: 1878041962}
   - {fileID: 80572413}
   m_Father: {fileID: 843058952}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1864639356
 Rigidbody2D:
@@ -22223,6 +22624,8 @@ Transform:
   - {fileID: 1638001623}
   - {fileID: 1003438507}
   - {fileID: 231295275}
+  - {fileID: 857784277}
+  - {fileID: 862512993}
   m_Father: {fileID: 1864639355}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22265,6 +22668,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grappleSound: {fileID: 8300000, guid: 49525265f4db12c46b2b6ccb6e1da6b2, type: 3}
   grappleClankSound: {fileID: 8300000, guid: 851c4cf1754dcfe4589a41b1a7934200, type: 3}
+  grappleClankSoundHigh: {fileID: 8300000, guid: aa08a1e4746d1c243a65a216a3baace9,
+    type: 3}
+  grappleClankSoundLow: {fileID: 8300000, guid: 2099c3cbea459e74bb67102eed972317,
+    type: 3}
+  PlayHigh: 0
+  PlayLow: 0
   gulpHealth: {fileID: 8300000, guid: f5fae952dcbcf30469f4258ecd03d0e8, type: 3}
   swordSound: {fileID: 8300000, guid: eb2e3c5274d0bc140b6580e2617dbe22, type: 3}
   swordHit: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
@@ -22284,6 +22693,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 0
+  grapPoint: {fileID: 495814860}
   attackDamage: 10
   enemyHealth: {fileID: 0}
   barrelroll: {fileID: 0}
@@ -22594,10 +23004,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grappleSound: {fileID: 8300000, guid: 49525265f4db12c46b2b6ccb6e1da6b2, type: 3}
   grappleClankSound: {fileID: 8300000, guid: 851c4cf1754dcfe4589a41b1a7934200, type: 3}
+  grappleClankSoundHigh: {fileID: 8300000, guid: aa08a1e4746d1c243a65a216a3baace9,
+    type: 3}
+  grappleClankSoundLow: {fileID: 8300000, guid: 2099c3cbea459e74bb67102eed972317,
+    type: 3}
+  DeathSound: {fileID: 0}
+  PlayHigh: 0
+  PlayLow: 0
   gulpHealth: {fileID: 8300000, guid: f5fae952dcbcf30469f4258ecd03d0e8, type: 3}
   swordSound: {fileID: 8300000, guid: eb2e3c5274d0bc140b6580e2617dbe22, type: 3}
   swordHit: {fileID: 8300000, guid: ba22a7e6b1b0841448be8aca7cb2d892, type: 3}
-  ambientMusic: {fileID: 8300000, guid: db2105cd8ad36b54eb54db20ad9ef3e1, type: 3}
+  ambientMusic: {fileID: 8300000, guid: 3236fa8dd5791e04f9270a51c0dd70b2, type: 3}
   mySource: {fileID: 1878241255}
   crosshairImage: {fileID: 2800000, guid: eaad76ed0f7838b4eba6b45c364f7fe0, type: 3}
   grapple: {fileID: 1878241256}
@@ -22612,6 +23029,7 @@ MonoBehaviour:
   mask:
     serializedVersion: 2
     m_Bits: 0
+  grapPoint: {fileID: 0}
   attackDamage: 10
   enemyHealth: {fileID: 0}
   barrelroll: {fileID: 0}
@@ -22690,9 +23108,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.095999986, y: 0.5360002, z: -6.82}
   m_LocalScale: {x: 0.45, y: 0.45, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 495814860}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1878241262
 CapsuleCollider2D:
@@ -22721,8 +23140,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b78728f6fb5fa4ea6ad3155fec9f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 100
+  startingHealth: 10
+  currentHealth: 10
   healthSlider: {fileID: 0}
   damageImage: {fileID: 1878241259}
   deathClip: {fileID: 8300000, guid: 166514b8ff518084988ef404e9d08a61, type: 3}
@@ -22739,7 +23158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885795165}
   - component: {fileID: 1885795164}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22980,7 +23399,7 @@ GameObject:
   - component: {fileID: 1907729916}
   - component: {fileID: 1907729917}
   - component: {fileID: 1907729918}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23078,7 +23497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923243256}
   - component: {fileID: 1923243255}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: blackBackground (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23150,7 +23569,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1923609953}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BlackBackgrounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23201,7 +23620,7 @@ GameObject:
   - component: {fileID: 1940446189}
   - component: {fileID: 1940446191}
   - component: {fileID: 1940446190}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23290,7 +23709,7 @@ GameObject:
   - component: {fileID: 1946014364}
   - component: {fileID: 1946014366}
   - component: {fileID: 1946014365}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23578,7 +23997,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -23679,7 +24098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1968066951}
   - component: {fileID: 1968066952}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23787,7 +24206,7 @@ GameObject:
   - component: {fileID: 1998627474}
   - component: {fileID: 1998627476}
   - component: {fileID: 1998627475}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23910,7 +24329,7 @@ GameObject:
   - component: {fileID: 2026512734}
   - component: {fileID: 2026512736}
   - component: {fileID: 2026512735}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock1_0 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23999,7 +24418,7 @@ GameObject:
   - component: {fileID: 2031381830}
   - component: {fileID: 2031381832}
   - component: {fileID: 2031381831}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24187,7 +24606,7 @@ GameObject:
   - component: {fileID: 2052890440}
   - component: {fileID: 2052890439}
   - component: {fileID: 2052890441}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock2_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24303,7 +24722,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4943966877962474, guid: 3fb4d766848e2e54cbdd1254c06ce368, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1147028744218720, guid: 3fb4d766848e2e54cbdd1254c06ce368, type: 2}
       propertyPath: m_IsActive
@@ -24421,7 +24840,7 @@ GameObject:
   - component: {fileID: 2088128054}
   - component: {fileID: 2088128056}
   - component: {fileID: 2088128055}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock3_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24510,7 +24929,7 @@ GameObject:
   - component: {fileID: 2092013420}
   - component: {fileID: 2092013421}
   - component: {fileID: 2092013422}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24608,7 +25027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2095384800}
   - component: {fileID: 2095384801}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24802,7 +25221,7 @@ GameObject:
   - component: {fileID: 2106265293}
   - component: {fileID: 2106265295}
   - component: {fileID: 2106265294}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SharpRock2_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24889,7 +25308,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2140103843}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: CaveBackgrounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24941,7 +25360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2141873985}
   - component: {fileID: 2141873984}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: caveWallPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}

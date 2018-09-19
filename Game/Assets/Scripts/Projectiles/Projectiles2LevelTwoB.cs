@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectiles2LevelOne : MonoBehaviour {
+public class Projectiles2LevelTwoB : MonoBehaviour {
 
 	GameObject poison;
 	//GameObject poison2;
@@ -15,8 +15,7 @@ public class Projectiles2LevelOne : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		ground = GameObject.Find ("CaveFloor (3)");
-		ground2 = GameObject.Find ("CaveFloor (8)");
+		ground = GameObject.Find ("Mast");
 		poison = GameObject.Find ("Projectiles2");
 		pirate = GameObject.Find ("Character");
 		projectileStartingPos.x = poison.transform.position.x;
@@ -26,10 +25,14 @@ public class Projectiles2LevelOne : MonoBehaviour {
 		//poison.SetActive (false);
 	}
 
-	// Update is called once per frame
 	void Update () {
-
+		if (poison.transform.position.y < 6.2f) {
+			poison.transform.position = projectileStartingPos;
+			poison.SetActive (true);
+			actionScript.ThrowProjectile(true);
+		}
 	}
+
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
