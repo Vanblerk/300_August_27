@@ -255,9 +255,15 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 
 		if (other.gameObject == endGame) {
 			Debug.Log("End Level");
-			SceneManager.LoadScene ("LevelTwoB");
+			StartCoroutine(endCooldown());
 		}
 
+	}
+
+	IEnumerator endCooldown()
+	{
+		yield return new WaitForSeconds(0.6f);
+		SceneManager.LoadScene ("LevelTwoB");
 	}
 
 

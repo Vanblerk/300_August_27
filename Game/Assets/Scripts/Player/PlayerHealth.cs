@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
@@ -86,7 +87,14 @@ public class PlayerHealth : MonoBehaviour {
 		currentHealth = 0;
 		playerAudio.PlayOneShot(deathClip);
 		anim.SetTrigger ("isDead");
+		StartCoroutine(waitingToDie());
 
+	}
+
+	IEnumerator waitingToDie()
+	{
+		yield return new WaitForSeconds(3f);
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
 
 
