@@ -258,9 +258,15 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 		if (other.gameObject == endGame) {
 			Debug.Log("End Level");
-			SceneManager.LoadScene ("LevelTwo");
+			StartCoroutine(endCooldown());
 		}
 
+	}
+
+	IEnumerator endCooldown()
+	{
+		yield return new WaitForSeconds(0.6f);
+		SceneManager.LoadScene ("LevelTwo");
 	}
 
 
@@ -517,7 +523,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	IEnumerator GrappleTimer()
 	{
 		canGrap = false;
-		yield return new WaitForSeconds(0.4f);
+		yield return new WaitForSeconds(0.25f);
 		canGrap = true;
 	}
 

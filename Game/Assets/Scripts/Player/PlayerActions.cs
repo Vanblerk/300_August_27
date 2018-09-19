@@ -260,12 +260,19 @@ public class PlayerActions : MonoBehaviour
 
 		if (other.gameObject == endGame) {
 			Debug.Log("End Level");
+			StartCoroutine(endCooldown());
+		}
+
+	}
+
+		IEnumerator endCooldown()
+		{
+			yield return new WaitForSeconds(0.6f);
 			SceneManager.LoadScene ("LevelOne");
 		}
-     }
-   
 
-	// Update is called once per frame
+
+
 	void Update()
 	{
 
