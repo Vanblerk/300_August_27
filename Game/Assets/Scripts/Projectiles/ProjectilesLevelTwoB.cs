@@ -13,6 +13,9 @@ public class ProjectilesLevelTwoB : MonoBehaviour {
 	Vector2 projectileStartingPos;
 	PlayerActionsLevelOne actionScript;
 
+	PlayerHealth playerHealth;					// Reference to the player's health script
+
+
 	// Use this for initialization
 	void Start () {
 
@@ -20,6 +23,7 @@ public class ProjectilesLevelTwoB : MonoBehaviour {
 		//ground2 = GameObject.Find ("Bench (3)");
 		poison = GameObject.Find ("Projectileslvl2");
 		pirate = GameObject.Find ("Character");
+		playerHealth = pirate.GetComponent<PlayerHealth> ();
 		projectileStartingPos.x = poison.transform.position.x;
 		projectileStartingPos.y = poison.transform.position.y;
 		actionScript = (PlayerActionsLevelOne) pirate.GetComponent(typeof(PlayerActionsLevelOne));
@@ -59,6 +63,7 @@ public class ProjectilesLevelTwoB : MonoBehaviour {
 
 		if (coll.gameObject == pirate) {
 			//poison.SetActive (false);
+			playerHealth.PlayerTakeDamage (1);
 			poison.transform.position = projectileStartingPos;
 			poison.SetActive (true);
 			actionScript.ThrowProjectile(true);
