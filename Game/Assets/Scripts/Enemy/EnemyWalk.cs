@@ -20,7 +20,12 @@ public class EnemyWalk : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject == player)	//if colliding with player
-		{			
+		{		
+			if (checkPlayerPosition () == "right") {
+				transform.eulerAngles = new Vector2(0, 0);
+			} else {
+				transform.eulerAngles = new Vector2(0, -180);
+			}
 			playerInSight = true;
 		}
 	}					
@@ -36,13 +41,30 @@ public class EnemyWalk : MonoBehaviour {
 
 	void Update () {
 
+
+
 		if (playerInSight == true) {
+			//Change enemy's direction in dirtection of player
+
 			WalkToPlayer ();
 		} else {
 			stopWalking ();
 		}
 
 
+	}
+
+	string checkPlayerPosition()
+	{
+		float PlayerXPosition = target.position.x;
+		float EnemyXPosition = transform.position.x;
+		if(PlayerXPosition > EnemyXPosition)
+		{
+			return "right";
+		}
+		else{
+			return "left";
+		}
 	}
 
 	public void WalkToPlayer(){

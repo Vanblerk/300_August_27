@@ -30,7 +30,9 @@ public class EnemyAttack : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "Player")
 		{			
-			playerInRange = true;
+			//playerInRange = true;
+			enemyWalk.stopWalking ();
+			InvokeRepeating ("Attack", 0.5f, 0.5f);
 		}
 
 	}
@@ -39,75 +41,77 @@ public class EnemyAttack : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "Player")
 		{			
-			playerInRange = false;
+			//playerInRange = false;
+			anim.SetBool ("isAttacking", false);
+			CancelInvoke ();
 		}
 
 	}
 
-	/*void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject == player)	//if colliding with player
-		{
-			Debug.Log ("Player in range");
-			playerInRange = true;
-		}
-	}
 
-	void OnTriggerExit(Collider other)
-	{
-		if (other.gameObject == player) 
-		{
-			playerInRange = false;
-		}
-	}*/
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
-		timer += Time.deltaTime;
 
-		//if (timer >= timeBetweenAttacks && playerInRange) {
-		if(playerInRange){
-			enemyWalk.stopWalking ();
-			anim.SetBool ("isWalking", false);
-			anim.SetBool("isAttacking", true);
+		//if (playerInRange) {
+		//	enemyWalk.stopWalking ();
+		//	Invoke ("Attack", 0.6f);
+		//} else if (!playerInRange) {
+		//	anim.SetBool ("isAttacking", false);
+		//}
+
+
+
+		///*OLD CODE*///
+		//timer += Time.deltaTime;
+
+
+		//if(playerInRange){
+		//	enemyWalk.stopWalking ();
+		//	anim.SetBool ("isWalking", false);
+		//	anim.SetBool("isAttacking", true);
 			//Invoke ("Attack", 0.4f);
-			Attack ();
-		} 
-		else if(playerInRange == false)
-		{			
-			anim.SetBool ("isAttacking", false);
-		}
+		//	Attack ();
+		//} 
+		//else if(playerInRange == false)
+		//{			
+		//	anim.SetBool ("isAttacking", false);
+		//}
 
-		if (playerHealth.currentHealth <= 0) 
-		{
-			Debug.Log ("Player Dead");
+		//if (playerHealth.currentHealth <= 0) 
+		//{
+		//	Debug.Log ("Player Dead");
 			//anim.SetTrigger("PlayerDead);
-		}
+		//}
+		///*OLD CODE END*///
 	}
 
 	void Attack()
 	{
-		timer = 0f;
+		anim.SetBool("isAttacking", true);
 
+		//StartCoroutine(AttackTimer());
+		playerHealth.PlayerTakeDamage (attackDamage);
 
+		///*OLD CODE*///
+		//timer = 0f;
 
-		if (playerHealth.currentHealth > 0) 
-		{
-			if(canAttack == true){				
-				StartCoroutine(AttackTimer());
-				playerHealth.PlayerTakeDamage (attackDamage);
-			}			
-		}
-
-		//canAttack = false;
+		//if (playerHealth.currentHealth > 0) 
+		//{
+		//	if(canAttack == true){				
+		//		StartCoroutine(AttackTimer());
+		//		playerHealth.PlayerTakeDamage (attackDamage);
+		//	}			
+		//}
+		///*OLD CODE END*///
 	}
 
 	//Change WaitForSeconds to delay the Attack time more or less
 	IEnumerator AttackTimer()
 	{
-		canAttack = false;
-		yield return new WaitForSeconds(1f);
-		canAttack = true;
+		//canAttack = false;
+		yield return new WaitForSecondsRealtime(1f);
+		//canAttack = true;
 	}
 }
