@@ -22,9 +22,9 @@ public class EnemyWalk : MonoBehaviour {
 		if (other.gameObject == player)	//if colliding with player
 		{		
 			if (checkPlayerPosition () == "right") {
-				transform.eulerAngles = new Vector2(0, 0);
+				this.transform.eulerAngles = new Vector2(0, 0);
 			} else {
-				transform.eulerAngles = new Vector2(0, -180);
+				this.transform.eulerAngles = new Vector2(0, -180);
 			}
 			playerInSight = true;
 		}
