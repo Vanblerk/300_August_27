@@ -9401,7 +9401,8 @@ Prefab:
       propertyPath: barrel
       value: 
       objectReference: {fileID: 222264909}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114865816983049030, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &2000469298
