@@ -44,8 +44,6 @@ public class EnemyWalk : MonoBehaviour {
 
 
 		if (playerInSight == true) {
-			//Change enemy's direction in dirtection of player
-
 			WalkToPlayer ();
 		} else {
 			stopWalking ();
