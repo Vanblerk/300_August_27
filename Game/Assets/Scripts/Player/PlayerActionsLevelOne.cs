@@ -42,7 +42,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	GameObject endGame;
 	public Transform grapPoint;
 	bool canAttack = true;
-
+	bool firstClick = false;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -289,16 +289,25 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		Attack();
 		Swinging();
 		if(Input.GetMouseButtonUp(0) == true){
-			if(canGrap == true){
-				//moving to on colision
-				isSet = false;
-				line.enabled = false;
-				anim.SetBool("isSwinging", false);
-				grapple.enabled = false;
-				hasHooked = false;
-				firstHit = false;
-				StartCoroutine(GrappleTimer());
+
+			if (firstClick == false) {
+				mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
+				ray = new Ray2D (pirate.transform.position, mouseDirection); 
+				firstClick = true;
 			}
+
+
+				if (canGrap == true) {
+					//moving to on colision
+					isSet = false;
+					line.enabled = false;
+					anim.SetBool ("isSwinging", false);
+					grapple.enabled = false;
+					hasHooked = false;
+					firstHit = false;
+					StartCoroutine (GrappleTimer ());
+				}
+
 
 		} 
 

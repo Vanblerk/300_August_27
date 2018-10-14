@@ -41,6 +41,7 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 	GameObject endGame;
 	public Transform grapPoint;
 	bool canAttack = true;
+	bool firstClick = false;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -300,6 +301,13 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 		} 
 
 		if (Input.GetKey (KeyCode.Mouse0)) {
+			
+			if (firstClick == false) {
+				mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
+				ray = new Ray2D (pirate.transform.position, mouseDirection); 
+				firstClick = true;
+			}
+
 			if (hasHooked == false) {
 				if(canGrap == true){
 					mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);

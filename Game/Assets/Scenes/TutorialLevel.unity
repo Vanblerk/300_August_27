@@ -468,7 +468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 113213123}
   - component: {fileID: 113213122}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: finalBrickBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2149,7 +2149,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2174511, y: 0.77}
+  m_Offset: {x: 0.2174511, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2160,7 +2160,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18.024902, y: 0.5}
+  m_Size: {x: 18.024902, y: 1.04}
   m_EdgeRadius: 0
 --- !u!212 &397765835
 SpriteRenderer:
@@ -5708,7 +5708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1143552116}
   - component: {fileID: 1143552115}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: door 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9264,7 +9264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1971323596}
   - component: {fileID: 1971323597}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ExitLevelCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9278,7 +9278,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1971323595}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.28, y: 19.3, z: 0}
+  m_LocalPosition: {x: -14.1, y: 19.3, z: 0}
   m_LocalScale: {x: 2.12, y: 4.1, z: 1}
   m_Children: []
   m_Father: {fileID: 326111551}

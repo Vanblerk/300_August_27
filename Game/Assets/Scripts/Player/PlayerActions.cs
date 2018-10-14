@@ -41,6 +41,7 @@ public class PlayerActions : MonoBehaviour
 	GameObject endGame;
 	public Transform grapPoint;
 	bool canAttack = true;
+	bool firstClick = false;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -137,7 +138,11 @@ public class PlayerActions : MonoBehaviour
 		projectileCol.SetActive (true);
 		projectileStartingPos.x = poison.transform.position.x;
 		projectileStartingPos.y = poison.transform.position.y;
+		Vector2 temp;
 
+
+		line.SetPosition (1, pirate.transform.position);
+		line.SetPosition (0, pirate.transform.position);
 
 
 		var vol = VolumeController.SaveStuff.VolumeG;
@@ -267,7 +272,7 @@ public class PlayerActions : MonoBehaviour
 
 		IEnumerator endCooldown()
 		{
-			yield return new WaitForSeconds(0.6f);
+			yield return new WaitForSeconds(0.3f);
 			SceneManager.LoadScene ("LevelOne");
 		}
 
@@ -316,6 +321,12 @@ public class PlayerActions : MonoBehaviour
 		} 
 
 		if (Input.GetKey (KeyCode.Mouse0)) {
+			if (firstClick == false) {
+				mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
+				ray = new Ray2D (pirate.transform.position, mouseDirection); 
+				firstClick = true;
+			}
+				
 			if (hasHooked == false) {
 				if(canGrap == true){
 					mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
@@ -428,19 +439,7 @@ public class PlayerActions : MonoBehaviour
 		if (Input.GetKey(KeyCode.Mouse0))
 		{
 
-			//if statement to ensure that you can't drag the mouse and the coordinates change
-			if (hasHooked == false) {
-
-				/*worldView = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x, Input.mousePosition.x, pirate.transform.position.z));
-				mouseDirection = worldView - pirate.transform.position;
-				mouseDirection.Normalize();*/
-
-				/*ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
-				ray.direction.Set (ray.direction.x, ray.direction.y, 0);*/
-				//set it's max distance
-
-
-			}
+		
 			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
 			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
@@ -494,9 +493,9 @@ public class PlayerActions : MonoBehaviour
 						lineR.x = hit.point.x + 0f;
 						lineR.y = hit.point.y;
 						grapple.connectedAnchor = values;
-						line.enabled = true;
 						line.SetPosition (1, lineR);
 						line.SetPosition (0, grapPoint.transform.position);
+						line.enabled = true;
 
 
 
@@ -504,9 +503,9 @@ public class PlayerActions : MonoBehaviour
 						grapple.connectedAnchor = hit.point;
 						lineR.x = hit.point.x + 0f;
 						lineR.y = hit.point.y;
-						line.enabled = true;
 						line.SetPosition (0, grapPoint.transform.position);
 						line.SetPosition (1, lineR);
+						line.enabled = true;
 					}
 
 					while (grapple.distance > 2f) {
@@ -520,14 +519,16 @@ public class PlayerActions : MonoBehaviour
 			}//end of if collide
 			else {
 
+		
+
 
 				mouseCoords = ray.GetPoint (5f);
 				grapple.enabled = false;
 				//grapple.connectedAnchor = mouseCoords;
 				//mouseCoords = lineLimit();
-				line.enabled = true;
 				line.SetPosition (0, transform.position);
 				line.SetPosition (1, mouseCoords);
+				line.enabled = true;
 				StartCoroutine(Example());
 
 			}
@@ -557,7 +558,7 @@ public class PlayerActions : MonoBehaviour
 	IEnumerator GrappleTimer()
 	{
 		canGrap = false;
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(0.2f);
 		canGrap = true;
 	}
 
