@@ -13,7 +13,7 @@ public class Projectiles : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		ground = GameObject.Find ("floor (11)");
+		ground = GameObject.Find ("newWoodenFloor (2)");
 		ground2 = GameObject.Find ("GroundTop");
 		poison = GameObject.Find ("Projectiles");
 		pirate = GameObject.Find ("Character");

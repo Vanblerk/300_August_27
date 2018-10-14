@@ -43,6 +43,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 	public Transform grapPoint;
 	bool canAttack = true;
 	bool firstClick = false;
+	PlayerHealth playerHealthScript;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -143,12 +144,14 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 		poison2.SetActive (false);
 		projectileCol.SetActive (true);
 		projectileCol2.SetActive (true);
+		playerHealthScript = (PlayerHealth) pirate.GetComponent(typeof(PlayerHealth));
 
 		var vol = VolumeController.SaveStuff.VolumeG;
 		AdjustVolume(vol);
 		//Music
 		mySource = GetComponent<AudioSource>();
 		mySource.Play();
+
 
 
 
@@ -279,6 +282,18 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.M)) {
 			SceneManager.LoadScene ("MainMenu");
+		}
+
+		if (Input.GetKey (KeyCode.H)) {
+			SceneManager.LoadScene ("LevelTwo");
+		}
+
+		if (Input.GetKey (KeyCode.Y)) {
+			SceneManager.LoadScene ("LevelTwoB");
+		}
+
+		if (Input.GetKey (KeyCode.L)) {
+			playerHealthScript.PlayerGetHealth (100);
 		}
 
 		Movement();

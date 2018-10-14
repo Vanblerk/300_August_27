@@ -42,6 +42,7 @@ public class PlayerActions : MonoBehaviour
 	public Transform grapPoint;
 	bool canAttack = true;
 	bool firstClick = false;
+	PlayerHealth playerHealthScript;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -139,7 +140,7 @@ public class PlayerActions : MonoBehaviour
 		projectileStartingPos.x = poison.transform.position.x;
 		projectileStartingPos.y = poison.transform.position.y;
 		Vector2 temp;
-
+		playerHealthScript = (PlayerHealth) pirate.GetComponent(typeof(PlayerHealth));
 
 		line.SetPosition (1, pirate.transform.position);
 		line.SetPosition (0, pirate.transform.position);
@@ -180,10 +181,9 @@ public class PlayerActions : MonoBehaviour
 			
 		if (coll.gameObject.name == "Projectiles") {
 
-			Debug.Log("HHHHHHHHHH");
 			poison.SetActive (false);
 			projectTest = false;
-			//decrement health
+			playerHealthScript.PlayerTakeDamage (1);
 			//reset
 			poison.transform.position = projectileStartingPos;
 			poison.SetActive (true);
@@ -301,6 +301,9 @@ public class PlayerActions : MonoBehaviour
 			SceneManager.LoadScene ("LevelTwoB");
 		}
 
+		if (Input.GetKey (KeyCode.L)) {
+			playerHealthScript.PlayerGetHealth (100);
+		}
 
 
 		Movement();
@@ -558,7 +561,7 @@ public class PlayerActions : MonoBehaviour
 	IEnumerator GrappleTimer()
 	{
 		canGrap = false;
-		yield return new WaitForSeconds(0.2f);
+		yield return new WaitForSeconds(0.25f);
 		canGrap = true;
 	}
 

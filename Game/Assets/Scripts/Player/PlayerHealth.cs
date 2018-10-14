@@ -80,6 +80,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		currentHealth += amount;
 	}
+		
 
 	public void Death()
 	{

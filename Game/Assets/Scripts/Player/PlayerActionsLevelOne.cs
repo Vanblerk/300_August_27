@@ -43,6 +43,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	public Transform grapPoint;
 	bool canAttack = true;
 	bool firstClick = false;
+	PlayerHealth playerHealthScript;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -70,6 +71,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 	//Variables For Health Pickups
 	GameObject HealthPickup;			//References the health pickup object
+	GameObject HealthPickup2;
 	public GiveHealth giveHealth;		// References the giveHealth script attached to the healthPickup gameObject
 
 
@@ -122,6 +124,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		Enemy = GameObject.FindGameObjectWithTag("Enemy"); 
 		pirate = GameObject.Find ("Character");
 		HealthPickup = GameObject.Find ("HealthPickup");
+		HealthPickup2 = GameObject.Find ("HealthPickup2");
 		poison = GameObject.Find ("Projectiles");
 		poison2 = GameObject.Find ("Projectiles2");
 		projectExit = GameObject.Find ("ProjectilesExit");
@@ -143,6 +146,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		poison2.SetActive (false);
 		projectileCol.SetActive (true);
 		projectileCol2.SetActive (true);
+		playerHealthScript = (PlayerHealth) pirate.GetComponent(typeof(PlayerHealth));
 
 		var vol = VolumeController.SaveStuff.VolumeG;
 		AdjustVolume(vol);
@@ -150,7 +154,8 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		mySource = GetComponent<AudioSource>();
 		mySource.Play();
 		mySource.PlayOneShot(ambientMusic);
-
+		line.SetPosition (1, pirate.transform.position);
+		line.SetPosition (0, pirate.transform.position);
 
 
 	}
@@ -244,6 +249,15 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			HealthPickup.SetActive (false);
 		}
 
+		if (other.gameObject == HealthPickup2)
+		{
+			Debug.Log ("healthPickup");
+
+			giveHealth.givePlayerHealth (); 
+			mySource.PlayOneShot(gulpHealth);
+			HealthPickup2.SetActive (false);
+		}
+
 		if (other.gameObject.name == "ProjectileCollider") {
 			projectileCol.SetActive (false);
 			poison.SetActive (true);
@@ -265,7 +279,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 	IEnumerator endCooldown()
 	{
-		yield return new WaitForSeconds(0.6f);
+		yield return new WaitForSeconds(0.3f);
 		SceneManager.LoadScene ("LevelTwo");
 	}
 
@@ -283,6 +297,18 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.M)) {
 			SceneManager.LoadScene ("MainMenu");
+		}
+
+		if (Input.GetKey (KeyCode.H)) {
+			SceneManager.LoadScene ("LevelTwo");
+		}
+
+		if (Input.GetKey (KeyCode.Y)) {
+			SceneManager.LoadScene ("LevelTwoB");
+		}
+
+		if (Input.GetKey (KeyCode.L)) {
+			playerHealthScript.PlayerGetHealth (100);
 		}
 
 		Movement();
