@@ -8,13 +8,15 @@ public class PlayerHealth : MonoBehaviour {
 
 	public int startingHealth = 10;								// The amount of health the player starts the game with.
 	public int currentHealth;									// The current health the player has.
-	Text text;  												// Text to Modify how many Lives we have.
+	Text text; 
+	Text text2; 												// Text to Modify how many Lives we have.
 	public Slider healthSlider;                                 // Reference to the UI's health bar.
 	public SpriteRenderer damageImage;                          // Reference to an image to flash on the screen on being hurt.
 	public AudioClip deathClip;                                 // The audio clip to play when the player dies.
 	public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
 	public Color flashColour = new Color(0, 0, 0, 0);     		// The colour the damageImage is set to, to flash.
 	public GameObject HealthUI;									//To Reference the healthUI			
+	public GameObject HealthUIIII;									//To Reference the healthUI			
 
 
 	Animator anim;                                              // Reference to the Animator component.
@@ -27,9 +29,12 @@ public class PlayerHealth : MonoBehaviour {
 	void Awake()
 	{
 		anim = GetComponent <Animator>();
-		HealthUI = GameObject.FindGameObjectWithTag ("HealthUI");
+		// HealthUI = GameObject.FindGameObjectWithTag ("HealthUI");
+		HealthUI = GameObject.Find("HealthShadow");
+		HealthUIIII = GameObject.Find("Health");
 		//playerAudio = GetComponent<AudioSource> ();
 		text = HealthUI.GetComponent <Text> ();
+		text2 = HealthUIIII.GetComponent <Text> ();
 		damageImage = GetComponent<SpriteRenderer>();
 		currentHealth = startingHealth;
 		playerAudio = GetComponent<AudioSource>();
@@ -39,6 +44,7 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () 
 	{
 		text.text = "x" + currentHealth;
+		text2.text = "x" + currentHealth;
 		// If player takes damage
 		if (damaged) 
 		{
