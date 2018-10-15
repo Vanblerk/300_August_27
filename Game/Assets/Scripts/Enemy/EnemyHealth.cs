@@ -9,7 +9,7 @@ public class EnemyHealth : MonoBehaviour {
 
     public int startingHealth = 10;                         // Enemy's starting health
     public int currentHealth;                                // Enemy's current health  
-    public float flashSpeed = 5f;                            // Speed at which damage flashes
+    public float flashSpeed = 20f;                            // Speed at which damage flashes
     public Color flashColour = new Color(0, 0, 0, 0);  //Enemy flashes red when taking damage
     public SpriteRenderer damageImage;    
   
@@ -32,6 +32,7 @@ public class EnemyHealth : MonoBehaviour {
     void Awake ()
     {
         anim = GetComponent<Animator>();
+		flashSpeed = 20f;
         // enemyAudio = GetComponent();
         //capsuleCollider = GetComponent<CapsuleCollider>();
         currentHealth = startingHealth;
@@ -49,7 +50,8 @@ public class EnemyHealth : MonoBehaviour {
             mySource.Stop();
             mySource.Play();
 
-           damageImage.color = flashColour;
+          
+			StartCoroutine ("changeColor");
         }
         else
         {
@@ -108,4 +110,14 @@ public class EnemyHealth : MonoBehaviour {
 
         Destroy(gameObject, 0.80f);
     }
+
+	IEnumerator changeColor()
+	{
+		damageImage.color = flashColour;
+
+
+
+		yield return new WaitForSeconds (0.3f);
+
+	}
 }

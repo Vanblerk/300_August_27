@@ -32,7 +32,8 @@ public class EnemyAttack : MonoBehaviour {
 		{			
 			//playerInRange = true;
 			enemyWalk.stopWalking ();
-			InvokeRepeating ("Attack", 0.5f, 0.5f);
+			anim.SetBool("isAttacking", true);
+			InvokeRepeating ("Attack", 0.3f, 0.7f);
 		}
 
 	}
@@ -89,7 +90,7 @@ public class EnemyAttack : MonoBehaviour {
 
 	void Attack()
 	{
-		anim.SetBool("isAttacking", true);
+		
 
 		//StartCoroutine(AttackTimer());
 		playerHealth.PlayerTakeDamage (attackDamage);

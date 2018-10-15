@@ -290,7 +290,10 @@ public class PlayerActions : MonoBehaviour
 		}
 
 
-
+	void FixedUpdate()
+	{
+		Movement();
+	}
 
 	void Update()
 	{
