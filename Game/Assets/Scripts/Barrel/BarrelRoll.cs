@@ -29,9 +29,9 @@ public class BarrelRoll : MonoBehaviour {
 	public void rollBarrel(string direction)
 	{
 		if (direction == "right") {
-			barrel.AddForce (Vector2.right * 300);
+			barrel.AddForce (Vector2.right * 750);
 		} else {
-			barrel.AddForce (Vector2.left * 300);
+			barrel.AddForce (Vector2.left * 750);
 		}
 
 

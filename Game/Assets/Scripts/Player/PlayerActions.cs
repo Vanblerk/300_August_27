@@ -62,6 +62,10 @@ public class PlayerActions : MonoBehaviour
 	//Vanblerk Variables
 	public int attackDamage = 10;      //Damage of the player's attack  
 	public EnemyHealth enemyHealth;    //References the enemy's health script
+	//for smooth movement
+	private Rigidbody2D body;
+	private Vector2 velocityLeft;
+	private Vector2 velocityRight;
 
 	//Variables for barrel rolling 
 	GameObject barrelCollider;
@@ -78,6 +82,8 @@ public class PlayerActions : MonoBehaviour
 	GameObject Enemy;           //References the enemy
 
 	bool enemyInRange;
+
+
 
 
 
@@ -110,10 +116,17 @@ public class PlayerActions : MonoBehaviour
 	}
 	void Start()
 	{
+		
 		// //TESTING FOR TUTORIAL VIDEO'S
 		GrapCollider = GameObject.Find ("GrappleVideoCollider");
 		AttCollider = GameObject.Find ("AttackVideoCollider");
 		// video = GameObject.Find ("GrappleVideo");
+
+		//For smooth movement
+		body = GetComponent<Rigidbody2D>();
+		velocityLeft = new Vector2 (-1f, 0f);
+		//transform.position = new Vector3 (-1.0f, 0f, 0f);
+
 
 
 		Cursor.visible = false;
@@ -278,6 +291,7 @@ public class PlayerActions : MonoBehaviour
 
 
 
+
 	void Update()
 	{
 
@@ -306,7 +320,7 @@ public class PlayerActions : MonoBehaviour
 		}
 
 
-		Movement();
+
 		Attack();
 		Swinging();
 		if(Input.GetMouseButtonUp(0) == true){
@@ -393,10 +407,19 @@ public class PlayerActions : MonoBehaviour
 		else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
 		{
 
+			//transform.eulerAngles = new Vector2(0, 180);
+			//body.MovePosition(body.position + velocityLeft*5f*Time.deltaTime);
+
+			//anim.SetBool("isWalking", true);
+			//transform.Translate(Vector2.right * 5f * Time.deltaTime);
+
+			//facingRight = false;
+
+
 			anim.SetBool("isWalking", true);
 			transform.Translate(Vector2.right * 5f * Time.deltaTime);
-			transform.eulerAngles = new Vector2(0, -180);
-			facingRight = false;
+			transform.eulerAngles = new Vector2(0, 180);
+			facingRight = true;
 		}
 		else
 		{

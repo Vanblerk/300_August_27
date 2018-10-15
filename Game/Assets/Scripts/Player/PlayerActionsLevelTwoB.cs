@@ -269,6 +269,10 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 
 	}
 
+	void FixedUpdate()
+	{
+		Movement();
+	}
 
 	// Update is called once per frame
 	void Update()
@@ -297,7 +301,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 			playerHealthScript.PlayerGetHealth (100);
 		}
 
-		Movement();
+
 		Attack();
 		Swinging();
 		if(Input.GetMouseButtonUp(0) == true){
