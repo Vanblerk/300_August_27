@@ -150,6 +150,7 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 		//Music
 		mySource = GetComponent<AudioSource>();
 		mySource.Play();
+		mySource.PlayOneShot(ambientMusic);
 
 
 
