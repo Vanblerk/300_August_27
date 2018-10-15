@@ -579,7 +579,7 @@ public class PlayerActions : MonoBehaviour
 
 	IEnumerator attackCooldown()
 	{
-		yield return new WaitForSeconds(0.6f);
+		yield return new WaitForSeconds(0.5f);
 		canAttack = true;
 	}
 

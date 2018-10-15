@@ -244,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 25
   currentHealth: 25
-  flashSpeed: 5
+  flashSpeed: 20
   flashColour: {r: 1, g: 0, b: 0, a: 1}
   damageImage: {fileID: 212409952824904046}
   deathclip: {fileID: 0}
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7af6c872020a348bb8d877735c34f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.2
+  speed: 1.6
 --- !u!212 &212409952824904046
 SpriteRenderer:
   m_ObjectHideFlags: 1

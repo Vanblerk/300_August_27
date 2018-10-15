@@ -23,10 +23,9 @@ GameObject:
   - component: {fileID: 95804540578626886}
   - component: {fileID: 50427557083978130}
   - component: {fileID: 82701092370609160}
-  - component: {fileID: 114926674125411970}
+  - component: {fileID: 114335281697305372}
   - component: {fileID: 114496210224449942}
   - component: {fileID: 70950123160147194}
-  - component: {fileID: 114865816983049030}
   - component: {fileID: 61544652520447522}
   - component: {fileID: 61053914165640322}
   - component: {fileID: 114794703268365502}
@@ -44,8 +43,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1322525938133488}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -17.35193, y: -1.8578022, z: -9.93625}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -16.595, y: 6.809, z: -8.03}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +61,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 150
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -244,6 +243,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9754854f4bfa04b4685763f69f55346f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114335281697305372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1322525938133488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffb6948f0f5f964eb69a8fe8faa8bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 50
+  attackDamage: 1
+  canAttack: 1
 --- !u!114 &114496210224449942
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -277,32 +290,6 @@ MonoBehaviour:
   rollBarrel: {fileID: 0}
   enemyState: {fileID: 0}
   speed: 0
---- !u!114 &114865816983049030
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1322525938133488}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f7af6c872020a348bb8d877735c34f5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1.2
---- !u!114 &114926674125411970
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1322525938133488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56aa8d826fc8a23449caca38f07da786, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 1
-  canAttack: 1
 --- !u!212 &212496772983058760
 SpriteRenderer:
   m_ObjectHideFlags: 1

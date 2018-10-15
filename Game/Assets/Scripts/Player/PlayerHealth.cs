@@ -49,12 +49,13 @@ public class PlayerHealth : MonoBehaviour {
 		if (damaged) 
 		{
 			//set player colour to red
-			damageImage.color = flashColour;
+			StartCoroutine ("changeColor");
+
 			text.text = "x" + currentHealth;
 		}
 		else 
 		{
-			damageImage.color = new Color(255, 255, 255, 255);
+			//damageImage.color = new Color(255, 255, 255, 255);
 		}
 		damaged = false;
 	}
@@ -104,6 +105,13 @@ public class PlayerHealth : MonoBehaviour {
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
 
+	IEnumerator changeColor()
+	{
 
+
+		damageImage.color = flashColour;
+		yield return new WaitForSeconds (0.1f);
+		damageImage.color = new Color(255, 255, 255, 255);
+	}
 
 }

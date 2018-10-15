@@ -7,90 +7,91 @@ using UnityEngine.UI;
 public class EnemyHealth : MonoBehaviour {
 
 
-    public int startingHealth = 10;                         // Enemy's starting health
-    public int currentHealth;                                // Enemy's current health  
-    public float flashSpeed = 20f;                            // Speed at which damage flashes
-    public Color flashColour = new Color(0, 0, 0, 0);  //Enemy flashes red when taking damage
-    public SpriteRenderer damageImage;    
-  
-    // public AudioClip deathclip;                           //Sound that plays when enemy is killed
-    public AudioClip deathclip;
+	public int startingHealth = 10;                         // Enemy's starting health
+	public int currentHealth;                                // Enemy's current health  
+	public float flashSpeed = 20f;                            // Speed at which damage flashes
+	public Color flashColour = new Color(0, 0, 0, 0);  //Enemy flashes red when taking damage
+	public SpriteRenderer damageImage;    
+
+	// public AudioClip deathclip;                           //Sound that plays when enemy is killed
+	public AudioClip deathclip;
 
 
 
 
-    Animator anim;  
-    bool isDead;
-    bool damaged;
-    // AudioSource enemyAudio;
-    
+	Animator anim;  
+	bool isDead;
+	bool damaged;
+	// AudioSource enemyAudio;
 
 
-    public AudioSource mySource;
+
+	public AudioSource mySource;
 
 
-    void Awake ()
-    {
-        anim = GetComponent<Animator>();
+	void Awake ()
+	{
+		anim = GetComponent<Animator>();
 		flashSpeed = 20f;
-        // enemyAudio = GetComponent();
-        //capsuleCollider = GetComponent<CapsuleCollider>();
-        currentHealth = startingHealth;
-        damageImage = GetComponent<SpriteRenderer>();
-        mySource = GetComponent<AudioSource>();
+		// enemyAudio = GetComponent();
+		//capsuleCollider = GetComponent<CapsuleCollider>();
+		currentHealth = startingHealth;
+		damageImage = GetComponent<SpriteRenderer>();
+		mySource = GetComponent<AudioSource>();
 
-    }
-	
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if(damaged)
-        {
-            //Sound
-            // mySource = GetComponent<AudioSource>();
-            mySource.Stop();
-            mySource.Play();
+		{
+			//Sound
+			// mySource = GetComponent<AudioSource>();
+			mySource.Stop();
+			mySource.Play();
 
-          
+
 			StartCoroutine ("changeColor");
-        }
-        else
-        {
-            damageImage.color = new Color(255, 255, 255, 255);
-            //damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-        }
-        damaged = false;
-    }
+		}
+		else
+		{
+			//StartCoroutine ("changeColor2");
 
-    public void TakeDamage(int amount)
-    {
+			//damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+		}
+		damaged = false;
+	}
 
-        if(isDead == true)
-        {
-            return;
-        }
-        damaged = true;
+	public void TakeDamage(int amount)
+	{
 
-        Debug.Log("enemy taking damage");
+		if(isDead == true)
+		{
+			return;
+		}
+		damaged = true;
 
-        //enemyAudio.Play();  //Play hurt sound
+		Debug.Log("enemy taking damage");
 
-        currentHealth -= amount;
+		//enemyAudio.Play();  //Play hurt sound
+
+		currentHealth -= amount;
 
 
-        if(currentHealth <= 0)
-        {
+		if(currentHealth <= 0)
+		{
 			Debug.Log("DEAD");
-            Death();
-        }
-    }
+			Death();
+		}
+	}
 
 
-    void Death()
-    {
+	void Death()
+	{
 		Debug.Log (gameObject.name + "death");
-        isDead = true;
-        mySource.Stop();
-        mySource.PlayOneShot(deathclip);
+		isDead = true;
+		mySource.Stop();
+		mySource.PlayOneShot(deathclip);
 
 		if (gameObject.name == "ThrowEnemy") {
 			anim.SetTrigger ("EnemyDeath");
@@ -101,22 +102,27 @@ public class EnemyHealth : MonoBehaviour {
 
 
 
-        // Tell the animator that the enemy is dead.
-        // anim.SetTrigger("Dead");
+		// Tell the animator that the enemy is dead.
+		// anim.SetTrigger("Dead");
 
-        // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
-        // enemyAudio.clip = deathClip;
-        // enemyAudio.Play();
+		// Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
+		// enemyAudio.clip = deathClip;
+		// enemyAudio.Play();
 
-        Destroy(gameObject, 0.80f);
-    }
+		Destroy(gameObject, 0.90f);
+	}
 
 	IEnumerator changeColor()
 	{
+
+
 		damageImage.color = flashColour;
+		yield return new WaitForSeconds (0.06f);
+		damageImage.color = new Color(255, 255, 255, 255);
+	}
 
-
-
+	IEnumerator changeColor2()
+	{
 		yield return new WaitForSeconds (0.3f);
 
 	}
