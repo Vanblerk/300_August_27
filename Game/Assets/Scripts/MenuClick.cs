@@ -10,6 +10,10 @@ public class MenuClick : MonoBehaviour {
 	public GameObject play;
 	public GameObject options;
 	public GameObject exit;
+	public GameObject box6;
+	public GameObject box7;
+	public GameObject box8;
+	public GameObject LevelMenus;
 	public PlayerActionsMenu actionScript;
 	SubMenuClick subScript;
 	public GameObject subMenu;
@@ -36,6 +40,9 @@ public class MenuClick : MonoBehaviour {
 		lvlScript = (LevelMenuClick) levelMenu.GetComponent(typeof(LevelMenuClick));
 		subScript = (SubMenuClick) subMenu.GetComponent(typeof(SubMenuClick));
 		pirateCoords = pirate.transform.position;
+		box6.SetActive(false);
+		box7.SetActive(false);
+		box8.SetActive(false);
 
 		// mySource = GetComponent<AudioSource>();
 		// mySource.Play();
@@ -83,11 +90,16 @@ public class MenuClick : MonoBehaviour {
 		pirate.transform.position = pirateCoords;
 		actionScript.setGrapple(false);
 		actionScript.setSwing (false);
-		lvlScript.startLvl();
+		
 		play.SetActive (false);
 		options.SetActive (false);
 		exit.SetActive (false);
 		menu.SetActive(false);
+		// LevelMenus.SetActive(true);
+		box6.SetActive(true);
+		box7.SetActive(true);
+		box8.SetActive(true);
+		lvlScript.startLvl();
 
 	}
 
