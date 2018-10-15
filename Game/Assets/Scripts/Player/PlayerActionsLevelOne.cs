@@ -406,7 +406,14 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	{
 		if (Input.GetKey(KeyCode.Mouse1))
 		{
-			anim.SetBool("isAttacking", true);
+			int attackNumber = Random.Range (0, 5);
+			Debug.Log (attackNumber);
+			if (attackNumber == 1 || attackNumber == 2 || attackNumber == 3) {
+				anim.SetBool ("isAttacking2", true);
+			} 
+			else if (attackNumber == 0 || attackNumber == 4) {
+				anim.SetBool ("isAttacking", true);
+			}
 
 			if (enemyInRange && canAttack)
 			{
@@ -420,6 +427,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		else
 		{
 			anim.SetBool("isAttacking", false);
+			anim.SetBool ("isAttacking2", false);
 		}
 	}
 

@@ -40,16 +40,11 @@ public class EnemyWalk : MonoBehaviour {
 	}
 
 	void Update () {
-
-
-
 		if (playerInSight == true) {
 			WalkToPlayer ();
 		} else {
 			stopWalking ();
 		}
-
-
 	}
 
 	string checkPlayerPosition()

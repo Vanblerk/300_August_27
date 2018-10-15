@@ -411,12 +411,12 @@ public class PlayerActions : MonoBehaviour
 		
 		if (Input.GetKey(KeyCode.Mouse1))
 		{
-			int attackNumber = Random.Range (0, 2);
+			int attackNumber = Random.Range (0, 5);
 			Debug.Log (attackNumber);
-			if (attackNumber == 1) {
+			if (attackNumber == 1 || attackNumber == 2 || attackNumber == 3 ) {
 				anim.SetBool ("isAttacking2", true);
 			} 
-			else if (attackNumber == 0) {
+			else if (attackNumber == 0 || attackNumber == 4) {
 				anim.SetBool ("isAttacking", true);
 			}
 
