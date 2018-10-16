@@ -15,9 +15,12 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	public AudioClip swordSound;
 	public AudioClip swordHit;
 	public AudioClip ambientMusic;
+	public AudioClip HighAttack;
+	
 	public AudioSource mySource;
 
 	public Texture2D crosshairImage;
+
 
 
 	//Nina Variables
@@ -368,7 +371,19 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		} 
 		if(Input.GetMouseButtonDown(1) == true){
 
-			mySource.PlayOneShot(swordSound);
+			// mySource.PlayOneShot(swordSound);
+			int attackNumber = Random.Range (0, 5);
+			Debug.Log (attackNumber);
+			if (attackNumber == 1 || attackNumber == 2 || attackNumber == 3 ) {
+				mySource.PlayOneShot(swordSound);
+				
+				
+			} 
+			else if (attackNumber == 0 || attackNumber == 4) {
+				mySource.PlayOneShot(HighAttack);
+				
+			}
+			StartCoroutine(attackCooldown());
 		}
 
 		// This will change how we do our attack and hit enemy functions. 
@@ -575,6 +590,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		yield return new WaitForSeconds(0.25f);
 		canGrap = true;
 	}
+
 
 	public void ThrowProjectile(bool project){
 		if (project == true) {
