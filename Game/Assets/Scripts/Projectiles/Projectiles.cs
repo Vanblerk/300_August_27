@@ -9,6 +9,10 @@ public class Projectiles : MonoBehaviour {
 	GameObject pirate;
 	Vector2 projectileStartingPos;
 	PlayerActions actionScript;
+	PlayerHealth playerHealth;
+	EnemyHealth enemyHealth;
+	GameObject enemy;
+
 
 	// Use this for initialization
 	void Start () {
@@ -16,17 +20,21 @@ public class Projectiles : MonoBehaviour {
 		ground = GameObject.Find ("newWoodenFloor (2)");
 		ground2 = GameObject.Find ("GroundTop");
 		poison = GameObject.Find ("Projectiles");
+		enemy = GameObject.Find ("ThrowEnemy");
 		pirate = GameObject.Find ("Character");
 		projectileStartingPos.x = poison.transform.position.x;
 		projectileStartingPos.y = poison.transform.position.y;
 		actionScript = (PlayerActions) pirate.GetComponent(typeof(PlayerActions));
+		enemyHealth = (EnemyHealth) enemy.GetComponent(typeof(EnemyHealth));
 
 		//poison.SetActive (false);
 	}
 
 	// Update is called once per frame
 	void Update () {
-
+		if (enemyHealth.enemyDead() == true) {
+			poison.SetActive (false);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
@@ -37,6 +45,7 @@ public class Projectiles : MonoBehaviour {
 			poison.transform.position = projectileStartingPos;
 			poison.SetActive (true);
 			actionScript.ThrowProjectile(true);
+
 
 
 		}

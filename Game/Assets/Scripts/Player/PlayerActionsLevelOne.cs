@@ -471,7 +471,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 
 			}
-			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
+			hit = Physics2D.Raycast (ray.origin, ray.direction, 12f);
 			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
 
@@ -607,6 +607,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			projectileCoords.x = poison2.transform.position.x - 50f;
 			projectileCoords.y = poison2.transform.position.y - 40f;
 			poison2.transform.position = Vector2.MoveTowards (poison2.transform.position, projectileCoords, 3 * Time.deltaTime);
+
 		} 
 	}
 

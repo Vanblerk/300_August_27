@@ -12,6 +12,8 @@ public class Projectiles2LevelOne : MonoBehaviour {
 	Vector2 projectileStartingPos;
 	PlayerActionsLevelOne actionScript;
 	PlayerHealth playerHealth;	
+	EnemyHealth enemyHealth;
+	GameObject enemy;
 
 	// Use this for initialization
 	void Start () {
@@ -24,13 +26,19 @@ public class Projectiles2LevelOne : MonoBehaviour {
 		projectileStartingPos.y = poison.transform.position.y;
 		actionScript = (PlayerActionsLevelOne) pirate.GetComponent(typeof(PlayerActionsLevelOne));
 		playerHealth = pirate.GetComponent<PlayerHealth> ();
+		enemyHealth = (EnemyHealth) enemy.GetComponent(typeof(EnemyHealth));
+		enemy = GameObject.Find ("ThrowEnemy");
 
 		//poison.SetActive (false);
 	}
 
 	// Update is called once per frame
 	void Update () {
-
+		if (poison.transform.position.y < -27) {
+			poison.transform.position = projectileStartingPos;
+			poison.SetActive (true);
+			actionScript.ThrowProjectile(true);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)

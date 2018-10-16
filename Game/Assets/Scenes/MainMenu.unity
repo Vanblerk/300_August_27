@@ -1703,6 +1703,10 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1046654918650682, guid: 94d752af07a0e9c4198f5726bf3aff7e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114588584515519784, guid: 94d752af07a0e9c4198f5726bf3aff7e, type: 2}
     - {fileID: 114834132504298486, guid: 94d752af07a0e9c4198f5726bf3aff7e, type: 2}
@@ -1826,9 +1830,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 220f7b5ce963809499995921931fea57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  play: {fileID: 1151969870}
-  options: {fileID: 242458106}
-  exit: {fileID: 1258743031}
   box6: {fileID: 473660658}
   box7: {fileID: 1800139877}
   box8: {fileID: 1785454305}
@@ -1836,6 +1837,7 @@ MonoBehaviour:
   actionScript: {fileID: 875192226}
   subMenu: {fileID: 1394519700}
   levelMenu: {fileID: 2004842854}
+  line: {fileID: 0}
 --- !u!1 &1040904504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2863,7 +2865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462738111}
   - component: {fileID: 1462738112}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Logo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2936,13 +2938,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1576911766}
   - component: {fileID: 1576911765}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!120 &1576911765
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -3851,7 +3853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2055286236}
   - component: {fileID: 2055286237}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: backgroundRescaledBlurred
   m_TagString: Untagged
   m_Icon: {fileID: 0}

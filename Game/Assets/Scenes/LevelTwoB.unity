@@ -2341,7 +2341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
       propertyPath: m_Name
-      value: ThrowEnemy
+      value: ThrowEnemy2
       objectReference: {fileID: 0}
     - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
       propertyPath: m_IsActive

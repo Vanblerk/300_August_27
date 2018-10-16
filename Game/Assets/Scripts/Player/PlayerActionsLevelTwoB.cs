@@ -449,7 +449,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 
 
 			}
-			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
+			hit = Physics2D.Raycast (ray.origin, ray.direction, 10f);
 			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
 

@@ -13,7 +13,7 @@ public class LevelMenuClick : MonoBehaviour {
 	public PlayerActionsMenu actionScript;
 	SubMenuClick subScript;
 	public GameObject subMenu;
-	GameObject pirate;
+	//GameObject pirate;
 	Vector2 coords;
 	Vector2 pirateCoords;
 
@@ -25,13 +25,13 @@ public class LevelMenuClick : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//menu = GameObject.Find ("LevelMenu");
-		pirate = GameObject.Find ("Character");
+		//pirate = GameObject.Find ("Character");
 		//subMenu = GameObject.FindGameObjectWithTag("submen");
 		/*lvl1 = GameObject.Find ("box");
 		lvl2 = GameObject.Find ("box3");
 		tut = GameObject.Find ("box2");*/
 
-		pirateCoords = pirate.transform.position;
+		//pirateCoords = pirate.transform.position;
 		lvl1.SetActive(false);
 		lvl2.SetActive(false);
 		tut.SetActive(false);
@@ -57,15 +57,15 @@ public class LevelMenuClick : MonoBehaviour {
 		//play grapple func
 		actionScript.setSwing (true);
 		coords = lvl1.transform.position;
-		actionScript.Swinging(coords);
+		//actionScript.Swinging(coords);
 		StartCoroutine(playEnum());
 	}
 
 	public void GoToOptions(){
 		//play grapple
-		actionScript.setSwing (true);
+		//actionScript.setSwing (true);
 		coords = tut.transform.position;
-		actionScript.Swinging(coords);
+		//actionScript.Swinging(coords);
 		//Disable all components and enable the others
 		StartCoroutine(optionsEnum());
 
@@ -73,9 +73,9 @@ public class LevelMenuClick : MonoBehaviour {
 
 	public void ExitGame(){
 		//play grapple
-		actionScript.setSwing (true);
+		//actionScript.setSwing (true);
 		coords = lvl2.transform.position;
-		actionScript.Swinging(coords);
+		//actionScript.Swinging(coords);
 		StartCoroutine(exitEnum());
 
 	}
@@ -84,19 +84,19 @@ public class LevelMenuClick : MonoBehaviour {
 
 	IEnumerator playEnum()
 	{
-		yield return new WaitForSeconds(1.6f);
+		yield return new WaitForSeconds(0.1f);
 		SceneManager.LoadScene("LevelOne");
 	}
 
 	IEnumerator exitEnum()
 	{
-		yield return new WaitForSeconds(1.6f);
+		yield return new WaitForSeconds(0.1f);
 		SceneManager.LoadScene("LevelTwo");
 	}
 
 	IEnumerator optionsEnum()
 	{
-		yield return new WaitForSeconds(1.6f);
+		yield return new WaitForSeconds(0.1f);
 		SceneManager.LoadScene("TutorialLevel");
 	}
 

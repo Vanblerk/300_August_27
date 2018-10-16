@@ -13,10 +13,11 @@ public class ProjectilesLevelOne : MonoBehaviour {
 	PlayerActionsLevelOne actionScript;
 	PlayerHealth playerHealthScript;
 
+
 	// Use this for initialization
 	void Start () {
 
-		ground = GameObject.Find ("CaveFloor (3)");
+		ground = GameObject.Find ("CaveFloorNew_2");
 		poison = GameObject.Find ("Projectiles");
 		pirate = GameObject.Find ("Character");
 		projectileStartingPos.x = poison.transform.position.x;
@@ -24,12 +25,19 @@ public class ProjectilesLevelOne : MonoBehaviour {
 		actionScript = (PlayerActionsLevelOne) pirate.GetComponent(typeof(PlayerActionsLevelOne));
 		playerHealthScript = (PlayerHealth) pirate.GetComponent(typeof(PlayerHealth));
 
+
 		//poison.SetActive (false);
 	}
 
 	// Update is called once per frame
 	void Update () {
 
+		if (poison.transform.position.y < 12) {
+			poison.transform.position = projectileStartingPos;
+			poison.SetActive (true);
+			actionScript.ThrowProjectile(true);
+		}
+		
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)

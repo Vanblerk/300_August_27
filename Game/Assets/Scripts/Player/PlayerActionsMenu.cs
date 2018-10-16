@@ -56,7 +56,6 @@ public class PlayerActionsMenu : MonoBehaviour {
 		firstHit = false;
 		hasHooked = false;
 		target = transform.position;
-
 		//music
 		mySource = GetComponent<AudioSource>();
 		mySource.Play();
@@ -80,6 +79,15 @@ public class PlayerActionsMenu : MonoBehaviour {
 			SceneManager.LoadScene ("MainMenu");
 		}
 
+		if (Input.GetKey (KeyCode.H)) {
+			SceneManager.LoadScene ("LevelTwo");
+		}
+
+		if (Input.GetKey (KeyCode.Y)) {
+			SceneManager.LoadScene ("LevelTwoB");
+		}
+
+		line.SetPosition (0, pirate.transform.position);
 
 
 	}
@@ -109,27 +117,30 @@ public class PlayerActionsMenu : MonoBehaviour {
 
 	}
 
-	public void Swinging(Vector2 coords)
+	/*public void Swinging(Vector2 coords)
 	{
 		grapple.connectedAnchor = coords;
-		line.SetPosition (0, grapPoint.transform.position);
 		line.SetPosition (1, coords);
 		grapple.enabled = true;
-		//line.enabled = true;
-		while (grapple.distance > 2f) {
+		line.enabled = true;
+		while (grapple.distance > 2.5f) {
 			grappleTime = grappleTime + 0.0000001f;	
 			grapple.distance = grapple.distance - grappleTime;
 
 		}
+		if(grapple.distance == 1.5f){
+		line.enabled = false;
+		//grapple.enabled = false;
+		}	
 
-	}
+	}*/
 
 	public void setSwing(bool val){
-		anim.SetBool ("isSwinging", val);
+		//anim.SetBool ("isSwinging", val);
 	}
 
 	public void setGrapple(bool val){
-		grapple.enabled = val;
+		//grapple.enabled = val;
 	}
 
 

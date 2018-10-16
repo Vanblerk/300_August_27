@@ -13,18 +13,18 @@ public class SubMenuClick : MonoBehaviour {
 	public GameObject back;
 	public GameObject tut;
 	public GameObject sound;
-	GameObject pirate;
+	//GameObject pirate;
 	PlayerActionsMenu actionScript;
-	Vector2 pirateCoords;
+	//Vector2 pirateCoords;
 	//Vector2 coords;
 
 	void Start () {
 		subMenu = GameObject.FindGameObjectWithTag("submen");
 		Menu = GameObject.Find ("MainMenu");
-		pirate = GameObject.Find ("Character");
+		//pirate = GameObject.Find ("Character");
 		subMenu.SetActive (false);
-		actionScript = (PlayerActionsMenu) pirate.GetComponent(typeof(PlayerActionsMenu));
-		pirateCoords = pirate.transform.position;
+		//actionScript = (PlayerActionsMenu) pirate.GetComponent(typeof(PlayerActionsMenu));
+		//pirateCoords = pirate.transform.position;
 		back.SetActive (false);
 		tut.SetActive (false);
 		sound.SetActive (false);
@@ -37,15 +37,15 @@ public class SubMenuClick : MonoBehaviour {
 
 	public void Tutorial(){
 		Vector2 coords = tut.transform.position;
-		actionScript.setSwing (true);
-		actionScript.Swinging(coords);
+		//actionScript.setSwing (true);
+		//actionScript.Swinging(coords);
 		StartCoroutine(tutEnum());
 	} 
 
 	public void goBack(){
 		Vector2 coords = back.transform.position;
-		actionScript.setSwing (true);
-		actionScript.Swinging(coords);
+		//actionScript.setSwing (true);
+		//actionScript.Swinging(coords);
 		StartCoroutine(backEnum());
 
 	} 
@@ -53,17 +53,17 @@ public class SubMenuClick : MonoBehaviour {
 	public void SoundandControlls(){
 		Vector2 coords = sound.transform.position;
 		actionScript.setSwing (true);
-		actionScript.Swinging(coords);
+		//actionScript.Swinging(coords);
 		StartCoroutine(soundEnum());
 	} 
 
 	IEnumerator backEnum()
 	{
-		yield return new WaitForSeconds(1.6f);
+		yield return new WaitForSeconds(0.3f);
 		Menu.SetActive (true);
-		pirate.transform.position = pirateCoords;
-		actionScript.setGrapple(false);
-		actionScript.setSwing (false);
+		//pirate.transform.position = pirateCoords;
+		//actionScript.setGrapple(false);
+		//actionScript.setSwing (false);
 		subMenu.SetActive (false);
 		back.SetActive (false);
 		tut.SetActive (false);
@@ -72,7 +72,7 @@ public class SubMenuClick : MonoBehaviour {
 
 	IEnumerator tutEnum()
 	{
-		yield return new WaitForSeconds(1.6f);
+		yield return new WaitForSeconds(0.3f);
 
 		//do your stuff here
 		SceneManager.LoadScene("TutorialLevel");
@@ -80,7 +80,7 @@ public class SubMenuClick : MonoBehaviour {
 
 	IEnumerator soundEnum()
 	{
-		yield return new WaitForSeconds(1.6f);
+		yield return new WaitForSeconds(0.3f);
 
 		//do your stuff here
 	}

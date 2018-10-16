@@ -12063,7 +12063,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
       propertyPath: m_Name
-      value: ThrowEnemy
+      value: ThrowEnemy2
       objectReference: {fileID: 0}
     - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
       propertyPath: m_IsActive
@@ -15312,6 +15312,7 @@ MonoBehaviour:
   swordSound: {fileID: 0}
   swordHit: {fileID: 0}
   ambientMusic: {fileID: 0}
+  HighAttack: {fileID: 0}
   mySource: {fileID: 0}
   crosshairImage: {fileID: 0}
   grapple: {fileID: 0}
@@ -16414,6 +16415,10 @@ Prefab:
     - target: {fileID: 4234728655512088, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1898696867851406, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}
+      propertyPath: m_Name
+      value: ThrowEnemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4105f3349b29c2a418e5074c69d0c618, type: 2}

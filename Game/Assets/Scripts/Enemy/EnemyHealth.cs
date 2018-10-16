@@ -100,7 +100,7 @@ public class EnemyHealth : MonoBehaviour {
 			anim.SetTrigger ("EnemyDeath");
 		}
 
-
+		isDead = true;
 
 		// Tell the animator that the enemy is dead.
 		// anim.SetTrigger("Dead");
@@ -125,5 +125,14 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		yield return new WaitForSeconds (0.3f);
 
+	}
+
+	public bool enemyDead(){
+		if (isDead == true) {
+			return true;
+		} else {
+			return false;
+		}
+	
 	}
 }

@@ -13,6 +13,9 @@ public class Projectiles2LevelTwoB : MonoBehaviour {
 	PlayerActionsLevelOne actionScript;
 	PlayerHealth playerHealth;	
 
+	EnemyHealth enemyHealth;
+	GameObject enemy;
+
 	// Use this for initialization
 	void Start () {
 
@@ -24,6 +27,8 @@ public class Projectiles2LevelTwoB : MonoBehaviour {
 		actionScript = (PlayerActionsLevelOne) pirate.GetComponent(typeof(PlayerActionsLevelOne));
 		playerHealth = pirate.GetComponent<PlayerHealth> ();
 
+		enemy = GameObject.Find ("ThrowEnemy2");
+		enemyHealth = (EnemyHealth) enemy.GetComponent(typeof(EnemyHealth));
 		//poison.SetActive (false);
 	}
 
@@ -32,6 +37,10 @@ public class Projectiles2LevelTwoB : MonoBehaviour {
 			poison.transform.position = projectileStartingPos;
 			poison.SetActive (true);
 			actionScript.ThrowProjectile(true);
+		}
+
+		if (enemyHealth.enemyDead() == true) {
+			poison.SetActive (false);
 		}
 	}
 

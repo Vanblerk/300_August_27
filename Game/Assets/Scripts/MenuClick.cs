@@ -7,9 +7,9 @@ using UnityEngine.SceneManagement;
 public class MenuClick : MonoBehaviour {
 
 	GameObject menu;
-	public GameObject play;
-	public GameObject options;
-	public GameObject exit;
+	 GameObject play;
+	 GameObject options;
+	 GameObject exit;
 	public GameObject box6;
 	public GameObject box7;
 	public GameObject box8;
@@ -17,11 +17,12 @@ public class MenuClick : MonoBehaviour {
 	public PlayerActionsMenu actionScript;
 	SubMenuClick subScript;
 	public GameObject subMenu;
-	GameObject pirate;
+	//GameObject pirate;
 	Vector2 coords;
 	Vector2 pirateCoords;
 	public GameObject levelMenu;
 	LevelMenuClick lvlScript;
+	public LineRenderer line;
 
 	// public AudioSource mySource;
 
@@ -31,15 +32,15 @@ public class MenuClick : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		menu = GameObject.Find ("MainMenu");
-		pirate = GameObject.Find ("Character");
+		//pirate = GameObject.Find ("Character");
 		//subMenu = GameObject.FindGameObjectWithTag("submen");
-		/*play = GameObject.Find ("box");
+		options = GameObject.Find ("box");
 		exit = GameObject.Find ("box3");
-		options = GameObject.Find ("box2");*/
+		play = GameObject.Find ("box2");
 
 		lvlScript = (LevelMenuClick) levelMenu.GetComponent(typeof(LevelMenuClick));
 		subScript = (SubMenuClick) subMenu.GetComponent(typeof(SubMenuClick));
-		pirateCoords = pirate.transform.position;
+		//pirateCoords = pirate.transform.position;
 		box6.SetActive(false);
 		box7.SetActive(false);
 		box8.SetActive(false);
@@ -57,27 +58,28 @@ public class MenuClick : MonoBehaviour {
 
 	public void PlayGame(){
 		//play grapple func
-		actionScript.setSwing (true);
+		//actionScript.setSwing (true);
 		coords = play.transform.position;
-		actionScript.Swinging(coords);
+		//actionScript.Swinging(coords);
 		StartCoroutine(playEnum());
 	}
 
 	public void GoToOptions(){
 		//play grapple
-		actionScript.setSwing (true);
+		//actionScript.setSwing (true);
 		coords = options.transform.position;
-		actionScript.Swinging(coords);
+		//actionScript.Swinging(coords);
 		//Disable all components and enable the others
 		StartCoroutine(optionsEnum());
+
 
 	}
 
 	public void ExitGame(){
 		//play grapple
-		actionScript.setSwing (true);
+		//actionScript.setSwing (true);
 		coords = exit.transform.position;
-		actionScript.Swinging(coords);
+		//actionScript.Swinging(coords);
 		StartCoroutine(exitEnum());
 
 	}
@@ -86,10 +88,10 @@ public class MenuClick : MonoBehaviour {
 
 	IEnumerator playEnum()
 	{
-		yield return new WaitForSeconds(1.6f);
-		pirate.transform.position = pirateCoords;
-		actionScript.setGrapple(false);
-		actionScript.setSwing (false);
+		yield return new WaitForSeconds(0.3f);
+		//pirate.transform.position = pirateCoords;
+		//actionScript.setGrapple(false);
+		//actionScript.setSwing (false);
 		
 		play.SetActive (false);
 		options.SetActive (false);
@@ -105,16 +107,16 @@ public class MenuClick : MonoBehaviour {
 
 	IEnumerator exitEnum()
 	{
-		yield return new WaitForSeconds(1.6f);
+		yield return new WaitForSeconds(0.3f);
 		Application.Quit();
 	}
 
 	IEnumerator optionsEnum()
 	{
-		yield return new WaitForSeconds(1.6f);
-		pirate.transform.position = pirateCoords;
-		actionScript.setGrapple(false);
-		actionScript.setSwing (false);
+		yield return new WaitForSeconds(0.3f);
+		//pirate.transform.position = pirateCoords;
+		//actionScript.setGrapple(false);
+		//actionScript.setSwing (false);
 		subScript.startSub();
 		play.SetActive (false);
 		options.SetActive (false);
