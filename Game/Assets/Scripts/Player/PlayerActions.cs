@@ -18,6 +18,8 @@ public class PlayerActions : MonoBehaviour
 	public AudioClip swordHit;
 	public AudioClip ambientMusic;
 	public AudioClip HighAttack;
+	public AudioClip Intro;
+	public AudioClip Outro;
 	public AudioSource mySource;
 
 	public Texture2D crosshairImage;
@@ -164,7 +166,9 @@ public class PlayerActions : MonoBehaviour
 		AdjustVolume(vol);
 		//Music
 		mySource = GetComponent<AudioSource>();
+		mySource.PlayOneShot(Intro);
 		mySource.Play();
+		
 
 
 		

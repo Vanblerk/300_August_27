@@ -5471,6 +5471,11 @@ Prefab:
       propertyPath: HighAttack
       value: 
       objectReference: {fileID: 8300000, guid: 08562ca89be0e154faaab469971f8f40, type: 3}
+    - target: {fileID: 114834132504298486, guid: 94d752af07a0e9c4198f5726bf3aff7e,
+        type: 2}
+      propertyPath: Intro
+      value: 
+      objectReference: {fileID: 8300000, guid: 77724351523623d45a6a7b4e153f58b0, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 94d752af07a0e9c4198f5726bf3aff7e, type: 2}
   m_IsPrefabParent: 0
@@ -8068,6 +8073,7 @@ MonoBehaviour:
   swordSound: {fileID: 0}
   swordHit: {fileID: 0}
   ambientMusic: {fileID: 0}
+  HighAttack: {fileID: 0}
   mySource: {fileID: 0}
   crosshairImage: {fileID: 0}
   grapple: {fileID: 0}
@@ -8110,6 +8116,7 @@ MonoBehaviour:
   swordSound: {fileID: 0}
   swordHit: {fileID: 0}
   ambientMusic: {fileID: 0}
+  HighAttack: {fileID: 0}
   mySource: {fileID: 0}
   crosshairImage: {fileID: 0}
   grapple: {fileID: 0}
@@ -8152,6 +8159,7 @@ MonoBehaviour:
   swordSound: {fileID: 0}
   swordHit: {fileID: 0}
   ambientMusic: {fileID: 0}
+  HighAttack: {fileID: 0}
   mySource: {fileID: 0}
   crosshairImage: {fileID: 0}
   grapple: {fileID: 0}

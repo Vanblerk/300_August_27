@@ -16,6 +16,8 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	public AudioClip swordHit;
 	public AudioClip ambientMusic;
 	public AudioClip HighAttack;
+	public AudioClip Intro;
+	public AudioClip Outro;
 	
 	public AudioSource mySource;
 
@@ -155,6 +157,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		AdjustVolume(vol);
 		//Music
 		mySource = GetComponent<AudioSource>();
+		mySource.PlayOneShot(Intro);
 		mySource.Play();
 		mySource.PlayOneShot(ambientMusic);
 		line.SetPosition (1, pirate.transform.position);
@@ -275,6 +278,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 		if (other.gameObject == endGame) {
 			Debug.Log("End Level");
+			mySource.PlayOneShot(Outro);
 			StartCoroutine(endCooldown());
 		}
 
@@ -282,7 +286,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 	IEnumerator endCooldown()
 	{
-		yield return new WaitForSeconds(0.3f);
+		yield return new WaitForSeconds(4f);
 		SceneManager.LoadScene ("LevelTwo");
 	}
 

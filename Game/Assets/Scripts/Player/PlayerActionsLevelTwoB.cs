@@ -16,6 +16,8 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 	public AudioClip swordHit;
 	public AudioClip ambientMusic;
 	public AudioClip HighAttack;
+	public AudioClip Intro;
+	public AudioClip Outro;
 	public AudioSource mySource;
 
 	public Texture2D crosshairImage;
@@ -151,6 +153,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 		AdjustVolume(vol);
 		//Music
 		mySource = GetComponent<AudioSource>();
+		mySource.PlayOneShot(Intro);
 		mySource.Play();
 		mySource.PlayOneShot(ambientMusic);
 
@@ -267,7 +270,18 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 			poison2.SetActive (true);
 			projectTest2 = true;
 		}
+		if (other.gameObject == endGame) {
+			Debug.Log("End Level");
+			mySource.PlayOneShot(Outro);
+			StartCoroutine(endCooldown());
+		}
 
+	}
+
+	IEnumerator endCooldown()
+	{
+		yield return new WaitForSeconds(4f);
+		SceneManager.LoadScene ("MainMenu");
 	}
 
 	void FixedUpdate()
