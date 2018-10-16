@@ -14741,6 +14741,7 @@ GameObject:
   - component: {fileID: 1443572521}
   - component: {fileID: 1443572520}
   - component: {fileID: 1443572531}
+  - component: {fileID: 1443572532}
   m_Layer: 2
   m_Name: Character
   m_TagString: Player
@@ -14860,8 +14861,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01b78728f6fb5fa4ea6ad3155fec9f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 100
+  startingHealth: 15
+  currentHealth: 15
   healthSlider: {fileID: 0}
   damageImage: {fileID: 1443572528}
   deathClip: {fileID: 8300000, guid: 166514b8ff518084988ef404e9d08a61, type: 3}
@@ -14869,6 +14870,10 @@ MonoBehaviour:
   flashColour: {r: 1, g: 0, b: 0, a: 1}
   HealthUI: {fileID: 0}
   HealthUIIII: {fileID: 0}
+  input: {fileID: 0}
+  input2: {fileID: 0}
+  input3: {fileID: 0}
+  input4: {fileID: 0}
   playerAudio: {fileID: 1443572525}
 --- !u!60 &1443572524
 PolygonCollider2D:
@@ -15278,6 +15283,48 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   grapPoint: {fileID: 39072633}
+  attackDamage: 10
+  enemyHealth: {fileID: 0}
+  barrelroll: {fileID: 0}
+  giveHealth: {fileID: 0}
+  canGrap: 1
+--- !u!114 &1443572532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443572519}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5335fa35a9ba334186aa5ba340534ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grappleSound: {fileID: 0}
+  grappleClankSound: {fileID: 0}
+  grappleClankSoundHigh: {fileID: 0}
+  grappleClankSoundLow: {fileID: 0}
+  PlayHigh: 0
+  PlayLow: 0
+  gulpHealth: {fileID: 0}
+  swordSound: {fileID: 0}
+  swordHit: {fileID: 0}
+  ambientMusic: {fileID: 0}
+  mySource: {fileID: 0}
+  crosshairImage: {fileID: 0}
+  grapple: {fileID: 0}
+  facingRight: 1
+  isSwinging: 0
+  hasHooked: 0
+  firstHit: 0
+  projectTest: 0
+  projectTest2: 0
+  isSet: 0
+  grappleTime: 0
+  line: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  grapPoint: {fileID: 0}
   attackDamage: 10
   enemyHealth: {fileID: 0}
   barrelroll: {fileID: 0}

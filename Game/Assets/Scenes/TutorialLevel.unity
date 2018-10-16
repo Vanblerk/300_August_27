@@ -8042,6 +8042,132 @@ GameObject:
   m_PrefabParentObject: {fileID: 1046654918650682, guid: 94d752af07a0e9c4198f5726bf3aff7e,
     type: 2}
   m_PrefabInternal: {fileID: 1050503897}
+--- !u!114 &1401179997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401179996}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5335fa35a9ba334186aa5ba340534ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grappleSound: {fileID: 0}
+  grappleClankSound: {fileID: 0}
+  grappleClankSoundHigh: {fileID: 0}
+  grappleClankSoundLow: {fileID: 0}
+  PlayHigh: 0
+  PlayLow: 0
+  gulpHealth: {fileID: 0}
+  swordSound: {fileID: 0}
+  swordHit: {fileID: 0}
+  ambientMusic: {fileID: 0}
+  mySource: {fileID: 0}
+  crosshairImage: {fileID: 0}
+  grapple: {fileID: 0}
+  facingRight: 1
+  isSwinging: 0
+  hasHooked: 0
+  firstHit: 0
+  projectTest: 0
+  projectTest2: 0
+  isSet: 0
+  grappleTime: 0
+  line: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  grapPoint: {fileID: 0}
+  attackDamage: 10
+  enemyHealth: {fileID: 0}
+  barrelroll: {fileID: 0}
+  giveHealth: {fileID: 0}
+  canGrap: 1
+--- !u!114 &1401179998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401179996}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 091cdd5042385ec45b647bd167bb8ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grappleSound: {fileID: 0}
+  grappleClankSound: {fileID: 0}
+  grappleClankSoundHigh: {fileID: 0}
+  grappleClankSoundLow: {fileID: 0}
+  PlayHigh: 0
+  PlayLow: 0
+  gulpHealth: {fileID: 0}
+  swordSound: {fileID: 0}
+  swordHit: {fileID: 0}
+  ambientMusic: {fileID: 0}
+  mySource: {fileID: 0}
+  crosshairImage: {fileID: 0}
+  grapple: {fileID: 0}
+  facingRight: 1
+  isSwinging: 0
+  hasHooked: 0
+  firstHit: 0
+  projectTest: 0
+  projectTest2: 0
+  isSet: 0
+  grappleTime: 0
+  line: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  grapPoint: {fileID: 0}
+  attackDamage: 10
+  enemyHealth: {fileID: 0}
+  barrelroll: {fileID: 0}
+  giveHealth: {fileID: 0}
+  canGrap: 1
+--- !u!114 &1401179999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401179996}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1924bce5bcc1f6b4283d54dc9fd617c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grappleSound: {fileID: 0}
+  grappleClankSound: {fileID: 0}
+  grappleClankSoundHigh: {fileID: 0}
+  grappleClankSoundLow: {fileID: 0}
+  PlayHigh: 0
+  PlayLow: 0
+  gulpHealth: {fileID: 0}
+  swordSound: {fileID: 0}
+  swordHit: {fileID: 0}
+  ambientMusic: {fileID: 0}
+  mySource: {fileID: 0}
+  crosshairImage: {fileID: 0}
+  grapple: {fileID: 0}
+  facingRight: 1
+  isSwinging: 0
+  hasHooked: 0
+  firstHit: 0
+  projectTest: 0
+  projectTest2: 0
+  isSet: 0
+  grappleTime: 0
+  line: {fileID: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 0
+  grapPoint: {fileID: 0}
+  attackDamage: 10
+  enemyHealth: {fileID: 0}
+  barrelroll: {fileID: 0}
+  giveHealth: {fileID: 0}
+  canGrap: 1
 --- !u!70 &1401180005
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -16,8 +16,13 @@ public class PlayerHealth : MonoBehaviour {
 	public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
 	public Color flashColour = new Color(0, 0, 0, 0);     		// The colour the damageImage is set to, to flash.
 	public GameObject HealthUI;									//To Reference the healthUI			
-	public GameObject HealthUIIII;									//To Reference the healthUI			
+	public GameObject HealthUIIII;									//To Reference the healthUI	
 
+	//Used to disable from player from moving after death, but need one for each playerActions script
+	public PlayerActions input;									
+	public PlayerActionsLevelOne input2;
+	public PlayerActionsLevelTwo input3;
+	public PlayerActionsLevelTwoB input4;
 
 	Animator anim;                                              // Reference to the Animator component.
 	PolygonCollider2D polygonCollider;							// References the players collider.
@@ -29,6 +34,10 @@ public class PlayerHealth : MonoBehaviour {
 	void Awake()
 	{
 		anim = GetComponent <Animator>();
+		input = GetComponent<PlayerActions>();
+		input2 = GetComponent<PlayerActionsLevelOne>();
+		input3 = GetComponent<PlayerActionsLevelTwo>();
+		input4 = GetComponent<PlayerActionsLevelTwoB>();
 		// HealthUI = GameObject.FindGameObjectWithTag ("HealthUI");
 		HealthUI = GameObject.Find("HealthShadow");
 		HealthUIIII = GameObject.Find("Health");
@@ -91,6 +100,10 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void Death()
 	{
+		input.enabled = false;
+		input2.enabled = false;
+		input3.enabled = false;
+		input4.enabled = false;
 		isDead = true;
 		currentHealth = 0;
 		playerAudio.PlayOneShot(deathClip);
