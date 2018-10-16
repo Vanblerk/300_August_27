@@ -14438,7 +14438,7 @@ GameObject:
   - component: {fileID: 1418005532}
   - component: {fileID: 1418005531}
   - component: {fileID: 1418005535}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Projectiles2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19455,7 +19455,7 @@ GameObject:
   - component: {fileID: 1903097085}
   - component: {fileID: 1903097084}
   - component: {fileID: 1903097088}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Projectileslvl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

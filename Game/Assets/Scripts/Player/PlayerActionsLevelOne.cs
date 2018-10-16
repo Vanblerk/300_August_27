@@ -320,13 +320,6 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		Swinging();
 		if(Input.GetMouseButtonUp(0) == true){
 
-			if (firstClick == false) {
-				mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
-				ray = new Ray2D (pirate.transform.position, mouseDirection); 
-				firstClick = true;
-			}
-
-
 				if (canGrap == true) {
 					//moving to on colision
 					isSet = false;
@@ -342,6 +335,15 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		} 
 
 		if (Input.GetKey (KeyCode.Mouse0)) {
+
+			if (firstClick == false) {
+				mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
+				ray = new Ray2D (pirate.transform.position, mouseDirection); 
+				firstClick = true;
+				swingFlip(facingRight, mouseDirection);
+			}
+
+
 			if (hasHooked == false) {
 				if(canGrap == true){
 					mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);

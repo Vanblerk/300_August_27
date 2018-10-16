@@ -325,6 +325,7 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 				mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
 				ray = new Ray2D (pirate.transform.position, mouseDirection); 
 				firstClick = true;
+				swingFlip(facingRight, mouseDirection);
 			}
 
 			if (hasHooked == false) {

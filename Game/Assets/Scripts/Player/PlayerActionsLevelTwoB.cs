@@ -324,6 +324,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 				mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
 				ray = new Ray2D (pirate.transform.position, mouseDirection); 
 				firstClick = true;
+				swingFlip(facingRight, mouseDirection);
 			}
 
 			if (hasHooked == false) {
@@ -333,7 +334,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 					anim.SetBool ("isSwinging", true);
 					hasHooked = true;
 					grapple.enabled = true;
-					swingFlip (facingRight, mouseDirection);
+					swingFlip(facingRight, mouseDirection);
 					mySource.PlayOneShot(grappleSound);
 				}
 			}
