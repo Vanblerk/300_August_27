@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public int startingHealth = 10;								// The amount of health the player starts the game with.
 	public int currentHealth;									// The current health the player has.
+	int savedhealth;
 	Text text; 
 	Text text2; 												// Text to Modify how many Lives we have.
 	public Slider healthSlider;                                 // Reference to the UI's health bar.
@@ -28,8 +29,9 @@ public class PlayerHealth : MonoBehaviour {
 	PolygonCollider2D polygonCollider;							// References the players collider.
 	public AudioSource playerAudio;                                    // Reference to the AudioSource component.
 	bool isDead = false;                                                // Whether the player is dead.
-	bool damaged;                                               // True when the player gets damaged.
-
+	bool ninaisDead = false; 
+	bool damaged;                                              // True when the player gets damaged.
+	bool mayDie = true;
 
 	void Awake()
 	{
@@ -67,6 +69,9 @@ public class PlayerHealth : MonoBehaviour {
 			//damageImage.color = new Color(255, 255, 255, 255);
 		}
 		damaged = false;
+
+
+	
 	}
 
 	public void PlayerTakeDamage(int amount)
@@ -85,9 +90,13 @@ public class PlayerHealth : MonoBehaviour {
 
 
 		if (currentHealth <= 0 && isDead == false) {
-			Death ();
+				Death ();
 		}
 
+	}
+
+	public bool didDie(){
+		return ninaisDead;
 	}
 
 	public void PlayerGetHealth(int amount)
@@ -100,15 +109,18 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void Death()
 	{
-		input.enabled = false;
-		input2.enabled = false;
-		input3.enabled = false;
-		input4.enabled = false;
-		isDead = true;
-		currentHealth = 0;
-		playerAudio.PlayOneShot(deathClip);
-		anim.SetTrigger ("isDead");
-		StartCoroutine(waitingToDie());
+		ninaisDead = true;
+		if (mayDie == true) {
+			input.enabled = false;
+			input2.enabled = false;
+			input3.enabled = false;
+			input4.enabled = false;
+			isDead = true;
+			currentHealth = 0;
+			playerAudio.PlayOneShot (deathClip);
+			anim.SetTrigger ("isDead");
+			StartCoroutine (waitingToDie ());
+		} 
 
 	}
 
@@ -127,4 +139,16 @@ public class PlayerHealth : MonoBehaviour {
 		damageImage.color = new Color(255, 255, 255, 255);
 	}
 
+	public int saveHealth(){
+		savedhealth = currentHealth;
+		return savedhealth;
+	}
+
+	public void changeHealth(int amount){
+		currentHealth = amount;
+	}
+
+	public void setMaydie(bool val){
+		mayDie = val;
+	}
 }

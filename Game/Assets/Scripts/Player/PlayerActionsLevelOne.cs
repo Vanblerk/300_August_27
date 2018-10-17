@@ -50,9 +50,17 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	bool firstClick = false;
 	PlayerHealth playerHealthScript;
 
+
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
 	GameObject AttCollider;
+	GameObject respawn1;
+	GameObject respawn1Exit;
+	Vector2 respawnCoords;
+	bool insideRespawn;
+	int saved;
+	bool changePos = false;
+
 	// GameObject video;
 
 
@@ -163,6 +171,8 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		line.SetPosition (1, pirate.transform.position);
 		line.SetPosition (0, pirate.transform.position);
 
+		respawn1 = GameObject.Find ("RespawnPoint");
+		respawn1Exit = GameObject.Find ("RespawnPointExit");
 
 	}
 
@@ -282,6 +292,22 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			StartCoroutine(endCooldown());
 		}
 
+		if (other.gameObject == respawn1)
+		{
+			insideRespawn = true;
+			respawnCoords = pirate.transform.position;
+			saved = playerHealthScript.saveHealth ();
+			playerHealthScript.setMaydie (false);
+			//saved the coordinates
+		}
+
+		if (other.gameObject == respawn1Exit)
+		{
+			//insideRespawn = false;
+			//playerHealthScript.setMaydie (true);
+			//saved the coordinates
+		}
+
 	}
 
 	IEnumerator endCooldown()
@@ -321,6 +347,11 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		if (Input.GetKey (KeyCode.L)) {
 			playerHealthScript.PlayerGetHealth (100);
 		}
+
+		if (Input.GetKey (KeyCode.F12)) {
+			playerHealthScript.setMaydie (false);
+		}
+
 
 
 		Attack();
@@ -397,6 +428,12 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		ThrowProjectile(projectTest);
 		ThrowProjectile2(projectTest2);
 
+		/*if (insideRespawn == true && playerHealthScript.didDie () == true) {
+				insideRespawn = false;
+				pirate.transform.position = respawnCoords;
+				saved = playerHealthScript.saveHealth ();
+				playerHealthScript.changeHealth (saved);
+		}*/
 
 	}
 
@@ -475,7 +512,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 
 			}
-			hit = Physics2D.Raycast (ray.origin, ray.direction, 12f);
+			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
 			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
 
@@ -636,5 +673,8 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 	}
 
+	public void setChangePos(bool val){
+		changePos = val;
+	}
 
 }

@@ -316,6 +316,9 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 			playerHealthScript.PlayerGetHealth (100);
 		}
 
+		if (Input.GetKey (KeyCode.F12)) {
+			playerHealthScript.setMaydie (false);
+		}
 
 		Attack();
 		Swinging();
@@ -463,7 +466,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 
 
 			}
-			hit = Physics2D.Raycast (ray.origin, ray.direction, 10f);
+			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
 			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
 
