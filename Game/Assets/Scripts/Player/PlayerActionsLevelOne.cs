@@ -303,8 +303,8 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 		if (other.gameObject == respawn1Exit)
 		{
-			//insideRespawn = false;
-			//playerHealthScript.setMaydie (true);
+			insideRespawn = false;
+			playerHealthScript.setMaydie (true);
 			//saved the coordinates
 		}
 
