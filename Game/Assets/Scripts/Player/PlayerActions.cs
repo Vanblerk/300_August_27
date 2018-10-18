@@ -46,6 +46,7 @@ public class PlayerActions : MonoBehaviour
 	bool canAttack = true;
 	bool firstClick = false;
 	PlayerHealth playerHealthScript;
+	bool isPlatform = false;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -330,7 +331,6 @@ public class PlayerActions : MonoBehaviour
 
 
 		Attack();
-		Swinging();
 		if(Input.GetMouseButtonUp(0) == true){
 			if(canGrap == true){
 				//moving to on colision
@@ -340,30 +340,28 @@ public class PlayerActions : MonoBehaviour
 				grapple.enabled = false;
 				hasHooked = false;
 				firstHit = false;
+				isPlatform = false;
 				StartCoroutine(GrappleTimer());
 			}
 			
 		} 
 
 		if (Input.GetKey (KeyCode.Mouse0)) {
-			if (firstClick == false) {
+			/*if (firstClick == false) {
 				mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
 				ray = new Ray2D (pirate.transform.position, mouseDirection); 
 				firstClick = true;
 				swingFlip(facingRight, mouseDirection);
-			}
+			}*/
 				
 			if (hasHooked == false) {
-				if(canGrap == true){
+				if(canGrap == true ){
 					mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
 					ray = new Ray2D (pirate.transform.position, mouseDirection); 
-					anim.SetBool ("isSwinging", true);
 					hasHooked = true;
-					grapple.enabled = true;
-					swingFlip (facingRight, mouseDirection);
-					mySource.PlayOneShot(grappleSound);
 				}
 			}
+			Swinging();
 		}
 
 		//Sounds
@@ -481,8 +479,8 @@ public class PlayerActions : MonoBehaviour
 	void Swinging()
 	{
 
-		if (Input.GetKey(KeyCode.Mouse0))
-		{
+		/*if (Input.GetKey(KeyCode.Mouse0))
+		{*/
 
 		
 			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
@@ -491,95 +489,102 @@ public class PlayerActions : MonoBehaviour
 
 			if (hit.collider != null) {
 
-				Debug.Log ("platform hit");
-
-				if(canGrap == true){
-
+				if (hit.collider.tag == "platform") {
+					Debug.Log ("platform hit");
+					isPlatform = true;
+				}
 				
 
-					// mySource.PlayClipAtPoint(grappleSound, transform.position);
-					// mySource.Play(grappleSound);
-					// mySource.PlayClipAtPoint(grappleSound, new Vector3(5, 1, 0));
-					// mySource.PlayOneShot(grappleSound);
+				if (canGrap == true && isPlatform == true) {
 
-					if (firstHit == false) {
-						// mySource.PlayOneShot (grappleClankSound);
-						if(PlayHigh == true && PlayLow == false){
-							// if(PlayLow == false){
-								mySource.PlayOneShot(grappleClankSoundHigh);
+					
+						grapple.enabled = true;
+						anim.SetBool ("isSwinging", true);
+						swingFlip (facingRight, mouseDirection);
+						//mySource.PlayOneShot(grappleSound);
+						// mySource.PlayClipAtPoint(grappleSound, transform.position);
+						// mySource.Play(grappleSound);
+						// mySource.PlayClipAtPoint(grappleSound, new Vector3(5, 1, 0));
+						// mySource.PlayOneShot(grappleSound);
+
+						if (firstHit == false) {
+							// mySource.PlayOneShot (grappleClankSound);
+							if (PlayHigh == true && PlayLow == false) {
+								// if(PlayLow == false){
+								mySource.PlayOneShot (grappleClankSoundHigh);
 								PlayHigh = false;
 								PlayLow = false;
-								Debug.Log("High Sound");
-							// }
-						}
-						else if(PlayLow == true && PlayHigh == false){
-							// if(PlayHigh == false){
-								mySource.PlayOneShot(grappleClankSoundLow);
+								Debug.Log ("High Sound");
+								// }
+							} else if (PlayLow == true && PlayHigh == false) {
+								// if(PlayHigh == false){
+								mySource.PlayOneShot (grappleClankSoundLow);
 								PlayLow = false;
 								PlayHigh = true;
-								Debug.Log("Low Sound");
-							// }
-						}
-						else if(PlayHigh == false && PlayLow == false){
-							// if(PlayLow == false){
-								mySource.PlayOneShot(grappleClankSound);
+								Debug.Log ("Low Sound");
+								// }
+							} else if (PlayHigh == false && PlayLow == false) {
+								// if(PlayLow == false){
+								mySource.PlayOneShot (grappleClankSound);
 								PlayLow = true;
-								Debug.Log("Normal Sound");
-							// }
+								Debug.Log ("Normal Sound");
+								// }
+							}
+							firstHit = true;
 						}
-						firstHit = true;
-					}
 
-					//if the mouse click is to the right
-					if (pirate.transform.position.x < Input.mousePosition.x) {
+						//if the mouse click is to the right
+						if (pirate.transform.position.x < Input.mousePosition.x) {
 
-						values.x = hit.point.x + 3.7f;
-						values.y = hit.point.y;
-						lineR.x = hit.point.x + 0f;
-						lineR.y = hit.point.y;
-						grapple.connectedAnchor = values;
-						line.SetPosition (1, lineR);
-						line.SetPosition (0, grapPoint.transform.position);
-						line.enabled = true;
+							values.x = hit.point.x + 3.7f;
+							values.y = hit.point.y;
+							lineR.x = hit.point.x + 0f;
+							lineR.y = hit.point.y;
+							grapple.connectedAnchor = values;
+							line.SetPosition (1, lineR);
+							line.SetPosition (0, grapPoint.transform.position);
+							line.enabled = true;
 
 
 
+						} else {
+							grapple.connectedAnchor = hit.point;
+							lineR.x = hit.point.x + 0f;
+							lineR.y = hit.point.y;
+							line.SetPosition (0, grapPoint.transform.position);
+							line.SetPosition (1, lineR);
+							line.enabled = true;
+						}
+
+						while (grapple.distance > 2f) {
+							grappleTime = grappleTime + 0.00001f;	
+							grapple.distance = grapple.distance - grappleTime;
+							
+						}
 					} else {
-						grapple.connectedAnchor = hit.point;
-						lineR.x = hit.point.x + 0f;
-						lineR.y = hit.point.y;
-						line.SetPosition (0, grapPoint.transform.position);
-						line.SetPosition (1, lineR);
-						line.enabled = true;
+						grapple.enabled = false;
+						line.enabled = false;
 					}
-
-					while (grapple.distance > 2f) {
-						grappleTime = grappleTime + 0.00001f;	
-						grapple.distance = grapple.distance - grappleTime;
 						
-					}
-				}
-					
-
 			}//end of if collide
 			else {
 
 		
-
-
-				mouseCoords = ray.GetPoint (5f);
 				grapple.enabled = false;
+				line.enabled = false;
+				/*mouseCoords = ray.GetPoint (5f);
+
 				//grapple.connectedAnchor = mouseCoords;
 				//mouseCoords = lineLimit();
 				line.SetPosition (0, transform.position);
 				line.SetPosition (1, mouseCoords);
 				line.enabled = true;
-				StartCoroutine(Example());
+				StartCoroutine(Example());*/
 
 			}
 
 
-		}
+		//}
 		
 	}
 

@@ -592,14 +592,14 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			else {
 
 
-				mouseCoords = ray.GetPoint (5f);
+				/*mouseCoords = ray.GetPoint (5f);
 				grapple.enabled = false;
 				//grapple.connectedAnchor = mouseCoords;
 				//mouseCoords = lineLimit();
 				line.enabled = true;
 				line.SetPosition (0, transform.position);
 				line.SetPosition (1, mouseCoords);
-				StartCoroutine(Example());
+				StartCoroutine(Example());*/
 
 			}
 
