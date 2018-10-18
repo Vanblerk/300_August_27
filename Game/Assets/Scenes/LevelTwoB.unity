@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 52201322}
   m_Layer: 0
   m_Name: pulleyHookable (13)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2489,7 +2489,7 @@ GameObject:
   - component: {fileID: 224475123}
   m_Layer: 0
   m_Name: pulleyHookable (8)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3678,7 +3678,7 @@ GameObject:
   - component: {fileID: 441137338}
   m_Layer: 0
   m_Name: pulleyHookable (4)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4796,7 +4796,7 @@ GameObject:
   - component: {fileID: 636598319}
   m_Layer: 0
   m_Name: pulleyHookable (9)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5185,7 +5185,7 @@ GameObject:
   - component: {fileID: 742719979}
   m_Layer: 0
   m_Name: pulleyHookable (2)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5940,7 +5940,7 @@ GameObject:
   - component: {fileID: 906603546}
   m_Layer: 0
   m_Name: pulleyHookable (6)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6347,7 +6347,7 @@ GameObject:
   - component: {fileID: 1029880659}
   m_Layer: 0
   m_Name: pulleyHookable (12)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6519,7 +6519,7 @@ GameObject:
   - component: {fileID: 1042498434}
   m_Layer: 0
   m_Name: pulleyHookable (18)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6837,7 +6837,7 @@ GameObject:
   - component: {fileID: 1118916822}
   m_Layer: 0
   m_Name: pulleyHookable (10)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7275,7 +7275,7 @@ GameObject:
   - component: {fileID: 1164338331}
   m_Layer: 0
   m_Name: pulleyHookable (17)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8794,7 +8794,7 @@ GameObject:
   - component: {fileID: 1433535525}
   m_Layer: 0
   m_Name: pulleyHookable (19)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9095,7 +9095,7 @@ GameObject:
   - component: {fileID: 1465327225}
   m_Layer: 0
   m_Name: pulleyHookable (3)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12192,7 +12192,7 @@ GameObject:
   - component: {fileID: 1947266715}
   m_Layer: 0
   m_Name: pulleyHookable (11)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12364,7 +12364,7 @@ GameObject:
   - component: {fileID: 1954378872}
   m_Layer: 0
   m_Name: pulleyHookable
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13328,7 +13328,7 @@ GameObject:
   - component: {fileID: 2130080996}
   m_Layer: 0
   m_Name: pulleyHookable (7)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

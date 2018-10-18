@@ -46,6 +46,7 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 	bool canAttack = true;
 	bool firstClick = false;
 	PlayerHealth playerHealthScript;
+	bool isPlatform = false;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -312,7 +313,6 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 		}
 
 		Attack();
-		Swinging();
 		if(Input.GetMouseButtonUp(0) == true){
 			if(canGrap == true){
 				//moving to on colision
@@ -322,6 +322,7 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 				grapple.enabled = false;
 				hasHooked = false;
 				firstHit = false;
+				isPlatform = false;
 				StartCoroutine(GrappleTimer());
 			}
 
@@ -329,24 +330,21 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.Mouse0)) {
 			
-			if (firstClick == false) {
+			/*if (firstClick == false) {
 				mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
 				ray = new Ray2D (pirate.transform.position, mouseDirection); 
 				firstClick = true;
 				swingFlip(facingRight, mouseDirection);
-			}
+			}*/
 
 			if (hasHooked == false) {
 				if(canGrap == true){
 					mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
 					ray = new Ray2D (pirate.transform.position, mouseDirection); 
-					anim.SetBool ("isSwinging", true);
 					hasHooked = true;
-					grapple.enabled = true;
-					swingFlip (facingRight, mouseDirection);
-					mySource.PlayOneShot(grappleSound);
 				}
 			}
+			Swinging();
 		}
 
 		//Sounds
@@ -441,34 +439,23 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 	void Swinging()
 	{
 
-		if (Input.GetKey(KeyCode.Mouse0))
-		{
 
-			//if statement to ensure that you can't drag the mouse and the coordinates change
-			if (hasHooked == false) {
-
-				/*worldView = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x, Input.mousePosition.x, pirate.transform.position.z));
-				mouseDirection = worldView - pirate.transform.position;
-				mouseDirection.Normalize();*/
-
-				/*ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
-				ray.direction.Set (ray.direction.x, ray.direction.y, 0);*/
-				//set it's max distance
-
-
-			}
 			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
 			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
 
 			if (hit.collider != null) {
 
-				Debug.Log ("platform hit");
+				if (hit.collider.tag == "platform") {
+					Debug.Log ("platform hit");
+					isPlatform = true;
+				}
+			if(canGrap == true && isPlatform == true){
 
-				if(canGrap == true){
 
-
-
+					grapple.enabled = true;
+					anim.SetBool ("isSwinging", true);
+					swingFlip (facingRight, mouseDirection);
 					// mySource.PlayClipAtPoint(grappleSound, transform.position);
 					// mySource.Play(grappleSound);
 					// mySource.PlayClipAtPoint(grappleSound, new Vector3(5, 1, 0));
@@ -531,26 +518,26 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 						grapple.distance = grapple.distance - grappleTime;
 
 					}
-				}
+			}else {
+				grapple.enabled = false;
+				line.enabled = false;
+			}
 
 
 			}//end of if collide
 			else {
 
 
-				mouseCoords = ray.GetPoint (5f);
+				//mouseCoords = ray.GetPoint (5f);
 				grapple.enabled = false;
 				//grapple.connectedAnchor = mouseCoords;
 				//mouseCoords = lineLimit();
-				line.enabled = true;
-				line.SetPosition (0, transform.position);
+				line.enabled = false;
+				/*line.SetPosition (0, transform.position);
 				line.SetPosition (1, mouseCoords);
-				StartCoroutine(Example());
+				StartCoroutine(Example());*/
 
 			}
-
-
-		}
 
 	}
 

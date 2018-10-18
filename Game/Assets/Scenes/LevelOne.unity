@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 22570633}
   m_Layer: 0
   m_Name: caveHookable (2)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 49478508}
   m_Layer: 0
   m_Name: caveHookable (3)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2509,7 +2509,7 @@ GameObject:
   - component: {fileID: 136185380}
   m_Layer: 0
   m_Name: caveHookable (16)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3921,7 +3921,7 @@ GameObject:
   - component: {fileID: 231295276}
   m_Layer: 0
   m_Name: caveHookable (26)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6509,7 +6509,7 @@ GameObject:
   - component: {fileID: 460457726}
   m_Layer: 0
   m_Name: caveHookable (4)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9379,7 +9379,7 @@ GameObject:
   - component: {fileID: 633531380}
   m_Layer: 0
   m_Name: caveHookable (7)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9551,7 +9551,7 @@ GameObject:
   - component: {fileID: 641337865}
   m_Layer: 0
   m_Name: caveHookable (17)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11065,7 +11065,7 @@ GameObject:
   - component: {fileID: 702990272}
   m_Layer: 0
   m_Name: caveHookable (22)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11411,7 +11411,7 @@ GameObject:
   - component: {fileID: 747385838}
   m_Layer: 0
   m_Name: caveHookable (21)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11927,7 +11927,7 @@ GameObject:
   - component: {fileID: 796084618}
   m_Layer: 0
   m_Name: caveHookable (8)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12247,7 +12247,7 @@ GameObject:
   - component: {fileID: 821221020}
   m_Layer: 0
   m_Name: caveHookable (14)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12492,7 +12492,7 @@ GameObject:
   - component: {fileID: 838203440}
   m_Layer: 0
   m_Name: caveHookable (5)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12705,7 +12705,7 @@ GameObject:
   - component: {fileID: 857519343}
   m_Layer: 0
   m_Name: caveHookable (6)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12804,7 +12804,7 @@ GameObject:
   - component: {fileID: 857784278}
   m_Layer: 0
   m_Name: caveHookable (27)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13026,7 +13026,7 @@ GameObject:
   - component: {fileID: 862512994}
   m_Layer: 0
   m_Name: caveHookable (28)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14513,7 +14513,7 @@ GameObject:
   - component: {fileID: 1003438508}
   m_Layer: 0
   m_Name: caveHookable (25)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15398,7 +15398,7 @@ GameObject:
   - component: {fileID: 1052359002}
   m_Layer: 0
   m_Name: caveHookable (12)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17220,7 +17220,7 @@ GameObject:
   - component: {fileID: 1117623026}
   m_Layer: 0
   m_Name: caveHookable (20)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18619,7 +18619,7 @@ GameObject:
   - component: {fileID: 1190037683}
   m_Layer: 0
   m_Name: caveHookable (13)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18939,7 +18939,7 @@ GameObject:
   - component: {fileID: 1217050568}
   m_Layer: 0
   m_Name: caveHookable (11)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20564,7 +20564,7 @@ GameObject:
   - component: {fileID: 1338860976}
   m_Layer: 0
   m_Name: caveHookable
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24451,7 +24451,7 @@ GameObject:
   - component: {fileID: 1559447609}
   m_Layer: 0
   m_Name: caveHookable (9)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25259,7 +25259,7 @@ GameObject:
   - component: {fileID: 1638001624}
   m_Layer: 0
   m_Name: caveHookable (24)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27544,7 +27544,7 @@ GameObject:
   - component: {fileID: 1768667033}
   m_Layer: 0
   m_Name: caveHookable (1)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27883,7 +27883,7 @@ GameObject:
   - component: {fileID: 1801738198}
   m_Layer: 0
   m_Name: caveHookable (18)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28801,7 +28801,7 @@ GameObject:
   - component: {fileID: 1852501581}
   m_Layer: 0
   m_Name: caveHookable (10)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31126,7 +31126,7 @@ GameObject:
   - component: {fileID: 1948300763}
   m_Layer: 0
   m_Name: caveHookable (19)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32033,7 +32033,7 @@ GameObject:
   - component: {fileID: 2044847239}
   m_Layer: 0
   m_Name: caveHookable (15)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32439,7 +32439,7 @@ GameObject:
   - component: {fileID: 2083079248}
   m_Layer: 0
   m_Name: caveHookable (23)
-  m_TagString: Untagged
+  m_TagString: platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
