@@ -33,7 +33,7 @@ public class EnemyAttack : MonoBehaviour {
 			//playerInRange = true;
 			enemyWalk.stopWalking ();
 			anim.SetBool("isAttacking", true);
-			InvokeRepeating ("Attack", 0.3f, 0.7f);
+			InvokeRepeating ("Attack", 0.7f, 1.0f);
 		}
 
 	}
