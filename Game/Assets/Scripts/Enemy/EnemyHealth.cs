@@ -109,7 +109,7 @@ public class EnemyHealth : MonoBehaviour {
 		// enemyAudio.clip = deathClip;
 		// enemyAudio.Play();
 
-		Destroy(gameObject, 0.90f);
+		Destroy(gameObject, 0.50f);
 	}
 
 	IEnumerator changeColor()

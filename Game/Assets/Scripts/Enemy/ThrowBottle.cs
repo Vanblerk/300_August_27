@@ -27,24 +27,20 @@ public class ThrowBottle : MonoBehaviour {
 			
 			if (checkPlayerPosition () == "right") {
 				this.transform.eulerAngles = new Vector2(0, 180);
-				Debug.Log ("Player In throw range");
 				anim.SetBool ("ThrowBottle", true);
-				InvokeRepeating ("throwBottle", 1.2f, 1.9f);
-			} else {
+
+			} else if(checkPlayerPosition () == "left") {
 				this.transform.eulerAngles = new Vector2(0, 0);
-				Debug.Log ("Player In throw range");
 				anim.SetBool ("ThrowBottle", true);
-				InvokeRepeating ("throwBottle", 1.2f, 1.9f);
 			}
 
-
+			InvokeRepeating ("throwBottle", 1.2f, 1.9f);
 		}
 	}					
 
 	void OnTriggerExit2D(Collider2D other)
 	{
-		if (other.gameObject == player) {	//if colliding with player
-			Debug.Log ("Player out range");
+		if (other.gameObject == player) {	//if colliding with player			
 			anim.SetBool ("ThrowBottle", false);
 			CancelInvoke ();
 		}
@@ -57,9 +53,10 @@ public class ThrowBottle : MonoBehaviour {
 	}
 
 	void throwBottle(){
+		
 		projectilePosition = transform.position;
 		projectilePosition += new Vector2 (0f, 1f);
-		Instantiate (projectile, projectilePosition, Quaternion.identity );
+		Instantiate (projectile, projectilePosition, Quaternion.identity);
 	}
 
 	string checkPlayerPosition()
