@@ -468,10 +468,10 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		{
 			int attackNumber = Random.Range (0, 5);
 			Debug.Log (attackNumber);
-			if (attackNumber == 1 || attackNumber == 2 || attackNumber == 3) {
+			if (attackNumber == 1 || attackNumber == 2 || attackNumber == 3 || attackNumber == 4) {
 				anim.SetBool ("isAttacking2", true);
 			} 
-			else if (attackNumber == 0 || attackNumber == 4) {
+			else if (attackNumber == 0 ) {
 				anim.SetBool ("isAttacking", true);
 			}
 
