@@ -25,8 +25,16 @@ public class BarrelDamage : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "Player")
 		{			
-			playerInRange = true;
+			if (playerHealth.currentHealth > 0) 
+			{
+				playerHealth.PlayerTakeDamage (barrelDamage);
+				Destroy (BarrelCollider);
+				anim.SetTrigger("destroyBarrel");
+				Invoke ("destroyBarrel", 0.35f);
+			}
 		}
+
+
 
 	}
 
@@ -45,23 +53,12 @@ public class BarrelDamage : MonoBehaviour {
 		timer += Time.deltaTime;
 
 		if (timer >= timeBetweenDamage && playerInRange) {
-			anim.SetTrigger("destroyBarrel");
-			damagePlayer ();
+			
 		} 
 
 	}
 
 	void damagePlayer (){
-		timer = 0f;
-		if (playerHealth.currentHealth > 0) 
-		{
-			playerHealth.PlayerTakeDamage (barrelDamage);
-			Destroy (BarrelCollider);
-			Invoke ("destroyBarrel", 0.35f);
-		}
-
-		//Play barrel break animation
-
 
 
 	}

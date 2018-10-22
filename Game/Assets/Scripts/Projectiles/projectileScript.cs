@@ -20,7 +20,7 @@ public class projectileScript : MonoBehaviour {
 		playerHealth = target.GetComponent<PlayerHealth> ();
 		moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
 		rigidBody.velocity = new Vector2 (moveDirection.x, moveDirection.y);
-		Destroy (gameObject, 4f);
+		Invoke ("breakBottle", 5f);
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
