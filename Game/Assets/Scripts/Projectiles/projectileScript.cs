@@ -11,8 +11,10 @@ public class projectileScript : MonoBehaviour {
 	GameObject target;							// Reference to the player GameObject.
 	PlayerHealth playerHealth;					// Reference to the player's health.
 	Vector2 moveDirection;
+	Animator anim;								// Reference to animator component.
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator>();
 		rigidBody = GetComponent<Rigidbody2D> ();
 		target = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = target.GetComponent<PlayerHealth> ();
@@ -28,8 +30,14 @@ public class projectileScript : MonoBehaviour {
 			playerHealth.PlayerTakeDamage (1);
 
 		}
-		Destroy (gameObject);
 
+		anim.SetTrigger ("hit");
+		Invoke ("breakBottle", 0.155f);
+
+	}
+
+	void breakBottle(){
+		Destroy (gameObject);
 	}
 
 	// Update is called once per frame
