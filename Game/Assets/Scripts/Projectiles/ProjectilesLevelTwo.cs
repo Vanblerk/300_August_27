@@ -40,7 +40,7 @@ public class ProjectilesLevelTwo : MonoBehaviour {
 		if (poison.transform.position.y < -3.5f) {
 			poison.transform.position = projectileStartingPos;
 			poison.SetActive (true);
-			actionScript.ThrowProjectile(true);
+/////			actionScript.ThrowProjectile(true);
 		}
 
 		if (enemyHealth.enemyDead() == true) {
@@ -55,7 +55,7 @@ public class ProjectilesLevelTwo : MonoBehaviour {
 			//poison.SetActive (false);
 			poison.transform.position = projectileStartingPos;
 			poison.SetActive (true);
-			actionScript.ThrowProjectile(true);
+		/////	actionScript.ThrowProjectile(true);
 
 
 		}
@@ -64,7 +64,7 @@ public class ProjectilesLevelTwo : MonoBehaviour {
 			//poison.SetActive (false);
 			poison.transform.position = projectileStartingPos;
 			poison.SetActive (true);
-			actionScript.ThrowProjectile(true);
+		/////	actionScript.ThrowProjectile(true);
 
 
 		}
@@ -74,7 +74,7 @@ public class ProjectilesLevelTwo : MonoBehaviour {
 			playerHealth.PlayerTakeDamage (1);
 			poison.transform.position = projectileStartingPos;
 			poison.SetActive (true);
-			actionScript.ThrowProjectile(true);
+		/////	actionScript.ThrowProjectile(true);
 
 
 		}

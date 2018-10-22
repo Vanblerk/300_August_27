@@ -55,60 +55,20 @@ public class EnemyAttack : MonoBehaviour {
 	void Update () 
 	{
 
-		//if (playerInRange) {
-		//	enemyWalk.stopWalking ();
-		//	Invoke ("Attack", 0.6f);
-		//} else if (!playerInRange) {
-		//	anim.SetBool ("isAttacking", false);
-		//}
 
-
-
-		///*OLD CODE*///
-		//timer += Time.deltaTime;
-
-
-		//if(playerInRange){
-		//	enemyWalk.stopWalking ();
-		//	anim.SetBool ("isWalking", false);
-		//	anim.SetBool("isAttacking", true);
-			//Invoke ("Attack", 0.4f);
-		//	Attack ();
-		//} 
-		//else if(playerInRange == false)
-		//{			
-		//	anim.SetBool ("isAttacking", false);
-		//}
-
-		//if (playerHealth.currentHealth <= 0) 
-		//{
-		//	Debug.Log ("Player Dead");
-			//anim.SetTrigger("PlayerDead);
-		//}
-		///*OLD CODE END*///
 	}
 
 	void Attack()
 	{
 		
 
-		//StartCoroutine(AttackTimer());
+
 		playerHealth.PlayerTakeDamage (attackDamage);
 
-		///*OLD CODE*///
-		//timer = 0f;
 
-		//if (playerHealth.currentHealth > 0) 
-		//{
-		//	if(canAttack == true){				
-		//		StartCoroutine(AttackTimer());
-		//		playerHealth.PlayerTakeDamage (attackDamage);
-		//	}			
-		//}
-		///*OLD CODE END*///
 	}
 
-	//Change WaitForSeconds to delay the Attack time more or less
+
 	IEnumerator AttackTimer()
 	{
 		//canAttack = false;

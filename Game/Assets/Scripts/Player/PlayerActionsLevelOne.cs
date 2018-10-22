@@ -39,11 +39,11 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	public LineRenderer line;
 	public LayerMask mask;
 	GameObject pirate;
-	GameObject projectileCol;
-	GameObject projectileCol2;
-	GameObject projectExit;
-	GameObject poison;
-	GameObject poison2;
+	/////////GameObject projectileCol;
+	/////////GameObject projectileCol2;
+	/////////GameObject projectExit;
+	/////////GameObject poison;
+	/////////GameObject poison2;
 	GameObject endGame;
 	public Transform grapPoint;
 	bool canAttack = true;
@@ -71,8 +71,8 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	Vector2 values;
 	Vector2 mouseCoords;
 	Vector2 mouseDirection;
-	Vector2 projectileStartingPos;
-	Vector2 projectileStartingPos2;
+	/////////Vector2 projectileStartingPos;
+	/////////Vector2 projectileStartingPos2;
 	Vector3 worldView;
 
 	//Vanblerk Variables
@@ -139,11 +139,11 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		pirate = GameObject.Find ("Character");
 		HealthPickup = GameObject.Find ("HealthPickup");
 		HealthPickup2 = GameObject.Find ("HealthPickup2");
-		poison = GameObject.Find ("Projectiles");
-		poison2 = GameObject.Find ("Projectiles2");
-		projectExit = GameObject.Find ("ProjectilesExit");
-		projectileCol = GameObject.Find ("ProjectileCollider");
-		projectileCol2 = GameObject.Find ("ProjectileCollider2");
+		/////////poison = GameObject.Find ("Projectiles");
+		/////////poison2 = GameObject.Find ("Projectiles2");
+		/////////projectExit = GameObject.Find ("ProjectilesExit");
+		/////////projectileCol = GameObject.Find ("ProjectileCollider");
+		/////////projectileCol2 = GameObject.Find ("ProjectileCollider2");
 		//projectileCol2 = GameObject.Find ("ProjectileCollider2");
 		barrelCollider = GameObject.Find ("BarrelCollider");
 		endGame = GameObject.Find ("EndGameCollider");
@@ -156,10 +156,10 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		target = transform.position;
 		grapple.enabled = false;
 		line.enabled = false;
-		poison.SetActive (false);
-		poison2.SetActive (false);
-		projectileCol.SetActive (true);
-		projectileCol2.SetActive (true);
+		/////////poison.SetActive (false);
+		/////////poison2.SetActive (false);
+		/////////projectileCol.SetActive (true);
+		/////////projectileCol2.SetActive (true);
 		playerHealthScript = (PlayerHealth) pirate.GetComponent(typeof(PlayerHealth));
 
 		var vol = VolumeController.SaveStuff.VolumeG;
@@ -201,12 +201,12 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		}
 
 	
-		if (coll.gameObject.name == "ProjectilesExit") {
-			projectTest = false;
-			poison.SetActive (false);
-			projectExit.SetActive (false);
+		/////////if (coll.gameObject.name == "ProjectilesExit") {
+		/////////	projectTest = false;
+			/////////poison.SetActive (false);
+			/////////projectExit.SetActive (false);
 
-		}
+		/////////}
 
 
 		//if (coll.gameObject.name == "BarrelCollider") {
@@ -275,17 +275,17 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			HealthPickup2.SetActive (false);
 		}
 
-		if (other.gameObject.name == "ProjectileCollider") {
-			projectileCol.SetActive (false);
-			poison.SetActive (true);
-			projectTest = true;
-		}	
+		/////////if (other.gameObject.name == "ProjectileCollider") {
+		/////////	projectileCol.SetActive (false);
+		/////////	poison.SetActive (true);
+		/////////	projectTest = true;
+		/////////}	
 
-		if (other.gameObject.name == "ProjectileCollider2") {
-			projectileCol2.SetActive (false);
-			poison2.SetActive (true);
-			projectTest2 = true;
-		}
+		/////////if (other.gameObject.name == "ProjectileCollider2") {
+		/////////	projectileCol2.SetActive (false);
+		/////////	poison2.SetActive (true);
+		/////////	projectTest2 = true;
+		/////////}
 
 		if (other.gameObject == endGame) {
 			Debug.Log("End Level");
@@ -423,8 +423,8 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		// if(anim.GetBool("isAttacking")){
 		//     mySource.PlayOneShot(swordHit);
 		// }
-		ThrowProjectile(projectTest);
-		ThrowProjectile2(projectTest2);
+		/////////ThrowProjectile(projectTest);
+		/////////ThrowProjectile2(projectTest2);
 
 		/*if (insideRespawn == true && playerHealthScript.didDie () == true) {
 				insideRespawn = false;
@@ -621,24 +621,24 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	}
 
 
-	public void ThrowProjectile(bool project){
-		if (project == true) {
-			Vector2 projectileCoords;
-			projectileCoords.x = poison.transform.position.x - 60f;
-			projectileCoords.y = poison.transform.position.y - 60f;
-			poison.transform.position = Vector2.MoveTowards (poison.transform.position, projectileCoords, 3 * Time.deltaTime);
-		} 
-	}
+	/////////public void ThrowProjectile(bool project){
+	/////////	if (project == true) {
+	/////////		Vector2 projectileCoords;
+	/////////		projectileCoords.x = poison.transform.position.x - 60f;
+	/////////		projectileCoords.y = poison.transform.position.y - 60f;
+	/////////		poison.transform.position = Vector2.MoveTowards (poison.transform.position, projectileCoords, 3 * Time.deltaTime);
+	/////////	} 
+	/////////}
 
-	public void ThrowProjectile2(bool project){
-		if (project == true) {
-			Vector2 projectileCoords;
-			projectileCoords.x = poison2.transform.position.x - 50f;
-			projectileCoords.y = poison2.transform.position.y - 40f;
-			poison2.transform.position = Vector2.MoveTowards (poison2.transform.position, projectileCoords, 3 * Time.deltaTime);
+	/////////public void ThrowProjectile2(bool project){
+	/////////	if (project == true) {
+	/////////		Vector2 projectileCoords;
+	/////////		projectileCoords.x = poison2.transform.position.x - 50f;
+	/////////		projectileCoords.y = poison2.transform.position.y - 40f;
+	/////////		poison2.transform.position = Vector2.MoveTowards (poison2.transform.position, projectileCoords, 3 * Time.deltaTime);
 
-		} 
-	}
+	/////////	} 
+	/////////}
 
 	public void swingFlip(bool isRight, Vector2 mousePos)
 	{

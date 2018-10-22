@@ -26,8 +26,9 @@ public class projectileScript : MonoBehaviour {
 		if (coll.gameObject.tag == "Player")
 		{			
 			playerHealth.PlayerTakeDamage (1);
-			Destroy (gameObject);
+
 		}
+		Destroy (gameObject);
 
 	}
 

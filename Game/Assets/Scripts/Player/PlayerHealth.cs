@@ -82,7 +82,7 @@ public class PlayerHealth : MonoBehaviour {
 		}
 		damaged = true;
 
-		Debug.Log ("player taking damage");
+
 
 		//enemyAudio.Play();  //Play hurt sound
 
