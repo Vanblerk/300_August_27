@@ -30,6 +30,7 @@ public class EnemyAttack : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "Player")
 		{			
+			Debug.Log ("TOAJFAS");
 			playerInRange = true;
 			enemyWalk.stopWalking ();
 			anim.SetBool("isAttacking", true);
