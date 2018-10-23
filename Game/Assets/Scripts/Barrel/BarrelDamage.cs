@@ -7,7 +7,9 @@ public class BarrelDamage : MonoBehaviour {
 	public float timeBetweenDamage = 0.5f;		// The intervals between which the barrel can damage you
 	public int barrelDamage = 5;				// Amount of damage the barrel does
 	GameObject player;							// Reference to the player GameObject.
+	GameObject enemy;
 	PlayerHealth playerHealth;					// Reference to the player's health.
+	EnemyHealth enemyHealth;
 	bool playerInRange; 						// Whether player is within the trigger collider and can be damaged
 	float timer;								// For counting up to next damage
 	Collider2D BarrelCollider;				
@@ -17,6 +19,7 @@ public class BarrelDamage : MonoBehaviour {
 	{
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = player.GetComponent<PlayerHealth> ();
+		enemy = GameObject.FindGameObjectWithTag("Enemy"); 
 		anim = GetComponent<Animator>();
 		BarrelCollider = GetComponent<Collider2D> ();
 	}
@@ -32,6 +35,13 @@ public class BarrelDamage : MonoBehaviour {
 				anim.SetTrigger("destroyBarrel");
 				Invoke ("destroyBarrel", 0.35f);
 			}
+		}
+		if (coll.gameObject.tag == "Enemy") {
+			enemy = coll.gameObject;
+			enemyHealth = enemy.GetComponent<EnemyHealth>();
+			enemyHealth.TakeDamage(barrelDamage);
+			anim.SetTrigger("destroyBarrel");
+			Invoke ("destroyBarrel", 0.35f);
 		}
 
 
