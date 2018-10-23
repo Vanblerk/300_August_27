@@ -186,7 +186,8 @@ public class PlayerActions : MonoBehaviour
 	{
 		if (coll.gameObject.tag == "Enemy")
 		{
-			//Debug.Log("Enemy in range");
+			Debug.Log("Gun Enemy in range");
+
 			Enemy = coll.gameObject;
 			enemyInRange = true;
 		}
@@ -253,7 +254,7 @@ public class PlayerActions : MonoBehaviour
 	{
 		if (coll.gameObject.tag == "Enemy")
 		{
-			Debug.Log("Enemy out of range");
+			///Debug.Log("Enemy out of range");
 			enemyInRange = false;
 		}
 

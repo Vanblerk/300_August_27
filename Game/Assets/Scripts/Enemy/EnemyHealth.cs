@@ -71,7 +71,7 @@ public class EnemyHealth : MonoBehaviour {
 		}
 		damaged = true;
 
-		Debug.Log("enemy taking damage");
+		Debug.Log("GUUUN enemy taking damage");
 
 		//enemyAudio.Play();  //Play hurt sound
 
@@ -96,9 +96,10 @@ public class EnemyHealth : MonoBehaviour {
 		if (gameObject.name == "ThrowEnemy") {
 			anim.SetTrigger ("EnemyDeath");
 
-		} else if (gameObject.name == "Enemy" || gameObject.name == "KickEnemy") {
+		} else if (gameObject.name == "Enemy" || gameObject.name == "KickEnemy" || gameObject.name == "GunEnemy") {
 			anim.SetTrigger ("EnemyDeath");
 		}
+
 
 		isDead = true;
 

@@ -34,7 +34,7 @@ public class ThrowBottle : MonoBehaviour {
 				anim.SetBool ("ThrowBottle", true);
 			}
 
-			InvokeRepeating ("throwBottle", 1.2f, 1.9f);
+			//InvokeRepeating ("throwBottle", 1.2f, 1.9f);
 		}
 	}					
 

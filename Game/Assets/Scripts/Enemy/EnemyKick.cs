@@ -64,7 +64,7 @@ public class EnemyKick : MonoBehaviour {
 			Debug.Log ("Player in sight and Barrel in range");
 			if (barrelKicked == false) {
 				anim.SetBool ("isKicking", true);
-				Invoke ("kickBarrel", 1.0f);
+				//Invoke ("kickBarrel", 1.0f);
 
 				barrelKicked = true;
 			}

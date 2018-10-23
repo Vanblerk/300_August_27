@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class projectileScript : MonoBehaviour {
+public class BulletScript : MonoBehaviour {
 
-	float moveSpeed = 5f;
+	float moveSpeed = 15f;
 	Rigidbody2D rigidBody;
 	GameObject target;							// Reference to the player GameObject.
 	PlayerHealth playerHealth;					// Reference to the player's health.
@@ -18,28 +18,23 @@ public class projectileScript : MonoBehaviour {
 		playerHealth = target.GetComponent<PlayerHealth> ();
 		moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
 		rigidBody.velocity = new Vector2 (moveDirection.x, moveDirection.y);
-		Invoke ("breakBottle", 5f);
+
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
-		if (coll.gameObject.tag == "Player")
-		{			
-			playerHealth.PlayerTakeDamage (1);
+		if (coll.gameObject.tag == "Player") {			
+			playerHealth.PlayerTakeDamage (3);
 
 		}
 
-		anim.SetTrigger ("hit");
-		Invoke ("breakBottle", 0.155f);
 
-	}
-
-	void breakBottle(){
 		Destroy (gameObject);
-	}
 
+	}
+	
 	// Update is called once per frame
 	void Update () {
-
+		
 	}
 }

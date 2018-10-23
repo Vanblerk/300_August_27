@@ -32,10 +32,10 @@ public class BarrelEnemyAttack : MonoBehaviour {
 
 		if (coll.gameObject.tag == "Player")
 		{			
-			//playerInRange = true;
+			playerInRange = true;
 			//enemyWalk.stopWalking ();
 			anim.SetBool("isAttacking", true);
-			InvokeRepeating ("Attack", 0.7f, 1.0f);
+			//InvokeRepeating ("Attack", 0.7f, 1.0f);
 		}
 
 	}
@@ -44,7 +44,7 @@ public class BarrelEnemyAttack : MonoBehaviour {
 	{
 		if (coll.gameObject.tag == "Player")
 		{			
-			//playerInRange = false;
+			playerInRange = false;
 			anim.SetBool ("isAttacking", false);
 			CancelInvoke ();
 		}
@@ -94,7 +94,11 @@ public class BarrelEnemyAttack : MonoBehaviour {
 	{
 
 		//StartCoroutine(AttackTimer());
-		playerHealth.PlayerTakeDamage (attackDamage);
+
+		if (playerInRange) {
+
+			playerHealth.PlayerTakeDamage (attackDamage);
+		}
 
 		///*OLD CODE*///
 		//timer = 0f;
