@@ -10,10 +10,16 @@ public class ShootScript : MonoBehaviour {
 	GameObject player;						// Reference to the player GameObject.
 	private Transform target;				//Target to follow
 
+	//Sound
+	public AudioClip gunShotSound;
+	public AudioSource mySource;
+
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		anim = GetComponent<Animator>();
 		target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform>();
+
+		mySource = GetComponent<AudioSource>();
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -48,6 +54,7 @@ public class ShootScript : MonoBehaviour {
 	}
 
 	void ShootBullet(){
+		mySource.PlayOneShot(gunShotSound);
 		if (checkPlayerPosition () == "right") {
 			bulletPosition = transform.position;
 			bulletPosition += new Vector2 (1.5f, 0f);
