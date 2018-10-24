@@ -29,9 +29,11 @@ public class PlayerHealth : MonoBehaviour {
 	PolygonCollider2D polygonCollider;							// References the players collider.
 	public AudioSource playerAudio;                                    // Reference to the AudioSource component.
 	bool isDead = false;                                                // Whether the player is dead.
-	bool ninaisDead = false; 
+	//bool ninaisDead = false; 
 	bool damaged;                                              // True when the player gets damaged.
 	bool mayDie = true;
+	RespawnValues respawn;
+	GameObject pirate;
 
 	void Awake()
 	{
@@ -49,6 +51,9 @@ public class PlayerHealth : MonoBehaviour {
 		damageImage = GetComponent<SpriteRenderer>();
 		currentHealth = startingHealth;
 		playerAudio = GetComponent<AudioSource>();
+
+		pirate = GameObject.Find ("Character");
+		respawn = (RespawnValues) pirate.GetComponent(typeof(RespawnValues));
 	}
 	
 
@@ -95,9 +100,9 @@ public class PlayerHealth : MonoBehaviour {
 
 	}
 
-	public bool didDie(){
+	/*public bool didDie(){
 		return ninaisDead;
-	}
+	}*/
 
 	public void PlayerGetHealth(int amount)
 	{
@@ -109,7 +114,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void Death()
 	{
-		ninaisDead = true;
+		//ninaisDead = true;
 		if (mayDie == true) {
 			input.enabled = false;
 			input2.enabled = false;
@@ -127,7 +132,24 @@ public class PlayerHealth : MonoBehaviour {
 	IEnumerator waitingToDie()
 	{
 		yield return new WaitForSeconds(3f);
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		//SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		isDead = false;
+		anim.SetTrigger ("hasRespawned");
+		pirate.transform.position = respawn.getSpawn();
+		currentHealth = respawn.getSpawnHealth ();
+		string currScene = SceneManager.GetActiveScene ().name;
+
+		if (currScene == "TutorialLevel") {
+			input.enabled = true;
+		} else if (currScene == "LevelOne") {
+			input2.enabled = true;
+		} else if (currScene == "LevelTwo") {
+			input3.enabled = true;
+		} else if (currScene == "LevelTwoB") {
+			input4.enabled = true;
+		}
+		//input.enabled = true;
+
 	}
 
 	IEnumerator changeColor()
@@ -146,6 +168,10 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void changeHealth(int amount){
 		currentHealth = amount;
+	}
+
+	public int getHealth(){
+		return currentHealth;
 	}
 
 	public void setMaydie(bool val){

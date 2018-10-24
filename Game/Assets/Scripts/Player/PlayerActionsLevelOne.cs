@@ -55,12 +55,12 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
 	GameObject AttCollider;
-	GameObject respawn1;
+	/*GameObject respawn1;
 	GameObject respawn1Exit;
 	Vector2 respawnCoords;
 	bool insideRespawn;
 	int saved;
-	bool changePos = false;
+	bool changePos = false;*/
 
 	// GameObject video;
 
@@ -172,8 +172,8 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 		line.SetPosition (1, pirate.transform.position);
 		line.SetPosition (0, pirate.transform.position);
 
-		respawn1 = GameObject.Find ("RespawnPoint");
-		respawn1Exit = GameObject.Find ("RespawnPointExit");
+		//respawn1 = GameObject.Find ("RespawnPoint");
+		//respawn1Exit = GameObject.Find ("RespawnPointExit");
 
 	}
 
@@ -293,7 +293,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			StartCoroutine(endCooldown());
 		}
 
-		if (other.gameObject == respawn1)
+		/*if (other.gameObject == respawn1)
 		{
 			insideRespawn = true;
 			respawnCoords = pirate.transform.position;
@@ -307,7 +307,7 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 			insideRespawn = false;
 			playerHealthScript.setMaydie (true);
 			//saved the coordinates
-		}
+		}*/
 
 	}
 
@@ -661,8 +661,8 @@ public class PlayerActionsLevelOne : MonoBehaviour {
 
 	}
 
-	public void setChangePos(bool val){
+	/*public void setChangePos(bool val){
 		changePos = val;
-	}
+	}*/
 
 }
