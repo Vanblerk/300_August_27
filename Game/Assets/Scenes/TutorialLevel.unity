@@ -2697,7 +2697,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4234728655512088, guid: 996cf6acc4fb7c5439b911d611591e2d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -3.14625
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4234728655512088, guid: 996cf6acc4fb7c5439b911d611591e2d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3868,7 +3868,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -8.03
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3895,6 +3895,16 @@ Prefab:
       propertyPath: barrel
       value: 
       objectReference: {fileID: 222264909}
+    - target: {fileID: 212496772983058760, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1471367541
+      objectReference: {fileID: 0}
+    - target: {fileID: 212496772983058760, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
   m_IsPrefabParent: 0
@@ -4579,6 +4589,16 @@ Prefab:
       propertyPath: barrelBreakSound
       value: 
       objectReference: {fileID: 8300000, guid: c4721ad855bbd774681939e69485d81c, type: 3}
+    - target: {fileID: 212780173921870860, guid: 309edde1e063723498c2fb90e9af130b,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 492417961
+      objectReference: {fileID: 0}
+    - target: {fileID: 212780173921870860, guid: 309edde1e063723498c2fb90e9af130b,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
   m_IsPrefabParent: 0
@@ -8666,6 +8686,17 @@ MonoBehaviour:
   barrelroll: {fileID: 0}
   giveHealth: {fileID: 0}
   canGrap: 1
+--- !u!114 &1401180000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401179996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac8d4ab3797b7f4c87aeee572bf5ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!70 &1401180005
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9831,7 +9862,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4311996325695938, guid: c6c4d91db1c1d224884407567871ca84, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -7.030233
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4311996325695938, guid: c6c4d91db1c1d224884407567871ca84, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9857,6 +9888,16 @@ Prefab:
         type: 2}
       propertyPath: m_Mass
       value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 212534559361101810, guid: c6c4d91db1c1d224884407567871ca84,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 492417961
+      objectReference: {fileID: 0}
+    - target: {fileID: 212534559361101810, guid: c6c4d91db1c1d224884407567871ca84,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6c4d91db1c1d224884407567871ca84, type: 2}

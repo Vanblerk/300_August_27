@@ -124,6 +124,31 @@ public class PlayerHealth : MonoBehaviour {
 			currentHealth = 0;
 			playerAudio.PlayOneShot (deathClip);
 			anim.SetTrigger ("isDead");
+
+			string currScene = SceneManager.GetActiveScene ().name;
+			if (currScene == "TutorialLevel") {
+				input.isSwinging = false;
+				input.grapple.enabled = false;
+				input.line.enabled = false;
+				input.hasHooked = false;
+
+			} else if (currScene == "LevelOne") {
+				input2.isSwinging = false;
+				input2.grapple.enabled = false;
+				input2.line.enabled = false;
+				input2.hasHooked = false;
+			} else if (currScene == "LevelTwo") {
+				input3.isSwinging = false;
+				input3.grapple.enabled = false;
+				input3.line.enabled = false;
+				input3.hasHooked = false;
+			} else if (currScene == "LevelTwoB") {
+				input4.isSwinging = false;
+				input4.grapple.enabled = false;
+				input4.line.enabled = false;
+				input4.hasHooked = false;
+			}
+
 			StartCoroutine (waitingToDie ());
 		} 
 
@@ -137,18 +162,22 @@ public class PlayerHealth : MonoBehaviour {
 		pirate.transform.position = respawn.getSpawn();
 		currentHealth = respawn.getSpawnHealth ();
 		isDead = false;
-		anim.SetTrigger ("hasRespawned");
+
 		string currScene = SceneManager.GetActiveScene ().name;
 
 		if (currScene == "TutorialLevel") {
 			input.enabled = true;
+			anim.SetTrigger ("hasRespawned");
 		} else if (currScene == "LevelOne") {
 			input2.enabled = true;
+			anim.SetTrigger ("hasRespawned");
 		} else if (currScene == "LevelTwo") {
 			input3.enabled = true;
+			anim.SetTrigger ("hasRespawned");
 		} else if (currScene == "LevelTwoB") {
 			Debug.Log ("level2b");
 			input4.enabled = true;
+			anim.SetTrigger ("hasRespawned");
 		}
 		//input.enabled = true;
 

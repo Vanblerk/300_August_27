@@ -337,6 +337,23 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 				swingFlip(facingRight, mouseDirection);
 			}*/
 
+			if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+			{
+
+				pirate.transform.Translate(Vector2.right * 5f * Time.deltaTime);
+				pirate.transform.eulerAngles = new Vector2(0, 0);
+				facingRight = true;
+
+			}
+			else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+			{
+
+				pirate.transform.Translate(Vector2.right * 5f * Time.deltaTime);
+				pirate.transform.eulerAngles = new Vector2(0, -180);
+				facingRight = false;
+			}
+
+
 			if (hasHooked == false) {
 				if(canGrap == true){
 					mouseDirection = Input.mousePosition - Camera.main.WorldToScreenPoint (transform.position);
@@ -345,7 +362,10 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 				}
 			}
 			Swinging();
+		}else {
+			anim.SetBool ("isSwinging", false);
 		}
+
 
 		//Sounds
 
