@@ -118,6 +118,10 @@ public class EnemyHealth : MonoBehaviour {
 			endLevelColliderLvl1.SetActive (true);	
 			anim.SetTrigger ("EnemyDeath");
 		}
+		else if(gameObject.name == "VanEnemy")
+		{				
+			anim.SetTrigger ("EnemyDeath");
+		}
 
 
 		isDead = true;

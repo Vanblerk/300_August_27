@@ -1,0 +1,1001 @@
+fileFormatVersion: 2
+guid: cb58303e1d13e724592fd864dd8de718
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: VanAttack_0
+    21300002: F
+    21300004: E
+    21300006: VanAttack_3
+    21300008: C
+    21300010: H
+    21300012: VanAttack_6
+    21300014: G
+    21300016: VanAttack_8
+    21300018: D
+    21300020: B
+    21300022: A
+    21300024: VanAttack_12
+    21300026: VanAttack_13
+    21300028: VanAttack_14
+    21300030: VanAttack_15
+    21300032: VanAttack_16
+    21300034: VanAttack_17
+    21300036: VanAttack_18
+    21300038: VanAttack_19
+    21300040: VanAttack_20
+    21300042: VanAttack_21
+    21300044: VanAttack_22
+    21300046: VanAttack_23
+    21300048: VanAttack_24
+    21300050: VanAttack_25
+    21300052: VanAttack_26
+    21300054: VanAttack_27
+    21300056: VanAttack_28
+    21300058: VanAttack_29
+    21300060: VanAttack_30
+    21300062: VanAttack_31
+    21300064: VanAttack_32
+    21300066: VanAttack_33
+    21300068: VanAttack_34
+    21300070: VanAttack_35
+    21300072: VanAttack_36
+    21300074: VanAttack_37
+    21300076: VanAttack_38
+    21300078: VanAttack_39
+    21300080: VanAttack_40
+    21300082: VanAttack_41
+    21300084: VanAttack_42
+    21300086: VanAttack_43
+    21300088: VanAttack_44
+    21300090: VanAttack_45
+    21300092: VanAttack_46
+    21300094: VanAttack_47
+    21300096: VanAttack_48
+    21300098: VanAttack_49
+    21300100: VanAttack_50
+    21300102: VanAttack_51
+    21300104: VanAttack_52
+    21300106: VanAttack_53
+    21300108: VanAttack_54
+    21300110: VanAttack_55
+    21300112: VanAttack_56
+    21300114: VanAttack_57
+    21300116: VanAttack_58
+    21300118: VanAttack_59
+    21300120: VanAttack_60
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: VanAttack_0
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1013
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: F
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 161
+        width: 756
+        height: 919
+      alignment: 9
+      pivot: {x: 0.5499229, y: 0.34869576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: E
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 161
+        width: 856
+        height: 919
+      alignment: 9
+      pivot: {x: 0.5997845, y: 0.3486958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_3
+      rect:
+        serializedVersion: 2
+        x: 3821
+        y: 847
+        width: 4
+        height: 233
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: C
+      rect:
+        serializedVersion: 2
+        x: 4710
+        y: 162
+        width: 848
+        height: 918
+      alignment: 9
+      pivot: {x: 0.59492177, y: 0.3789124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: H
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 161
+        width: 624
+        height: 852
+      alignment: 9
+      pivot: {x: 0.42359963, y: 0.37410086}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_6
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 979
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: G
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 163
+        width: 770
+        height: 725
+      alignment: 9
+      pivot: {x: 0.5424947, y: 0.43150312}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_8
+      rect:
+        serializedVersion: 2
+        x: 3965
+        y: 773
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: D
+      rect:
+        serializedVersion: 2
+        x: 4134
+        y: 161
+        width: 501
+        height: 728
+      alignment: 9
+      pivot: {x: 0.32158047, y: 0.43997112}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: B
+      rect:
+        serializedVersion: 2
+        x: 5692
+        y: 162
+        width: 482
+        height: 804
+      alignment: 9
+      pivot: {x: 0.28130877, y: 0.4308715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: A
+      rect:
+        serializedVersion: 2
+        x: 6253
+        y: 161
+        width: 747
+        height: 708
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_12
+      rect:
+        serializedVersion: 2
+        x: 3979
+        y: 759
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_13
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 748
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_14
+      rect:
+        serializedVersion: 2
+        x: 2276
+        y: 748
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_15
+      rect:
+        serializedVersion: 2
+        x: 3992
+        y: 731
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_16
+      rect:
+        serializedVersion: 2
+        x: 3998
+        y: 724
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_17
+      rect:
+        serializedVersion: 2
+        x: 4005
+        y: 690
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_18
+      rect:
+        serializedVersion: 2
+        x: 4013
+        y: 677
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_19
+      rect:
+        serializedVersion: 2
+        x: 4019
+        y: 656
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_20
+      rect:
+        serializedVersion: 2
+        x: 4013
+        y: 636
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_21
+      rect:
+        serializedVersion: 2
+        x: 4012
+        y: 608
+        width: 7
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_22
+      rect:
+        serializedVersion: 2
+        x: 4020
+        y: 576
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_23
+      rect:
+        serializedVersion: 2
+        x: 4630
+        y: 602
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_24
+      rect:
+        serializedVersion: 2
+        x: 4635
+        y: 561
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_25
+      rect:
+        serializedVersion: 2
+        x: 4642
+        y: 533
+        width: 6
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_26
+      rect:
+        serializedVersion: 2
+        x: 4647
+        y: 505
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_27
+      rect:
+        serializedVersion: 2
+        x: 5675
+        y: 508
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_28
+      rect:
+        serializedVersion: 2
+        x: 4633
+        y: 472
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_29
+      rect:
+        serializedVersion: 2
+        x: 3054
+        y: 446
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_30
+      rect:
+        serializedVersion: 2
+        x: 4623
+        y: 438
+        width: 12
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_31
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 438
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_32
+      rect:
+        serializedVersion: 2
+        x: 3061
+        y: 431
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_33
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 431
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_34
+      rect:
+        serializedVersion: 2
+        x: 4628
+        y: 431
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_35
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 424
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_36
+      rect:
+        serializedVersion: 2
+        x: 3069
+        y: 415
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_37
+      rect:
+        serializedVersion: 2
+        x: 3077
+        y: 410
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_38
+      rect:
+        serializedVersion: 2
+        x: 3084
+        y: 405
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_39
+      rect:
+        serializedVersion: 2
+        x: 4635
+        y: 410
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_40
+      rect:
+        serializedVersion: 2
+        x: 3091
+        y: 398
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_41
+      rect:
+        serializedVersion: 2
+        x: 4649
+        y: 391
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_42
+      rect:
+        serializedVersion: 2
+        x: 3095
+        y: 388
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_43
+      rect:
+        serializedVersion: 2
+        x: 4655
+        y: 383
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_44
+      rect:
+        serializedVersion: 2
+        x: 3107
+        y: 376
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_45
+      rect:
+        serializedVersion: 2
+        x: 4663
+        y: 369
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_46
+      rect:
+        serializedVersion: 2
+        x: 3117
+        y: 362
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_47
+      rect:
+        serializedVersion: 2
+        x: 4669
+        y: 342
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_48
+      rect:
+        serializedVersion: 2
+        x: 3138
+        y: 321
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_49
+      rect:
+        serializedVersion: 2
+        x: 4673
+        y: 321
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_50
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 289
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_51
+      rect:
+        serializedVersion: 2
+        x: 4676
+        y: 299
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_52
+      rect:
+        serializedVersion: 2
+        x: 3158
+        y: 280
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_53
+      rect:
+        serializedVersion: 2
+        x: 4683
+        y: 280
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_54
+      rect:
+        serializedVersion: 2
+        x: 4690
+        y: 274
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_55
+      rect:
+        serializedVersion: 2
+        x: 4696
+        y: 260
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_56
+      rect:
+        serializedVersion: 2
+        x: 3175
+        y: 236
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_57
+      rect:
+        serializedVersion: 2
+        x: 3239
+        y: 0
+        width: 8
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_58
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 157
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_59
+      rect:
+        serializedVersion: 2
+        x: 4749
+        y: 0
+        width: 9
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: VanAttack_60
+      rect:
+        serializedVersion: 2
+        x: 4928
+        y: 0
+        width: 7
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

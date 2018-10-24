@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NicoAttack : MonoBehaviour {
+public class VanAttack : MonoBehaviour {
 
 	public float timeBetweenAttacks = 50.0f; 	// Time in seconds between attacks
 	public int attackDamage = 1;				// Amount of damage to player
@@ -11,7 +11,7 @@ public class NicoAttack : MonoBehaviour {
 	GameObject player;							// Reference to the player GameObject.
 	PlayerHealth playerHealth;					// Reference to the player's health.
 	EnemyHealth enemyHealth; 					// Reference to this enemy's health.
-	NicoWalk enemyWalk;						// Reference to the enemy walk script
+
 	bool playerInRange; 						// Whether player is within the trigger collider and can be damaged
 	float timer;	
 
@@ -22,16 +22,16 @@ public class NicoAttack : MonoBehaviour {
 		player = GameObject.FindGameObjectWithTag ("Player");
 		playerHealth = player.GetComponent<PlayerHealth> ();
 		enemyHealth = GetComponent<EnemyHealth> ();
-		enemyWalk = GetComponent<NicoWalk> ();
+
 		anim = GetComponent<Animator>();
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
 	{
 		if (coll.gameObject.tag == "Player")
-		{				
+		{					
 			playerInRange = true;
-			enemyWalk.stopWalking ();
+			/////////////////enemyWalk.stopWalking ();////////////////Activate later for when walking
 			anim.SetBool("isAttacking", true);
 			//InvokeRepeating ("Attack", 0.7f, 1.0f);
 		}
@@ -44,7 +44,7 @@ public class NicoAttack : MonoBehaviour {
 		{			
 			playerInRange = false;
 			anim.SetBool ("isAttacking", false);
-			CancelInvoke ();
+			//CancelInvoke ();
 		}
 
 	}
