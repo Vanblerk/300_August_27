@@ -94,7 +94,7 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 
 	void OnGUI()
 	{
-		float xMin = (Input.mousePosition.x - 40f) + (crosshairImage.width / 2);
+		float xMin = (Input.mousePosition.x - 120f) + (crosshairImage.width / 2);
 		float yMin = (Screen.height - Input.mousePosition.y) - (crosshairImage.height / 2);
 		GUI.DrawTexture(new Rect(xMin, yMin, crosshairImage.width, crosshairImage.height), crosshairImage);
 	}

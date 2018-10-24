@@ -29039,7 +29039,7 @@ MonoBehaviour:
   Intro: {fileID: 8300000, guid: b3baa6d433f69a54d81d9c11b229fa4e, type: 3}
   Outro: {fileID: 8300000, guid: a4e0282c0cc6bc34a8a530c4854ef82e, type: 3}
   mySource: {fileID: 1878241255}
-  crosshairImage: {fileID: 2800000, guid: eaad76ed0f7838b4eba6b45c364f7fe0, type: 3}
+  crosshairImage: {fileID: 2800000, guid: 08a1fde5b66c3d44e809ba026c125a7a, type: 3}
   grapple: {fileID: 1878241256}
   facingRight: 1
   isSwinging: 0
