@@ -11,6 +11,7 @@ public class PlayerActions : MonoBehaviour
 	public AudioClip grappleClankSoundHigh;
 	public AudioClip grappleClankSoundLow;
 	public AudioClip DeathSound;
+	public AudioClip BarrelBreak;
 	public bool PlayHigh = false;
 	public bool PlayLow = false;
 	public AudioClip gulpHealth;
@@ -267,6 +268,7 @@ public class PlayerActions : MonoBehaviour
 		if (other.gameObject == barrelCollider)
 		{
 			Debug.Log ("barrelCollider");
+			mySource.PlayOneShot(BarrelBreak);
 			//barrelroll.rollBarrel ();
 
 		}

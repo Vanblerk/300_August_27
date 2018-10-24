@@ -12,7 +12,11 @@ public class BarrelDamage : MonoBehaviour {
 	EnemyHealth enemyHealth;
 	bool playerInRange; 						// Whether player is within the trigger collider and can be damaged
 	float timer;								// For counting up to next damage
-	Collider2D BarrelCollider;				
+	Collider2D BarrelCollider;	
+
+	//Sound
+	public AudioClip barrelBreakSound;
+	public AudioSource mySource;			
 
 
 	void Awake () 
@@ -22,6 +26,9 @@ public class BarrelDamage : MonoBehaviour {
 		enemy = GameObject.FindGameObjectWithTag("Enemy"); 
 		anim = GetComponent<Animator>();
 		BarrelCollider = GetComponent<Collider2D> ();
+		//Music
+		mySource = GetComponent<AudioSource>();
+		
 	}
 
 	void OnCollisionEnter2D(Collision2D coll)
@@ -32,6 +39,7 @@ public class BarrelDamage : MonoBehaviour {
 			{
 				playerHealth.PlayerTakeDamage (barrelDamage);
 				Destroy (BarrelCollider);
+				mySource.PlayOneShot(barrelBreakSound);
 				anim.SetTrigger("destroyBarrel");
 				Invoke ("destroyBarrel", 0.35f);
 			}
@@ -40,6 +48,7 @@ public class BarrelDamage : MonoBehaviour {
 			enemy = coll.gameObject;
 			enemyHealth = enemy.GetComponent<EnemyHealth>();
 			enemyHealth.TakeDamage(barrelDamage);
+			mySource.PlayOneShot(barrelBreakSound);
 			anim.SetTrigger("destroyBarrel");
 			Invoke ("destroyBarrel", 0.35f);
 		}
