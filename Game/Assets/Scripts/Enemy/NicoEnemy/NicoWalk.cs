@@ -10,11 +10,14 @@ public class NicoWalk : MonoBehaviour {
 	private Transform target;	//Target to follow
 	bool playerInSight;			//To check if player is in line of sight
 
+	public GameObject endLevelCollider;
+
 	void Awake () {
 		playerInSight = false;
 		anim = GetComponent<Animator>();
 		player = GameObject.FindGameObjectWithTag ("Player");
 		target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform>();
+		endLevelCollider = GameObject.Find ("ExitLevelCollider");
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -27,6 +30,7 @@ public class NicoWalk : MonoBehaviour {
 				this.transform.eulerAngles = new Vector2(0, 0);
 			}
 			playerInSight = true;
+			endLevelCollider.SetActive (false);
 		}
 	}					
 

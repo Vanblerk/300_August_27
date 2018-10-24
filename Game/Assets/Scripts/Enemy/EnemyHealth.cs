@@ -16,6 +16,8 @@ public class EnemyHealth : MonoBehaviour {
 	// public AudioClip deathclip;                           //Sound that plays when enemy is killed
 	public AudioClip deathclip;
 
+	public GameObject endLevelCollider;
+
 
 
 
@@ -27,7 +29,10 @@ public class EnemyHealth : MonoBehaviour {
 
 
 	public AudioSource mySource;
-
+	void Start ()
+	{
+		endLevelCollider = GameObject.Find ("ExitLevelCollider");
+	}
 
 	void Awake ()
 	{
@@ -38,6 +43,8 @@ public class EnemyHealth : MonoBehaviour {
 		currentHealth = startingHealth;
 		damageImage = GetComponent<SpriteRenderer>();
 		mySource = GetComponent<AudioSource>();
+
+		//
 
 	}
 
@@ -96,7 +103,12 @@ public class EnemyHealth : MonoBehaviour {
 		if (gameObject.name == "ThrowEnemy") {
 			anim.SetTrigger ("EnemyDeath");
 
-		} else if (gameObject.name == "Enemy" || gameObject.name == "KickEnemy" || gameObject.name == "GunEnemy" || gameObject.name == "NicoEnemy") {
+		} else if (gameObject.name == "Enemy" || gameObject.name == "KickEnemy" || gameObject.name == "GunEnemy") {
+			anim.SetTrigger ("EnemyDeath");
+		}
+		else if(gameObject.name == "NicoEnemy")
+		{
+			endLevelCollider.SetActive (true);
 			anim.SetTrigger ("EnemyDeath");
 		}
 
