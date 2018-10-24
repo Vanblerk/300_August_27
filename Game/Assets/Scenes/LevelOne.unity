@@ -2211,7 +2211,12 @@ Prefab:
         type: 2}
       propertyPath: mySource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1067281990}
+    - target: {fileID: 114897460552437614, guid: e308795c1d7a0ae48bb5013706500346,
+        type: 2}
+      propertyPath: swordHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e308795c1d7a0ae48bb5013706500346, type: 2}
   m_IsPrefabParent: 0
@@ -12777,9 +12782,24 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114258250016897390, guid: 996cf6acc4fb7c5439b911d611591e2d,
+        type: 2}
+      propertyPath: mySource
+      value: 
+      objectReference: {fileID: 852819797}
+    - target: {fileID: 114258250016897390, guid: 996cf6acc4fb7c5439b911d611591e2d,
+        type: 2}
+      propertyPath: swordHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 996cf6acc4fb7c5439b911d611591e2d, type: 2}
   m_IsPrefabParent: 0
+--- !u!82 &852819797 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82187808658452540, guid: 996cf6acc4fb7c5439b911d611591e2d,
+    type: 2}
+  m_PrefabInternal: {fileID: 852819796}
 --- !u!1 &857519341
 GameObject:
   m_ObjectHideFlags: 0
@@ -13086,7 +13106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2cf2a223557e840a29f5cfeef6f4e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Volume: {fileID: 0}
+  Volume: {fileID: 1842319489}
   mySource: {fileID: 860753011}
 --- !u!4 &860753013
 Transform:
@@ -13465,6 +13485,11 @@ Prefab:
       propertyPath: m_Name
       value: GunEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114897460552437614, guid: e308795c1d7a0ae48bb5013706500346,
+        type: 2}
+      propertyPath: swordHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e308795c1d7a0ae48bb5013706500346, type: 2}
   m_IsPrefabParent: 0
@@ -14640,6 +14665,11 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114496210224449942, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: swordHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
     m_RemovedComponents:
     - {fileID: 114865816983049030, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
@@ -19313,6 +19343,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 114623590823404408, guid: b9bc96d467b5d2a45b779be8e65c35cc,
+        type: 2}
+      propertyPath: swordHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
   m_IsPrefabParent: 0
@@ -22393,7 +22428,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000015259, y: 0.00009918121}
-  m_SizeDelta: {x: 800, y: 449.72}
+  m_SizeDelta: {x: 368, y: 379}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406906486
 MonoBehaviour:
@@ -23306,6 +23341,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114623590823404408, guid: b9bc96d467b5d2a45b779be8e65c35cc,
+        type: 2}
+      propertyPath: swordHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
   m_IsPrefabParent: 0
@@ -24849,6 +24889,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114623590823404408, guid: b9bc96d467b5d2a45b779be8e65c35cc,
+        type: 2}
+      propertyPath: swordHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b9bc96d467b5d2a45b779be8e65c35cc, type: 2}
   m_IsPrefabParent: 0
@@ -26520,9 +26565,114 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114351066411922526, guid: 0e3c1e0992e9e3644899afeda80b76e3,
+        type: 2}
+      propertyPath: mySource
+      value: 
+      objectReference: {fileID: 1710956157}
+    - target: {fileID: 114351066411922526, guid: 0e3c1e0992e9e3644899afeda80b76e3,
+        type: 2}
+      propertyPath: gunShotSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 76bcadcb15365c44a9999abb286f409f, type: 3}
+    - target: {fileID: 114800815313731142, guid: 0e3c1e0992e9e3644899afeda80b76e3,
+        type: 2}
+      propertyPath: swordHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
+    - target: {fileID: 114800815313731142, guid: 0e3c1e0992e9e3644899afeda80b76e3,
+        type: 2}
+      propertyPath: mySource
+      value: 
+      objectReference: {fileID: 1710956157}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0e3c1e0992e9e3644899afeda80b76e3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1710956156 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1649706225290762, guid: 0e3c1e0992e9e3644899afeda80b76e3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1710956155}
+--- !u!82 &1710956157
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1710956156}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 76bcadcb15365c44a9999abb286f409f, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1713965060
 GameObject:
   m_ObjectHideFlags: 0
@@ -30469,6 +30619,7 @@ MonoBehaviour:
   enemyHealth: {fileID: 0}
   barrelroll: {fileID: 0}
   giveHealth: {fileID: 0}
+  attackNumber: 0
   canGrap: 1
 --- !u!212 &1878241259
 SpriteRenderer:
@@ -32034,6 +32185,11 @@ Prefab:
       propertyPath: m_SortingLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114496210224449942, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: swordHit
+      value: 
+      objectReference: {fileID: 8300000, guid: 8e1988333a2569a4d80b3797b2356438, type: 3}
     m_RemovedComponents:
     - {fileID: 114865816983049030, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}

@@ -15,6 +15,7 @@ public class EnemyHealth : MonoBehaviour {
 
 	// public AudioClip deathclip;                           //Sound that plays when enemy is killed
 	public AudioClip deathclip;
+	public AudioClip swordHit;
 
 	public GameObject endLevelColliderTut;					//End level collider for tutorial
 	public GameObject endLevelColliderLvl1;					//End level collider for level 1
@@ -54,7 +55,7 @@ public class EnemyHealth : MonoBehaviour {
 	void Update () {
 		if(damaged)
 		{
-			
+			mySource.PlayOneShot(swordHit);
 			//////////////mySource.Stop();/////////////////
 			//////////////mySource.Play();/////////////////
 

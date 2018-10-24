@@ -144,8 +144,8 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 		target = transform.position;
 		grapple.enabled = false;
 		line.enabled = false;
-		poison.SetActive (false);
-		poison2.SetActive (false);
+		// poison.SetActive (false);
+		// poison2.SetActive (false);
 		projectileCol.SetActive (true);
 		projectileCol2.SetActive (true);
 		playerHealthScript = (PlayerHealth) pirate.GetComponent(typeof(PlayerHealth));

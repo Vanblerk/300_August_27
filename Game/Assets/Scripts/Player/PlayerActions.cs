@@ -91,6 +91,8 @@ public class PlayerActions : MonoBehaviour
 
 	bool enemyInRange;
 
+	public int attackNumber;
+
 
 
 
@@ -334,7 +336,7 @@ public class PlayerActions : MonoBehaviour
 			playerHealthScript.PlayerGetHealth (100);
 		}
 
-
+		
 
 		Attack();
 		if(Input.GetMouseButtonUp(0) == true){
@@ -389,6 +391,7 @@ public class PlayerActions : MonoBehaviour
 			anim.SetBool ("isSwinging", false);
 		}
 
+		
 
 		//Sounds
 
@@ -473,7 +476,7 @@ public class PlayerActions : MonoBehaviour
 
 	void Attack()
 	{
-
+		
 		if (Input.GetKey(KeyCode.Mouse1))
 		{
 			int attackNumber = Random.Range (0, 5);
