@@ -133,10 +133,11 @@ public class PlayerHealth : MonoBehaviour {
 	{
 		yield return new WaitForSeconds(3f);
 		//SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
-		isDead = false;
-		anim.SetTrigger ("hasRespawned");
+
 		pirate.transform.position = respawn.getSpawn();
 		currentHealth = respawn.getSpawnHealth ();
+		isDead = false;
+		anim.SetTrigger ("hasRespawned");
 		string currScene = SceneManager.GetActiveScene ().name;
 
 		if (currScene == "TutorialLevel") {
@@ -146,6 +147,7 @@ public class PlayerHealth : MonoBehaviour {
 		} else if (currScene == "LevelTwo") {
 			input3.enabled = true;
 		} else if (currScene == "LevelTwoB") {
+			Debug.Log ("level2b");
 			input4.enabled = true;
 		}
 		//input.enabled = true;

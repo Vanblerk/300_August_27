@@ -687,7 +687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 53000686}
   - component: {fileID: 53000685}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: VerticalMast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,6 +1612,7 @@ GameObject:
   - component: {fileID: 148077666}
   - component: {fileID: 148077665}
   - component: {fileID: 148077677}
+  - component: {fileID: 148077678}
   m_Layer: 2
   m_Name: Character
   m_TagString: Player
@@ -1792,10 +1793,10 @@ MonoBehaviour:
   flashColour: {r: 1, g: 0, b: 0, a: 1}
   HealthUI: {fileID: 0}
   HealthUIIII: {fileID: 0}
-  input: {fileID: 0}
-  input2: {fileID: 0}
-  input3: {fileID: 0}
-  input4: {fileID: 0}
+  input: {fileID: 148077667}
+  input2: {fileID: 148077666}
+  input3: {fileID: 148077665}
+  input4: {fileID: 148077677}
   playerAudio: {fileID: 148077671}
 --- !u!60 &148077670
 PolygonCollider2D:
@@ -2120,8 +2121,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1471367541
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ed6f801479797884abad93f59e889ab4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2213,6 +2214,17 @@ MonoBehaviour:
   barrelroll: {fileID: 0}
   giveHealth: {fileID: 0}
   canGrap: 1
+--- !u!114 &148077678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 148077664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac8d4ab3797b7f4c87aeee572bf5ab2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &155522803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2708,7 +2720,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.93625
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2735,6 +2747,16 @@ Prefab:
       propertyPath: barrel
       value: 
       objectReference: {fileID: 344286348}
+    - target: {fileID: 212496772983058760, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1471367541
+      objectReference: {fileID: 0}
+    - target: {fileID: 212496772983058760, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
   m_IsPrefabParent: 0
@@ -3198,7 +3220,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4841612093360890, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -6.19
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4841612093360890, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3230,6 +3252,16 @@ Prefab:
       propertyPath: barrelBreakSound
       value: 
       objectReference: {fileID: 8300000, guid: c4721ad855bbd774681939e69485d81c, type: 3}
+    - target: {fileID: 212780173921870860, guid: 309edde1e063723498c2fb90e9af130b,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 492417961
+      objectReference: {fileID: 0}
+    - target: {fileID: 212780173921870860, guid: 309edde1e063723498c2fb90e9af130b,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
   m_IsPrefabParent: 0
@@ -4610,7 +4642,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 636598317}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.45, y: 15.05, z: -10.26}
+  m_LocalPosition: {x: -1.45, y: 15.05, z: -1}
   m_LocalScale: {x: 0.15911, y: 0.14801, z: 1}
   m_Children: []
   m_Father: {fileID: 678959598}
@@ -8688,7 +8720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1411932241}
   - component: {fileID: 1411932240}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: sky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9330,7 +9362,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.93625
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4809348574124080, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9361,6 +9393,16 @@ Prefab:
       propertyPath: barrel
       value: 
       objectReference: {fileID: 1850715195}
+    - target: {fileID: 212496772983058760, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1471367541
+      objectReference: {fileID: 0}
+    - target: {fileID: 212496772983058760, guid: 48f653628de4f8d49a76ff4137d90ba1,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48f653628de4f8d49a76ff4137d90ba1, type: 2}
   m_IsPrefabParent: 0
@@ -10884,7 +10926,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4234728655512088, guid: 996cf6acc4fb7c5439b911d611591e2d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.24
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4234728655512088, guid: 996cf6acc4fb7c5439b911d611591e2d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11054,6 +11096,60 @@ Transform:
   m_Father: {fileID: 925912511}
   m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -21.179}
+--- !u!1 &1682292130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1682292131}
+  - component: {fileID: 1682292132}
+  m_Layer: 2
+  m_Name: SpawnPoint
+  m_TagString: SP
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1682292131
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1682292130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.9, y: 16.53, z: 0}
+  m_LocalScale: {x: 1.1, y: 6.68, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1786351940}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1682292132
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1682292130}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1690123705
 GameObject:
   m_ObjectHideFlags: 0
@@ -11591,6 +11687,7 @@ Transform:
   - {fileID: 1867252853}
   - {fileID: 1850715194}
   - {fileID: 344286347}
+  - {fileID: 1682292131}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11735,7 +11832,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4841612093360890, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -6.080233
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4841612093360890, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
       propertyPath: m_LocalRotation.x
@@ -11767,6 +11864,16 @@ Prefab:
       propertyPath: barrelBreakSound
       value: 
       objectReference: {fileID: 8300000, guid: c4721ad855bbd774681939e69485d81c, type: 3}
+    - target: {fileID: 212780173921870860, guid: 309edde1e063723498c2fb90e9af130b,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: 492417961
+      objectReference: {fileID: 0}
+    - target: {fileID: 212780173921870860, guid: 309edde1e063723498c2fb90e9af130b,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 309edde1e063723498c2fb90e9af130b, type: 2}
   m_IsPrefabParent: 0
@@ -11877,7 +11984,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4234728655512088, guid: 996cf6acc4fb7c5439b911d611591e2d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.24
+      value: 0.39
       objectReference: {fileID: 0}
     - target: {fileID: 4234728655512088, guid: 996cf6acc4fb7c5439b911d611591e2d, type: 2}
       propertyPath: m_LocalRotation.x
