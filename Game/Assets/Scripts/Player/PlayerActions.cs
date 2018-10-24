@@ -364,20 +364,30 @@ public class PlayerActions : MonoBehaviour
 
 			if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
 			{
-
-				pirate.transform.Translate(Vector2.right * 5f * Time.deltaTime);
-				pirate.transform.eulerAngles = new Vector2(0, 0);
-				facingRight = true;
+				if (facingRight != true) {
+					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					pirate.transform.eulerAngles = new Vector2 (0, -180);
+					facingRight = true;
+				} else {
+					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					pirate.transform.eulerAngles = new Vector2 (0, 0);
+					facingRight = true;
+				}
 
 			}
 			else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
 			{
+				if (facingRight != true) {
+					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					pirate.transform.eulerAngles = new Vector2 (0, 0);
+					facingRight = false;
+				} else {
+					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					pirate.transform.eulerAngles = new Vector2 (0, -180);
+					facingRight = true;
 
-				pirate.transform.Translate(Vector2.right * 5f * Time.deltaTime);
-				pirate.transform.eulerAngles = new Vector2(0, -180);
-				facingRight = false;
+				}
 			}
-
 
 			if (hasHooked == false) {
 				if(canGrap == true ){
