@@ -16,7 +16,8 @@ public class EnemyHealth : MonoBehaviour {
 	// public AudioClip deathclip;                           //Sound that plays when enemy is killed
 	public AudioClip deathclip;
 
-	public GameObject endLevelCollider;
+	public GameObject endLevelColliderTut;					//End level collider for tutorial
+	public GameObject endLevelColliderLvl1;					//End level collider for level 1
 
 
 
@@ -31,7 +32,8 @@ public class EnemyHealth : MonoBehaviour {
 	public AudioSource mySource;
 	void Start ()
 	{
-		endLevelCollider = GameObject.Find ("ExitLevelCollider");
+		endLevelColliderTut = GameObject.Find ("ExitLevelCollider");
+		endLevelColliderLvl1 =  GameObject.Find ("EndGameCollider");
 	}
 
 	void Awake ()
@@ -52,10 +54,9 @@ public class EnemyHealth : MonoBehaviour {
 	void Update () {
 		if(damaged)
 		{
-			//Sound
-			// mySource = GetComponent<AudioSource>();
-			mySource.Stop();
-			mySource.Play();
+			
+			//////////////mySource.Stop();/////////////////
+			//////////////mySource.Play();/////////////////
 
 
 			StartCoroutine ("changeColor");
@@ -97,8 +98,8 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		Debug.Log (gameObject.name + "death");
 		isDead = true;
-		mySource.Stop();
-		mySource.PlayOneShot(deathclip);
+		///////////////////////mySource.Stop();////////////////////////////
+		///////////////////////mySource.PlayOneShot(deathclip);////////////////////
 
 		if (gameObject.name == "ThrowEnemy") {
 			anim.SetTrigger ("EnemyDeath");
@@ -108,7 +109,12 @@ public class EnemyHealth : MonoBehaviour {
 		}
 		else if(gameObject.name == "NicoEnemy")
 		{
-			endLevelCollider.SetActive (true);
+			endLevelColliderTut.SetActive (true);
+			anim.SetTrigger ("EnemyDeath");
+		}
+		else if(gameObject.name == "NinaEnemy")
+		{		
+			endLevelColliderLvl1.SetActive (true);	
 			anim.SetTrigger ("EnemyDeath");
 		}
 
