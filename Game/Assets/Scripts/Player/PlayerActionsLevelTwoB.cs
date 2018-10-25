@@ -75,7 +75,8 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 	public BarrelRoll barrelroll;
 
 	//Variables For Health Pickups
-	GameObject HealthPickup;			//References the health pickup object
+	GameObject HealthPickup;	
+	GameObject HealthPickup2;//References the health pickup object
 	public GiveHealth giveHealth;		// References the giveHealth script attached to the healthPickup gameObject
 
 
@@ -128,6 +129,7 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 		Enemy = GameObject.FindGameObjectWithTag("Enemy"); 
 		pirate = GameObject.Find ("Character");
 		HealthPickup = GameObject.Find ("HealthPickup");
+		HealthPickup2 = GameObject.Find ("HealthPickup2");
 		poison = GameObject.Find ("Projectileslvl2");
 		poison2 = GameObject.Find ("Projectiles2");
 		projectExit = GameObject.Find ("ProjectilesExit");
@@ -259,6 +261,15 @@ public class PlayerActionsLevelTwoB : MonoBehaviour {
 			giveHealth.givePlayerHealth (); 
 			mySource.PlayOneShot(gulpHealth);
 			HealthPickup.SetActive (false);
+		}
+
+		if (other.gameObject == HealthPickup2)
+		{
+			Debug.Log ("healthPickup");
+
+			giveHealth.givePlayerHealth (); 
+			mySource.PlayOneShot(gulpHealth);
+			HealthPickup2.SetActive (false);
 		}
 
 		if (other.gameObject.name == "ProjectileCollider") {
