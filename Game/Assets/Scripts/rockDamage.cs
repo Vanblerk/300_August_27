@@ -25,6 +25,13 @@ public class rockDamage : MonoBehaviour {
 		}
 	}
 
+	void OnTriggerExit2D(Collider2D other)
+	{
+		if (other.gameObject == player) {
+			killPlayer = false;
+			playerDead = false;
+		}
+	}
 	
 	// Update is called once per frame
 	void Update () {
