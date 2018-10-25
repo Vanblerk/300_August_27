@@ -53,3 +53,6 @@ TagManager:
   - name: Projectiles
     uniqueID: 492417961
     locked: 0
+  - name: HealthPickup
+    uniqueID: 1759429301
+    locked: 0
