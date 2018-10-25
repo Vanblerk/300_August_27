@@ -15,8 +15,8 @@ public class VanShoot : MonoBehaviour {
 	//////////////public GameObject endLevelCollider;
 
 	//Sound
-	////////////////////public AudioClip gunShotSound;
-	////////////////////public AudioSource mySource;
+	public AudioClip gunShotSound;
+	public AudioSource mySource;
 
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");
@@ -24,7 +24,7 @@ public class VanShoot : MonoBehaviour {
 		target = GameObject.FindGameObjectWithTag ("Player").GetComponent<Transform>();
 		////////////////////endLevelCollider = GameObject.Find ("EndGameCollider");
 
-		////////////////////mySource = GetComponent<AudioSource>();
+		mySource = GetComponent<AudioSource>();
 	}
 
 	void OnTriggerEnter2D(Collider2D other)
@@ -66,7 +66,7 @@ public class VanShoot : MonoBehaviour {
 	}
 
 	void ShootBullet(){
-		///////////////////////mySource.PlayOneShot(gunShotSound);
+		mySource.PlayOneShot(gunShotSound);
 		if (checkPlayerPosition () == "right") {
 			bulletPosition = transform.position;
 			bulletPosition += new Vector2 (1.6f, 0.31f);
