@@ -47,6 +47,7 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 	bool firstClick = false;
 	PlayerHealth playerHealthScript;
 	bool isPlatform = false;
+	bool flipped = false;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -323,6 +324,7 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 				hasHooked = false;
 				firstHit = false;
 				isPlatform = false;
+				flipped = false;
 				StartCoroutine(GrappleTimer());
 			}
 
@@ -340,11 +342,11 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 			if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
 			{
 				if (facingRight != true) {
-					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					//pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
 					pirate.transform.eulerAngles = new Vector2 (0, -180);
 					facingRight = true;
 				} else {
-					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					//pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
 					pirate.transform.eulerAngles = new Vector2 (0, 0);
 					facingRight = true;
 				}
@@ -352,18 +354,17 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 			}
 			else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
 			{
-				if (facingRight != true) {
-					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
-					pirate.transform.eulerAngles = new Vector2 (0, 0);
+				if (facingRight == true) {
+					//pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					pirate.transform.eulerAngles = new Vector2 (0, -180);
 					facingRight = false;
 				} else {
-					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
-					pirate.transform.eulerAngles = new Vector2 (0, -180);
-					facingRight = true;
+					//pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					//pirate.transform.eulerAngles = new Vector2 (0, 0);
+					facingRight = false;
 
 				}
 			}
-
 
 			if (hasHooked == false) {
 				if(canGrap == true){
@@ -486,7 +487,13 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 
 					grapple.enabled = true;
 					anim.SetBool ("isSwinging", true);
-					swingFlip (facingRight, mouseDirection);
+					if (flipped == false) {
+						Debug.Log ("swingflip with: "+facingRight);
+						swingFlip (facingRight, mouseDirection);
+
+						flipped = true;
+					}
+
 					// mySource.PlayClipAtPoint(grappleSound, transform.position);
 					// mySource.Play(grappleSound);
 					// mySource.PlayClipAtPoint(grappleSound, new Vector3(5, 1, 0));
@@ -619,7 +626,8 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 		//mouse is clicked to the right
 		if (mousePos.x > pirate.transform.position.x) {
 			//if I am not right
-			if (isRight != true) {
+			Debug.Log("I look to right:"+facingRight);
+			if (isRight == false) {
 				pirate.transform.Rotate (0f, 180f, 0f);
 				facingRight = true;
 			}
@@ -628,7 +636,8 @@ public class PlayerActionsLevelTwo : MonoBehaviour {
 			//mouse was to the left
 			//I am facing right 
 			if (isRight == true) {
-				pirate.transform.Rotate (0f, 180f, 0f);
+				Debug.Log("I look to right:"+facingRight);
+				pirate.transform.eulerAngles = new Vector2 (0, -180);
 				facingRight = false;
 			}
 		}
