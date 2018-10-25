@@ -78,7 +78,8 @@ public class PlayerActions : MonoBehaviour
 	public BarrelRoll barrelroll;
 
 	//Variables For Health Pickups
-	GameObject HealthPickup;			//References the health pickup object
+	GameObject HealthPickup;
+	GameObject HealthPickup2;//References the health pickup object
 	public GiveHealth giveHealth;		// References the giveHealth script attached to the healthPickup gameObject
 
 	//Variables for projectiles Vanblerk
@@ -145,6 +146,7 @@ public class PlayerActions : MonoBehaviour
 		Enemy = GameObject.FindGameObjectWithTag("Enemy"); 
 		pirate = GameObject.Find ("Character");
 		HealthPickup = GameObject.Find ("HealthPickup");
+		HealthPickup2 = GameObject.Find ("HealthPickup2");
 		///////////////poison = GameObject.Find ("Projectiles");
 		///////////////projectExit = GameObject.Find ("ProjectilesExit");
 		///////////////projectileCol = GameObject.Find ("ProjectileCollider");
@@ -283,6 +285,15 @@ public class PlayerActions : MonoBehaviour
 			giveHealth.givePlayerHealth (); 
 			mySource.PlayOneShot(gulpHealth);
 			HealthPickup.SetActive (false);
+		}
+
+		if (other.gameObject == HealthPickup2)
+		{
+			Debug.Log ("healthPickup");
+
+			giveHealth.givePlayerHealth (); 
+			mySource.PlayOneShot(gulpHealth);
+			HealthPickup2.SetActive (false);
 		}
 
 		///////////////if (other.gameObject.name == "ProjectileCollider") {

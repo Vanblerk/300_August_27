@@ -16855,7 +16855,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1778056904018770, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
       propertyPath: m_Name
-      value: HealthPickup (1)
+      value: HealthPickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca0f35a744e14a4439530d61694e37fe, type: 2}
