@@ -131,12 +131,19 @@ public class PlayerHealth : MonoBehaviour {
 				input.grapple.enabled = false;
 				input.line.enabled = false;
 				input.hasHooked = false;
+				GameObject nico = GameObject.Find("NicoEnemy");
+				EnemyHealth boss = (EnemyHealth)nico.GetComponent(typeof(EnemyHealth));
+				boss.setEnemyHealth (110);
 
 			} else if (currScene == "LevelOne") {
 				input2.isSwinging = false;
 				input2.grapple.enabled = false;
 				input2.line.enabled = false;
 				input2.hasHooked = false;
+				GameObject nina = GameObject.Find("NinaEnemy");
+				EnemyHealth boss = (EnemyHealth)nina.GetComponent(typeof(EnemyHealth));
+				boss.setEnemyHealth (100);
+
 			} else if (currScene == "LevelTwo") {
 				input3.isSwinging = false;
 				input3.grapple.enabled = false;
@@ -147,6 +154,10 @@ public class PlayerHealth : MonoBehaviour {
 				input4.grapple.enabled = false;
 				input4.line.enabled = false;
 				input4.hasHooked = false;
+
+				GameObject vb = GameObject.Find("VanEnemy");
+				EnemyHealth boss = (EnemyHealth)vb.GetComponent(typeof(EnemyHealth));
+				boss.setEnemyHealth (150);
 			}
 
 			StartCoroutine (waitingToDie ());

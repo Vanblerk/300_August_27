@@ -122,6 +122,8 @@ public class EnemyHealth : MonoBehaviour {
 		else if(gameObject.name == "VanEnemy")
 		{				
 			anim.SetTrigger ("EnemyDeath");
+			SceneManager.LoadScene ("MainMenu");
+	
 		}
 
 
@@ -159,5 +161,9 @@ public class EnemyHealth : MonoBehaviour {
 			return false;
 		}
 	
+	}
+
+	public void setEnemyHealth(int val){
+		currentHealth = val;
 	}
 }

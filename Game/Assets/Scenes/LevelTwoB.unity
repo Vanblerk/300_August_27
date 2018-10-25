@@ -16492,6 +16492,11 @@ Prefab:
       propertyPath: gunShotSound
       value: 
       objectReference: {fileID: 8300000, guid: 76bcadcb15365c44a9999abb286f409f, type: 3}
+    - target: {fileID: 114291673743257034, guid: cacd784ddf0f8f346bb293f05a63d08e,
+        type: 2}
+      propertyPath: attackDamage
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cacd784ddf0f8f346bb293f05a63d08e, type: 2}
   m_IsPrefabParent: 0
