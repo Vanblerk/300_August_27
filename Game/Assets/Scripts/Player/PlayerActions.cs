@@ -48,6 +48,7 @@ public class PlayerActions : MonoBehaviour
 	bool firstClick = false;
 	PlayerHealth playerHealthScript;
 	bool isPlatform = false;
+	bool flipped = false;
 
 	// //TESTING FOR TUTORIAL VIDEO'S
 	GameObject GrapCollider;
@@ -349,6 +350,7 @@ public class PlayerActions : MonoBehaviour
 				hasHooked = false;
 				firstHit = false;
 				isPlatform = false;
+				flipped = false;
 				StartCoroutine(GrappleTimer());
 			}
 
@@ -365,11 +367,11 @@ public class PlayerActions : MonoBehaviour
 			if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
 			{
 				if (facingRight != true) {
-					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					//pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
 					pirate.transform.eulerAngles = new Vector2 (0, -180);
 					facingRight = true;
 				} else {
-					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					//pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
 					pirate.transform.eulerAngles = new Vector2 (0, 0);
 					facingRight = true;
 				}
@@ -377,14 +379,14 @@ public class PlayerActions : MonoBehaviour
 			}
 			else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
 			{
-				if (facingRight != true) {
-					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
-					pirate.transform.eulerAngles = new Vector2 (0, 0);
+				if (facingRight == true) {
+					//pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					pirate.transform.eulerAngles = new Vector2 (0, -180);
 					facingRight = false;
 				} else {
-					pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
-					pirate.transform.eulerAngles = new Vector2 (0, -180);
-					facingRight = true;
+					//pirate.transform.Translate (Vector2.right * 5f * Time.deltaTime);
+					//pirate.transform.eulerAngles = new Vector2 (0, 0);
+					facingRight = false;
 
 				}
 			}
@@ -474,7 +476,7 @@ public class PlayerActions : MonoBehaviour
 			anim.SetBool("isWalking", true);
 			transform.Translate(Vector2.right * 5f * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 180);
-			facingRight = true;
+			facingRight = false;
 		}
 		else
 		{
@@ -518,100 +520,105 @@ public class PlayerActions : MonoBehaviour
 	void Swinging()
 	{
 
-		/*if (Input.GetKey(KeyCode.Mouse0))
-		{*/
+		if (Input.GetKey (KeyCode.Mouse0)) {
 
 
-		hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
-		//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
+			hit = Physics2D.Raycast (ray.origin, ray.direction, 8f);
+			//hit.rigidbody.AddForceAtPosition(ray.direction, hit.point);
 
 
-		if (hit.collider != null) {
+			if (hit.collider != null) {
 
-			if (hit.collider.tag == "platform") {
-				Debug.Log ("platform hit");
-				isPlatform = true;
-			}
-
-
-			if (canGrap == true && isPlatform == true) {
+				if (hit.collider.tag == "platform") {
+					Debug.Log ("platform hit");
+					isPlatform = true;
+				}
 
 
-				grapple.enabled = true;
-				anim.SetBool ("isSwinging", true);
-				swingFlip (facingRight, mouseDirection);
-				//mySource.PlayOneShot(grappleSound);
-				// mySource.PlayClipAtPoint(grappleSound, transform.position);
-				// mySource.Play(grappleSound);
-				// mySource.PlayClipAtPoint(grappleSound, new Vector3(5, 1, 0));
-				// mySource.PlayOneShot(grappleSound);
+				if (canGrap == true && isPlatform == true) {
 
-				if (firstHit == false) {
-					// mySource.PlayOneShot (grappleClankSound);
-					if (PlayHigh == true && PlayLow == false) {
-						// if(PlayLow == false){
-						mySource.PlayOneShot (grappleClankSoundHigh);
-						PlayHigh = false;
-						PlayLow = false;
-						Debug.Log ("High Sound");
-						// }
-					} else if (PlayLow == true && PlayHigh == false) {
-						// if(PlayHigh == false){
-						mySource.PlayOneShot (grappleClankSoundLow);
-						PlayLow = false;
-						PlayHigh = true;
-						Debug.Log ("Low Sound");
-						// }
-					} else if (PlayHigh == false && PlayLow == false) {
-						// if(PlayLow == false){
-						mySource.PlayOneShot (grappleClankSound);
-						PlayLow = true;
-						Debug.Log ("Normal Sound");
-						// }
+
+					grapple.enabled = true;
+					anim.SetBool ("isSwinging", true);
+					if (flipped == false) {
+						Debug.Log ("swingflip with: "+facingRight);
+						swingFlip (facingRight, mouseDirection);
+
+						flipped = true;
 					}
-					firstHit = true;
-				}
 
-				//if the mouse click is to the right
-				if (pirate.transform.position.x < Input.mousePosition.x) {
+					//mySource.PlayOneShot(grappleSound);
+					// mySource.PlayClipAtPoint(grappleSound, transform.position);
+					// mySource.Play(grappleSound);
+					// mySource.PlayClipAtPoint(grappleSound, new Vector3(5, 1, 0));
+					// mySource.PlayOneShot(grappleSound);
 
-					values.x = hit.point.x + 3.7f;
-					values.y = hit.point.y;
-					lineR.x = hit.point.x + 0f;
-					lineR.y = hit.point.y;
-					grapple.connectedAnchor = values;
-					line.SetPosition (1, lineR);
-					line.SetPosition (0, grapPoint.transform.position);
-					line.enabled = true;
+					if (firstHit == false) {
+						// mySource.PlayOneShot (grappleClankSound);
+						if (PlayHigh == true && PlayLow == false) {
+							// if(PlayLow == false){
+							mySource.PlayOneShot (grappleClankSoundHigh);
+							PlayHigh = false;
+							PlayLow = false;
+							Debug.Log ("High Sound");
+							// }
+						} else if (PlayLow == true && PlayHigh == false) {
+							// if(PlayHigh == false){
+							mySource.PlayOneShot (grappleClankSoundLow);
+							PlayLow = false;
+							PlayHigh = true;
+							Debug.Log ("Low Sound");
+							// }
+						} else if (PlayHigh == false && PlayLow == false) {
+							// if(PlayLow == false){
+							mySource.PlayOneShot (grappleClankSound);
+							PlayLow = true;
+							Debug.Log ("Normal Sound");
+							// }
+						}
+						firstHit = true;
+					}
+
+					//if the mouse click is to the right
+					if (pirate.transform.position.x < Input.mousePosition.x) {
+
+						values.x = hit.point.x + 3.7f;
+						values.y = hit.point.y;
+						lineR.x = hit.point.x + 0f;
+						lineR.y = hit.point.y;
+						grapple.connectedAnchor = values;
+						line.SetPosition (1, lineR);
+						line.SetPosition (0, grapPoint.transform.position);
+						line.enabled = true;
 
 
 
+					} else {
+						grapple.connectedAnchor = hit.point;
+						lineR.x = hit.point.x + 0f;
+						lineR.y = hit.point.y;
+						line.SetPosition (0, grapPoint.transform.position);
+						line.SetPosition (1, lineR);
+						line.enabled = true;
+					}
+
+					while (grapple.distance > 2f) {
+						grappleTime = grappleTime + 0.00001f;	
+						grapple.distance = grapple.distance - grappleTime;
+
+					}
 				} else {
-					grapple.connectedAnchor = hit.point;
-					lineR.x = hit.point.x + 0f;
-					lineR.y = hit.point.y;
-					line.SetPosition (0, grapPoint.transform.position);
-					line.SetPosition (1, lineR);
-					line.enabled = true;
+					grapple.enabled = false;
+					line.enabled = false;
 				}
 
-				while (grapple.distance > 2f) {
-					grappleTime = grappleTime + 0.00001f;	
-					grapple.distance = grapple.distance - grappleTime;
-
-				}
-			} else {
-				grapple.enabled = false;
-				line.enabled = false;
-			}
-
-		}//end of if collide
+			}//end of if collide
 		else {
 
 
-			grapple.enabled = false;
-			line.enabled = false;
-			/*mouseCoords = ray.GetPoint (5f);
+				grapple.enabled = false;
+				line.enabled = false;
+				/*mouseCoords = ray.GetPoint (5f);
 
 				//grapple.connectedAnchor = mouseCoords;
 				//mouseCoords = lineLimit();
@@ -620,10 +627,10 @@ public class PlayerActions : MonoBehaviour
 				line.enabled = true;
 				StartCoroutine(Example());*/
 
+			}
+
+
 		}
-
-
-		//}
 
 	}
 
@@ -665,7 +672,8 @@ public class PlayerActions : MonoBehaviour
 		//mouse is clicked to the right
 		if (mousePos.x > pirate.transform.position.x) {
 			//if I am not right
-			if (isRight != true) {
+			Debug.Log("I look to right:"+facingRight);
+			if (isRight == false) {
 				pirate.transform.Rotate (0f, 180f, 0f);
 				facingRight = true;
 			}
@@ -674,7 +682,8 @@ public class PlayerActions : MonoBehaviour
 			//mouse was to the left
 			//I am facing right 
 			if (isRight == true) {
-				pirate.transform.Rotate (0f, 180f, 0f);
+				Debug.Log("I look to right:"+facingRight);
+				pirate.transform.eulerAngles = new Vector2 (0, -180);
 				facingRight = false;
 			}
 		}
