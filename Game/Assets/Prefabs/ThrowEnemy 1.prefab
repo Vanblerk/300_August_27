@@ -73,15 +73,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1898696867851406}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -42.58922, y: 6.88916, z: -3.14625}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -58.94789, y: 6.150195, z: -5.0525}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_Children:
   - {fileID: 4532175070782484}
   - {fileID: 4771989942381666}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4532175070782484
 Transform:
   m_ObjectHideFlags: 1
@@ -357,6 +357,9 @@ MonoBehaviour:
   flashColour: {r: 1, g: 0, b: 0, a: 1}
   damageImage: {fileID: 0}
   deathclip: {fileID: 0}
+  swordHit: {fileID: 0}
+  endLevelColliderTut: {fileID: 0}
+  endLevelColliderLvl1: {fileID: 0}
   mySource: {fileID: 0}
 --- !u!114 &114503773302133268
 MonoBehaviour:
