@@ -431,15 +431,15 @@ public class PlayerActions : MonoBehaviour
 		if(Input.GetMouseButtonDown(1) == true){
 
 			// mySource.PlayOneShot(swordSound);
-			int attackNumber = Random.Range (0, 5);
-			Debug.Log (attackNumber);
-			if (attackNumber == 1 || attackNumber == 2 || attackNumber == 3 ) {
-				mySource.PlayOneShot(swordSound);
+		////////////////////////	int attackNumber = Random.Range (0, 5);
+		////////////////////////	Debug.Log (attackNumber);
+		/////////////////////////	if (attackNumber == 1 || attackNumber == 2 || attackNumber == 3 ) {
+		///////////////////////		mySource.PlayOneShot(swordSound);
 
-			} 
-			else if (attackNumber == 0 || attackNumber == 4) {
-				mySource.PlayOneShot(HighAttack);
-			}
+		//////////////////////////	} 
+		/////////////////////////	else if (attackNumber == 0 || attackNumber == 4) {
+		////////////////////////////		mySource.PlayOneShot(HighAttack);
+		/////////////////////////////	}
 		}
 
 		// This will change how we do our attack and hit enemy functions. 
@@ -448,6 +448,19 @@ public class PlayerActions : MonoBehaviour
 		// }
 		///////////////ThrowProjectile(projectTest);
 
+	}
+
+	public void playSwordSwing()
+	{
+		int attackNumber = Random.Range (0, 5);
+		Debug.Log (attackNumber);
+		if (attackNumber == 1 || attackNumber == 2 || attackNumber == 3 ) {
+			mySource.PlayOneShot(swordSound);
+
+		} 
+		else if (attackNumber == 0 || attackNumber == 4) {
+			mySource.PlayOneShot(HighAttack);
+		}
 	}
 
 	void Movement()

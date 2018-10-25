@@ -55,7 +55,7 @@ public class EnemyHealth : MonoBehaviour {
 	void Update () {
 		if(damaged)
 		{
-			mySource.PlayOneShot(swordHit);
+			
 			//////////////mySource.Stop();/////////////////
 			//////////////mySource.Play();/////////////////
 
@@ -78,6 +78,7 @@ public class EnemyHealth : MonoBehaviour {
 		{
 			return;
 		}
+		mySource.PlayOneShot(swordHit);
 		damaged = true;
 
 
