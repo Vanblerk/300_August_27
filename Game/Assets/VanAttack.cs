@@ -15,7 +15,8 @@ public class VanAttack : MonoBehaviour {
 	bool playerInRange; 						// Whether player is within the trigger collider and can be damaged
 	float timer;	
 
-	public bool canAttack = true;							// For counting up to next attack				
+	public bool canAttack = true;							// For counting up to next attack		
+
 
 	void Awake () 
 	{

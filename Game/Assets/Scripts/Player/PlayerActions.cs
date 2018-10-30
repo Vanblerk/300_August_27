@@ -303,17 +303,17 @@ public class PlayerActions : MonoBehaviour
 		///////////////}
 
 		if (other.gameObject == endGame) {
-			Debug.Log("End Level");
-			StartCoroutine(endCooldown());
+			////////////////////////////////////////Debug.Log("End Level");
+			/////////////////////////StartCoroutine(endCooldown());
 		}
 
 	}
 
-	IEnumerator endCooldown()
-	{
-		yield return new WaitForSeconds(0.3f);
-		SceneManager.LoadScene ("LevelOne");
-	}
+///	IEnumerator endCooldown()
+///	{
+		///////////////////////////////////////////yield return new WaitForSeconds(0.3f);
+		///////////////////////////////////////////SceneManager.LoadScene ("LevelOne");
+///	}
 
 
 	void FixedUpdate()

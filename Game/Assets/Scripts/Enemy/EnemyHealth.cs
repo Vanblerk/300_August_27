@@ -21,7 +21,7 @@ public class EnemyHealth : MonoBehaviour {
 	public GameObject endLevelColliderLvl1;					//End level collider for level 1
 
 
-
+	public Fade fade;
 
 	Animator anim;  
 	bool isDead;
@@ -122,9 +122,10 @@ public class EnemyHealth : MonoBehaviour {
 		else if(gameObject.name == "VanEnemy")
 		{				
 			anim.SetTrigger ("EnemyDeath");
-			SceneManager.LoadScene ("MainMenu");
+			fade.FadeToLevel (0);
 	
 		}
+
 
 
 		isDead = true;
