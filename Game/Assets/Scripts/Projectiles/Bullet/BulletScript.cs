@@ -26,7 +26,7 @@ public class BulletScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll)
 	{
 		if (coll.gameObject.tag == "Player") {			
-			playerHealth.PlayerTakeDamage (3);
+			playerHealth.PlayerTakeDamage (1);
 
 		}
 		if (coll.gameObject.tag == "Enemy") {
